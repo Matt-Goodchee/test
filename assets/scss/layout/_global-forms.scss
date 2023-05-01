@@ -1,0 +1,151 @@
+/* Gravity Form Styles
+========================================================= */
+
+// Placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+  &::placeholder               { @content; }
+}
+
+// Settings
+$border-width-top    : 2;
+$border-width-bottom : 2;
+$border-width-right  : 2;
+$border-width-left   : 2;
+$border-color        : black;
+$border-color-active : green;
+$border-color-error  : red;
+$border-radius       : 0;
+$box-shadow          : none;
+
+@mixin formInputStyles {
+  border-top-width: $border-width-top+px;
+  border-bottom-width: $border-width-bottom+px;
+  border-right-width: $border-width-right+px;
+  border-left-width: $border-width-left+px;
+  border-color: $border-color;
+  border-radius: $border-radius+px;
+  box-shadow : $box-shadow;
+  &:hover, &:focus, &:active {
+    border-color:$border-color-active;
+  }
+}
+
+/* Global Form Elements
+========================================================= */
+
+form {
+  input[type], select, textarea {
+    @include trans( all, 300 );
+    @include formInputStyles;
+    display: inline-block;
+    border-style: solid;
+    padding: 10px 15px;
+    font-family: inherit;
+    line-height: normal;
+    color: black;
+    @include placeholder {
+      color: black;
+    }
+    &:focus {
+      border-color: $border-color-active;
+    }
+  }
+}
+
+/* Gravity Form
+========================================================= */
+.gform_wrapper.gravity-theme {
+  margin: 0;
+  .gform_heading {
+    display: none;
+  }
+  form {
+    .gform-body {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      .gform_fields {
+        grid-row-gap: 25px;
+      }
+      .gfield_label {
+        font-weight: 400;
+        display: block;
+        margin-bottom: 6px;
+        font-size: rem(14);
+        .gfield_required {
+          color: $border-color-error;
+        }
+      }
+      .ginput_container_address {
+        label {
+          padding-top: 15px;
+        }
+      }
+      .gfield_checkbox {
+        margin-top: 10px;
+      }
+      .gchoice {
+        margin-bottom: 10px;
+      }
+      .gfield_checkbox, .gchoice {
+        input {
+          margin-right: 7px;
+        }
+      }
+      .ginput_container_consent {
+        display: flex;
+        align-items: center;
+        input {
+          margin-right: 10px;
+        }
+      }
+    }
+    
+    .gform_footer {
+      margin: 0;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      button {
+        @include button;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.gform_confirmation_wrapper  {
+  
+  .gform_confirmation_message {
+    @extend %body-copy;
+  }
+}
+
+
+/* Gravity Form Error Styles
+========================================================= */
+.gform_wrapper.gform_validation_error {
+  .gform_validation_errors {
+    margin-bottom: 25px;
+    border-color: $border-color-error;
+    h2.gform_submission_error {
+      font-size: 18px;
+      color: $border-color-error;
+    }
+  }
+  .gfield.gfield_error {
+    input, select, textarea, legend, label {
+      color: $border-color-error;
+      border-color: $border-color-error;
+      @include placeholder {
+        color: $border-color-error;
+      }
+      
+    }
+  }
+  .validation_message, .gfield.gfield_error .gfield_description {
+    display: none;
+  }
+}

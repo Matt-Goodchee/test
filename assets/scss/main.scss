@@ -1,0 +1,34 @@
+/*!
+Theme Name: {CLIENT}
+Description: Custom Blocks Framework | Created for {CLIENT}
+Version: N/A
+Author: {AGENCY}
+Author URI: https://github.com/cheestudio/startup-blocks
+*/
+
+/* SASS Modules (add as needed: https://sass-lang.com/documentation/modules)
+========================================================= */
+//@use "sass:math";
+
+/* Core
+========================================================= */
+@import "core/reset";
+@import "core/variables/queries";
+@import "core/layout/grid";
+@import "core/variables/variables";
+@import "core/typography/main";
+@import "core/vendor/fancybox";
+
+/* Global
+========================================================= */
+@import "layout/**/*.scss";
+
+
+/* Elements / Components
+========================================================= */
+@import "elements/**/*.scss";
+
+
+/* Pages
+========================================================= */
+@import "pages/**/*.scss";
