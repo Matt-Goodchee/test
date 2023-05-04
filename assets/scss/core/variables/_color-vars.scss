@@ -1,7 +1,30 @@
 /* Color VARs (values defined in theme.json)
 ========================================================= */
+$black      : var(--wp--preset--color--black);
+$white      : var(--wp--preset--color--white);
+$red        : var(--wp--preset--color--red);
+$dark-brown : var(--wp--preset--color--dark-brown);
+$yellow     : var(--wp--preset--color--yellow);
+$gray       : var(--wp--preset--color--gray);
+$teal       : var(--wp--preset--color--teal);
+$ivory      : var(--wp--preset--color--ivory);
 
-$blue : var(--wp--preset--color--blue);
-$dark-red : var(--wp--preset--color--dark-red);
-$black : var(--wp--preset--color--black);
-$white : var(--wp--preset--color--white);
+$colors : (
+  'black'      : $black,
+  'white'      : $white,
+  'red'        : $red,
+  'dark-brown' : $dark-brown,
+  'yellow'     : $yellow,
+  'gray'       : $gray,
+  'teal'       : $teal,
+  'ivory'      : $ivory,
+);
+
+$providers : (
+  'green' : #47a842,
+  'pink'  : #e31479,
+  'teal'  : #459baf,
+  'navy'  : #176a90,
+  'blue'  : #0064cb,
+  'lime'  : #8dc63f,
+);

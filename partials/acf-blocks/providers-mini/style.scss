@@ -1,0 +1,61 @@
+@import "../../../assets/scss/core/variables/queries";
+@import "../../../assets/scss/core/variables/variables";
+@import "../../../assets/scss/core/typography/presets";
+@import "../../../assets/scss/core/variables/color-vars";
+
+/* Custom Block Styles
+========================================================= */
+$class: '.providers-mini';
+
+#{$class} {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 12px;
+  }
+  .provider {
+    flex: 1 1 195px;
+    max-width: 195px;
+    min-height: 135px;
+    @each $color, $hex in $providers {
+      &.#{$color} .name {
+        background-color: #{$hex};
+      }
+    }
+    a {
+      display: block;
+      border-radius: 10px;
+      box-shadow: 1.57219px 1.57219px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+    }
+    figure {
+      display: flex;
+      align-items: center;
+      padding: 20px 25px;
+      flex: 1;
+      background-color: $white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    .name {
+      margin-top: auto;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      span {
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,14 +1,24 @@
 /* Grid & Padding Sizes (values defined in theme.json)
 ========================================================= */
-$width   : var(--wp--style--global--content-size);
-$padding : 15px;
+$width       : var(--wp--style--global--content-size);
+$padding-lg  : 100px;
+$padding-md  : 75px;
+$padding-sm  : 40px;
 
 /* Containers 
 ========================================================= */
-@mixin content-container( $width: $width, $padding: $padding ) {
+@mixin content-container( $width: $width ) {
   max-width: $width;
   margin: 0 auto;
-  padding: 0 $padding;
+  padding: 0 $padding-lg;
+  @include for-size(tablet) {
+    padding-left: $padding-md;
+    padding-right: $padding-md;
+  }
+  @include for-size(tablet-sm) {
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+  }
 }
 
 /* Reusable Flex & Grid Classes
@@ -34,7 +44,7 @@ $padding : 15px;
   }
 
   &.reverse {
-    @include for-size(tablet-sm, up) {
+    @include for-size(tablet-sm, up, offset) {
       flex-direction: row-reverse;
     }
   }
@@ -51,4 +61,20 @@ $padding : 15px;
 
 .content-blocks > *:not(.alignfull).alignwide {
   max-width: var(--wp--style--global--wide-size);
+}
+
+
+/* Default Kadence Spacing
+========================================================= */
+:root {
+  --global-kb-spacing-xxs : 10px;
+  --global-kb-spacing-xs  : 20px;
+  --global-kb-spacing-sm  : 25px;
+  --global-kb-spacing-md  : 40px;
+  --global-kb-spacing-lg  : 50px;
+  --global-kb-spacing-xl  : 75px;
+  --global-kb-spacing-xxl : 100px;
+  --global-kb-spacing-3xl : 150px;
+  --global-kb-spacing-4xl : 200px;
+  --global-kb-spacing-5xl : 250px;
 }

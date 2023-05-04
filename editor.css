@@ -1,7 +1,7 @@
 .container {
   max-width: var(--wp--style--global--content-size);
   margin: 0 auto;
-  padding: 0 15px
+  padding: 0 100px
 }
 .grid {
   display: grid;
@@ -23,34 +23,20 @@
 .content-blocks > :not(.alignfull).alignwide {
   max-width: var(--wp--style--global--wide-size)
 }
-body .editor-styles-wrapper .acf-block-preview .button,
-body .editor-styles-wrapper .edit-post-visual-editor .button .button,
-body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button,
-body .editor-styles-wrapper .mce-content-body .button .button,
-body .editor-styles-wrapper .wp-block-button .wp-block-button__link,
-body .editor-styles-wrapper .wp-block-button__link .button,
-body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button,
-body .editor-styles-wrapper .wp-block.editor-block .button .button,
-body .wp-block-button .wp-block-button__link {
-  transition: .6s cubic-bezier(.23,1,.32,1);
-  border: 2px solid transparent;
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 40px;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: baseline;
-  font-size: 1.125rem;
-  line-height: 1.2;
-  text-decoration: none;
-  -webkit-appearance: none
+:root {
+  --global-kb-spacing-xxs: 10px;
+  --global-kb-spacing-xs: 20px;
+  --global-kb-spacing-sm: 25px;
+  --global-kb-spacing-md: 40px;
+  --global-kb-spacing-lg: 50px;
+  --global-kb-spacing-xl: 75px;
+  --global-kb-spacing-xxl: 100px;
+  --global-kb-spacing-3xl: 150px;
+  --global-kb-spacing-4xl: 200px;
+  --global-kb-spacing-5xl: 250px
 }
-body figure img {
-  display: block;
-  width: 100%
+body .has-x-large-font-size {
+  font-weight: 400
 }
 body .buttons-wrap {
   display: flex;
@@ -65,15 +51,25 @@ body .button-wrap {
   padding-top: 30px
 }
 body .wp-block-button .wp-block-button__link {
-  background-color: #fff;
-  color: #000;
-  border-color: #000
-}
-body .wp-block-button .wp-block-button__link:active,
-body .wp-block-button .wp-block-button__link:focus,
-body .wp-block-button .wp-block-button__link:hover {
-  color: #fff;
-  background-color: #000
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  font-family: var(--wp--preset--font-family--header);
+  border: 2px solid var(--wp--preset--color--red);
+  background: var(--wp--preset--color--red);
+  color: var(--wp--preset--color--white);
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 30px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: baseline;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-decoration: none;
+  -webkit-appearance: none
 }
 body .social-icons ul {
   margin: 0;
@@ -88,59 +84,145 @@ body .social-icons ul li a {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-size: 1.25rem
 }
+body .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+  padding-left: 0!important
+}
+body .wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__content {
+  padding-right: 0!important
+}
+body .wp-block-media-text hr {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  max-width: 150px!important;
+  color: var(--wp--preset--color--yellow)
+}
+body .wp-block-media-text .wp-block-media-text__content h3 {
+  margin-bottom: 15px
+}
+body .wp-block-media-text .wp-block-media-text__content ul li {
+  margin-bottom: 0
+}
+body .icon-heading {
+  margin: 0
+}
+body .icon-heading .kt-svg-icon-list-text {
+  color: var(--wp--preset--color--black)
+}
+body .icon-link li {
+  flex-direction: row-reverse;
+  justify-content: flex-end
+}
+body .icon-link .kb-svg-icon-wrap {
+  margin-right: 0;
+  margin-left: 5px
+}
+body .icon-link .kt-svg-icon-list-text a {
+  font-family: var(--wp--preset--font-family--header);
+  font-weight: 500;
+  text-decoration: none
+}
+body .icon-link .kt-svg-icon-list-text a:active,
+body .icon-link .kt-svg-icon-list-text a:focus,
+body .icon-link .kt-svg-icon-list-text a:hover {
+  text-decoration: underline
+}
+body .wp-block-image {
+  margin-bottom: 20px
+}
+body .count-split-row.reverse .wp-block-kadence-countup {
+  flex-direction: row-reverse
+}
+body .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
+  margin-left: 20px;
+  margin-right: 0
+}
+body .count-split-row .wp-block-kadence-countup {
+  display: flex;
+  align-items: flex-start
+}
+body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+  margin-right: 20px;
+  background: var(--wp--preset--color--yellow);
+  border-radius: 50%;
+  margin-top: -5px;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px
+}
+body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
+  max-width: 325px
+}
 body .editor-styles-wrapper {
   font-family: var(--wp--preset--font-family--body)
 }
 body .editor-styles-wrapper .h1,
 body .editor-styles-wrapper .preset1,
 body .editor-styles-wrapper h1 {
-  font-size: 4.375rem;
-  line-height: 110%;
-  font-weight: 600
+  font-family: var(--wp--preset--font-family--header);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2
 }
 body .editor-styles-wrapper .h2,
+body .editor-styles-wrapper .icon-heading .kt-svg-icon-list-text,
 body .editor-styles-wrapper .preset2,
-body .editor-styles-wrapper h2 {
-  font-size: 3.125rem;
-  line-height: 125%;
-  font-weight: 500
+body .editor-styles-wrapper h2,
+body .icon-heading .editor-styles-wrapper .kt-svg-icon-list-text {
+  font-family: var(--wp--preset--font-family--header);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.2
 }
+body .count-split-row .editor-styles-wrapper .wp-block-kadence-countup,
+body .editor-styles-wrapper .count-split-row .wp-block-kadence-countup,
 body .editor-styles-wrapper .h3,
 body .editor-styles-wrapper .preset3,
 body .editor-styles-wrapper h3 {
-  font-size: 2.5rem;
-  line-height: 130%;
-  font-weight: 600
+  font-family: var(--wp--preset--font-family--header);
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1.2
 }
 body .editor-styles-wrapper .h4,
+body .editor-styles-wrapper .has-x-large-font-size,
 body .editor-styles-wrapper .preset4,
 body .editor-styles-wrapper h4 {
-  font-size: 1.875rem;
-  line-height: 130%
+  font-family: var(--wp--preset--font-family--header);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2
 }
 body .editor-styles-wrapper .h5,
 body .editor-styles-wrapper .preset5,
 body .editor-styles-wrapper h5 {
+  font-family: var(--wp--preset--font-family--header);
   font-size: 1.5rem;
-  line-height: 140%
+  font-weight: 600;
+  line-height: 1.2
 }
 body .editor-styles-wrapper .h6,
 body .editor-styles-wrapper .preset6,
 body .editor-styles-wrapper h6 {
+  font-family: var(--wp--preset--font-family--header);
   font-size: 1.25rem;
-  line-height: 150%
+  font-weight: 600;
+  line-height: 1.2
 }
 body .editor-styles-wrapper .gform_confirmation_wrapper .gform_confirmation_message,
 body .editor-styles-wrapper li,
 body .editor-styles-wrapper p {
-  font-size: 1.125rem;
-  line-height: 165%
+  font-size: 1rem;
+  line-height: 1.7
 }
 body .editor-styles-wrapper body {
   color: var(--wp--preset--color--black)
 }
 body .editor-styles-wrapper li,
 body .editor-styles-wrapper p {
+  color: var(--wp--preset--color--dark-brown);
   margin-bottom: 20px
 }
 body .editor-styles-wrapper blockquote {
@@ -161,12 +243,7 @@ body .editor-styles-wrapper body:not(.wp-admin) {
 }
 body .editor-styles-wrapper main a {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  color: red
-}
-body .editor-styles-wrapper main a:active,
-body .editor-styles-wrapper main a:focus,
-body .editor-styles-wrapper main a:hover {
-  color: purple
+  color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper h1,
 body .editor-styles-wrapper h2,
@@ -174,7 +251,7 @@ body .editor-styles-wrapper h3,
 body .editor-styles-wrapper h4,
 body .editor-styles-wrapper h5,
 body .editor-styles-wrapper h6 {
-  margin: 0 0 15px
+  margin: 0 0 20px
 }
 body .editor-styles-wrapper form input[type],
 body .editor-styles-wrapper form select,
@@ -270,16 +347,26 @@ body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer {
   padding-bottom: 25px
 }
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button {
-  background-color: #fff;
-  color: #000;
-  border-color: #000;
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  font-family: var(--wp--preset--font-family--header);
+  border: 2px solid var(--wp--preset--color--red);
+  background: var(--wp--preset--color--red);
+  color: var(--wp--preset--color--white);
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 30px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: baseline;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-decoration: none;
+  -webkit-appearance: none;
   margin: 0
-}
-body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button:active,
-body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button:focus,
-body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button:hover {
-  color: #fff;
-  background-color: #000
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gform_validation_errors {
   margin-bottom: 25px;
@@ -328,44 +415,29 @@ body .editor-styles-wrapper h1.wp-block-post-title {
 body .editor-styles-wrapper .acf-block-preview .button,
 body .editor-styles-wrapper .edit-post-visual-editor .button .button,
 body .editor-styles-wrapper .mce-content-body .button .button,
+body .editor-styles-wrapper .wp-block-button .wp-block-button__link,
 body .editor-styles-wrapper .wp-block-button__link .button,
 body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button,
 body .editor-styles-wrapper .wp-block.editor-block .button .button {
-  background-color: #fff;
-  color: #000;
-  border-color: #000
-}
-body .editor-styles-wrapper .acf-block-preview .button:active,
-body .editor-styles-wrapper .acf-block-preview .button:focus,
-body .editor-styles-wrapper .acf-block-preview .button:hover,
-body .editor-styles-wrapper .edit-post-visual-editor .button .button:active,
-body .editor-styles-wrapper .edit-post-visual-editor .button .button:focus,
-body .editor-styles-wrapper .edit-post-visual-editor .button .button:hover,
-body .editor-styles-wrapper .mce-content-body .button .button:active,
-body .editor-styles-wrapper .mce-content-body .button .button:focus,
-body .editor-styles-wrapper .mce-content-body .button .button:hover,
-body .editor-styles-wrapper .wp-block-button__link .button:active,
-body .editor-styles-wrapper .wp-block-button__link .button:focus,
-body .editor-styles-wrapper .wp-block-button__link .button:hover,
-body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button:active,
-body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button:focus,
-body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button:hover,
-body .editor-styles-wrapper .wp-block.editor-block .button .button:active,
-body .editor-styles-wrapper .wp-block.editor-block .button .button:focus,
-body .editor-styles-wrapper .wp-block.editor-block .button .button:hover {
-  color: #fff;
-  background-color: #000
-}
-body .editor-styles-wrapper .wp-block-button .wp-block-button__link {
-  background-color: #fff;
-  color: #000;
-  border-color: #000
-}
-body .editor-styles-wrapper .wp-block-button .wp-block-button__link:active,
-body .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus,
-body .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
-  color: #fff;
-  background-color: #000
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  font-family: var(--wp--preset--font-family--header);
+  border: 2px solid var(--wp--preset--color--red);
+  background: var(--wp--preset--color--red);
+  color: var(--wp--preset--color--white);
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 30px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: baseline;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-decoration: none;
+  -webkit-appearance: none
 }
 .interface-interface-skeleton__editor {
   overflow: auto!important
@@ -408,86 +480,71 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   z-index: 20;
   position: relative
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:769px) {
   .flex.reverse {
     flex-direction: row-reverse
   }
-}
-@media only screen and (max-width:1440px) {
-  body .editor-styles-wrapper .h1,
-  body .editor-styles-wrapper .preset1,
-  body .editor-styles-wrapper h1 {
-    font-size: 3.5rem
-  }
-  body .editor-styles-wrapper .h2,
-  body .editor-styles-wrapper .preset2,
-  body .editor-styles-wrapper h2 {
-    font-size: 2.5rem
-  }
-  body .editor-styles-wrapper .h3,
-  body .editor-styles-wrapper .preset3,
-  body .editor-styles-wrapper h3 {
-    font-size: 2rem
-  }
-  body .editor-styles-wrapper .h4,
-  body .editor-styles-wrapper .preset4,
-  body .editor-styles-wrapper h4 {
-    font-size: 1.6875rem
-  }
-  body .editor-styles-wrapper .h5,
-  body .editor-styles-wrapper .preset5,
-  body .editor-styles-wrapper h5 {
-    font-size: 1.25rem
+  body .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
+    margin-left: auto
   }
 }
 @media only screen and (max-width:1024px) {
-  body .editor-styles-wrapper .h1,
-  body .editor-styles-wrapper .preset1,
-  body .editor-styles-wrapper h1 {
-    font-size: 2.5rem
-  }
-  body .editor-styles-wrapper .h2,
-  body .editor-styles-wrapper .preset2,
-  body .editor-styles-wrapper h2 {
-    font-size: 1.875rem
-  }
-  body .editor-styles-wrapper .h3,
-  body .editor-styles-wrapper .preset3,
-  body .editor-styles-wrapper h3 {
-    font-size: 1.75rem
-  }
-  body .editor-styles-wrapper .h4,
-  body .editor-styles-wrapper .preset4,
-  body .editor-styles-wrapper h4 {
-    font-size: 1.5rem
-  }
-  body .editor-styles-wrapper .h6,
-  body .editor-styles-wrapper .preset6,
-  body .editor-styles-wrapper h6 {
-    font-size: 1rem
-  }
-  body .editor-styles-wrapper h1 br,
-  body .editor-styles-wrapper h2 br,
-  body .editor-styles-wrapper h3 br,
-  body .editor-styles-wrapper h4 br,
-  body .editor-styles-wrapper h5 br,
-  body .editor-styles-wrapper h6 br {
-    display: none
+  .container {
+    padding-left: 75px;
+    padding-right: 75px
   }
 }
 @media only screen and (max-width:768px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px
+  }
   .flex {
     flex-direction: column
   }
   body .social-icons ul {
     justify-content: center
   }
+  body .wp-block-media-text.is-stacked-on-mobile {
+    grid-template-columns: 100%!important
+  }
+  body .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+    grid-column: 1!important;
+    grid-row: 1!important
+  }
+  body .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    grid-column: 1!important;
+    grid-row: 2!important
+  }
+  body .wp-block-media-text .wp-block-media-text__content {
+    padding-top: 50px!important;
+    padding-left: 0!important;
+    padding-right: 0!important
+  }
+  body .editor-styles-wrapper .h1,
+  body .editor-styles-wrapper .preset1,
+  body .editor-styles-wrapper h1 {
+    font-size: 2.25rem
+  }
+  body .editor-styles-wrapper .h2,
+  body .editor-styles-wrapper .icon-heading .kt-svg-icon-list-text,
+  body .editor-styles-wrapper .preset2,
+  body .editor-styles-wrapper h2,
+  body .icon-heading .editor-styles-wrapper .kt-svg-icon-list-text {
+    font-size: 2rem
+  }
+  body .count-split-row .editor-styles-wrapper .wp-block-kadence-countup,
+  body .editor-styles-wrapper .count-split-row .wp-block-kadence-countup,
+  body .editor-styles-wrapper .h3,
+  body .editor-styles-wrapper .preset3,
+  body .editor-styles-wrapper h3 {
+    font-size: 1.75rem
+  }
 }
 @media only screen and (max-width:480px) {
   body .editor-styles-wrapper .gform_confirmation_wrapper .gform_confirmation_message,
   body .editor-styles-wrapper li,
   body .editor-styles-wrapper p {
-    font-size: 1rem;
-    line-height: 170%
+    font-size: .875rem
   }
 }

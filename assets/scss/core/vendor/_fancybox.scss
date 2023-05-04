@@ -186,7 +186,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   box-shadow: 0 0 0 1px #fff, 0 0 0 2px var(--fancybox-accent-color, rgba(1, 210, 232, 0.94))
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .fancybox__container {
     --carousel-button-width: 48px;
     --carousel-button-height: 48px;
@@ -256,7 +256,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__slide {
-  @include for-size(tablet, up) {
+  @include for-size(tablet, up, offset) {
     padding: 50px 100px
   }
   @include for-size(tablet) {
@@ -311,7 +311,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   right: 8px
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .fancybox__nav .carousel__button.is-next {
     right: 40px
   }
@@ -321,7 +321,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   left: 8px
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .fancybox__nav .carousel__button.is-prev {
     left: 40px
   }
@@ -336,7 +336,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   z-index: 40
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .carousel__button.is-close {
     right: 40px
   }
@@ -769,7 +769,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   text-shadow: var(--fancybox-toolbar-text-shadow, 1px 1px 1px rgba(0, 0, 0, 0.4))
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .fancybox__toolbar {
     padding: 8px
   }
@@ -801,7 +801,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   margin-left: auto
 }
 
-@media(max-width: 640px) {
+@media only screen and (max-width: 640px) {
   .fancybox__toolbar__items--center:not(:last-child) {
     display: none
   }

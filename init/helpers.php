@@ -187,20 +187,21 @@ function my_acf_admin_head() {
   .acf-field-wysiwyg.short .mce-edit-area iframe {
     height: auto !important;
   }
-  .acf-field.heading>.acf-label {
-    text-align: center;
+  .acf-field.heading >.acf-label {
+/*    text-align: center;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 20px;*/
   }
   .acf-block-fields>.acf-field-group>.acf-label label,
   .acf-block-fields>.acf-field-repeater>.acf-label label {
-    display: block;
     text-align: center;
+    font-weight: 700 !important;
+/*    display: block;
     font-size: 20px;
     color: #555;
     line-height: 1;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
   }
   .acf-relationship ul.acf-bl {
     text-align: left;
@@ -365,9 +366,9 @@ function reorder_admin_menu( $__return_true ) {
   return [
        'index.php',
        'edit.php?post_type=page',
+       'edit.php?post_type=provider',
        'admin.php?page=gf_edit_forms',
        'edit.php',
-       'edit.php?post_type=POSTTYPE',
        'separator1',
        'themes.php',
         // 'edit-comments.php', (de-registered below)

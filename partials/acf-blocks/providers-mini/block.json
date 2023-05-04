@@ -1,0 +1,52 @@
+{
+  "name": "acf/providers-mini",
+  "title": "Providers Mini Links",
+  "description": "",
+  "style": "file:./style.css" ,
+  "category": "custom_blocks",
+  "icon": "cover-image",
+  "keywords": [""],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php",
+    "postTypes": ["post", "page"]
+  },
+  "align": "full",
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "alignContent": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "fullHeight": false,
+    "alignText": false,
+    "spacing": {
+        "margin": true,
+        "padding": true
+    },
+    "typography": {
+        "lineHeight": false,
+        "fontSize": false
+    }
+  },
+  "example": {
+		"innerBlocks": [
+			{
+				"name": "core/heading",
+				"attributes": {
+					"level": 1,
+					"content": "Page Hero Header"
+				}
+			},
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Page Hero Copy"
+				}
+			}
+		]
+	}
+}

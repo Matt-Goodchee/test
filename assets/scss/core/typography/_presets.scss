@@ -2,73 +2,81 @@
 ========================================================= */
 
 %preset1 {
-  font-size: rem(70);
-  line-height: 110%;
-  font-weight: 600;
+  @include font('heading');
+  font-size: rem(48);
+  font-weight: 500;
+  line-height: 1.2;
   @include for-size(laptop) {
-    font-size: rem(56);
+    // font-size: rem(56);
   }
-  @include for-size(tablet) {
-    font-size: rem(40);
+  @include for-size(tablet-sm) {
+    font-size: rem(36);
   }
 }
 
 %preset2 {
-  font-size: rem(50);
-  line-height: 125%;
-  font-weight: 500;
+  @include font('heading');
+  font-size: rem(36);
+  font-weight: 600;
+  line-height: 1.2;
   @include for-size(laptop) {
-    font-size: rem(40);
+    // font-size: rem(40);
   }
-  @include for-size(tablet) {
-    font-size: rem(30);
+  @include for-size(tablet-sm) {
+    font-size: rem(32);
   }
 }
 
 %preset3 {
-  font-size: rem(40);
-  line-height: 130%;
-  font-weight: 600;
+  @include font('heading');
+  font-size: rem(30);
+  font-weight: 500;
+  line-height: 1.2;
   @include for-size(laptop) {
-    font-size: rem(32);
+    // font-size: rem(32);
   }
-  @include for-size(tablet) {
+  @include for-size(tablet-sm) {
     font-size: rem(28);
   }
 }
 
 %preset4 {
-  font-size: rem(30);
-  line-height: 130%;
+  @include font('heading');
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: 1.2;
   @include for-size(laptop) {
-    font-size: rem(27);
+    // font-size: rem(27);
   }
-  @include for-size(tablet) {
-    font-size: rem(24);
+  @include for-size(tablet-sm) {
+    // font-size: rem(24);
   }
 }
 
 %preset5 {
+  @include font('heading');
   font-size: rem(24);
-  line-height: 140%;
-  @include for-size(laptop) {
-    font-size: rem(20);
+  font-weight: 600;
+  line-height: 1.2;
+  @include for-size(tablet-sm) {
+    // font-size: rem(20);
   }
 }
 
 %preset6 {
+  @include font('heading');
   font-size: rem(20);
-  line-height: 150%;
-  @include for-size(tablet) {
-    font-size: rem(16);
+  font-weight: 600;
+  line-height: 1.2;
+  @include for-size(tablet-sm) {
+    // font-size: rem(16);
   }
 }
 
 %body-copy {
-  font-size: rem(18);
-  line-height: 165%;
+  font-size: rem(16);
+  line-height: 1.7;
   @include for-size(phone) {
-    font-size: rem(16);
-    line-height: 170%;
+    font-size: rem(14);
   }
 }

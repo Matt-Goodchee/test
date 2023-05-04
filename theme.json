@@ -17,12 +17,36 @@
        { "name": "White",
         "slug": "white",
         "color": "#ffffff"
+      },
+      { "name": "Red",
+        "slug": "red",
+        "color": "#F0421C"
+      },
+      { "name": "Dark Brown",
+        "slug": "dark-brown",
+        "color": "#212121"
+      },
+      { "name": "Yellow",
+        "slug": "yellow",
+        "color": "#E3B505"
+      },
+      { "name": "Gray",
+        "slug": "gray",
+        "color": "#797673"
+      },
+      { "name": "Teal",
+        "slug": "teal",
+        "color": "#17A398"
+      },
+      { "name": "Ivory",
+        "slug": "ivory",
+        "color": "#FAFAF2"
       }
     ]
     },
     "layout": {
-      "contentSize": "1200px",
-      "wideSize": "1400px"
+      "contentSize": "1440px",
+      "wideSize": "1440px"
     },
     "spacing": {
       "customMargin": true,
@@ -45,12 +69,12 @@
       "dropCap": false,
       "fontFamilies": [
         {
-          "fontFamily": "Georgia, sans-serif",
+          "fontFamily": "Montserrat, sans-serif",
           "slug": "header",
           "name": "Header Font"
         },
         {
-          "fontFamily": "Arial, sans-serif",
+          "fontFamily": "Karla, sans-serif",
           "slug": "body",
           "name": "Body Font"
         }                

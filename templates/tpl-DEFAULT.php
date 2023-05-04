@@ -62,7 +62,7 @@ get_header();
     <p style="display:inline">Non-Inline Links: </p> <a href="">Link 3</a> <a href="">Link 4</a>
 
     <div class="button-wrap">
-      <a href="#" class="button blue">Apply Now</a>
+      <a href="#" class="button blue">Primary CTA Button</a>
     </div>
 
     <hr>

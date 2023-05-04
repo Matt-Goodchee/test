@@ -47,7 +47,7 @@ $browser-context: 16; // Default
   $top-medium:60, $bottom-medium:60,
   $top-small:$top-medium, $bottom-small:$bottom-medium) {
 
-  @include for-size(tablet, up) {
+  @include for-size(tablet, up, offset) {
     padding-top: $top-large + px;
     padding-bottom: $bottom-large + px;
   }
@@ -130,29 +130,75 @@ $browser-context: 16; // Default
 }
 
 
+@mixin image-border($pos) {
+  position: relative;
+  &:before {
+    content:'';
+    display: block;
+    position: absolute;
+    background: $red;
+    width: 80%;
+    height: 50px;
+    z-index: 0;
+  }
+  @if ($pos == 'top left') {
+    &:before {
+      top: -12px;
+      left: -12px;
+    }
+  }
+  @else if ($pos == 'top right') {
+    &:before {
+      top: -12px;
+      right: -12px;
+    }
+  }
+  @else if ($pos == 'bottom left') {
+    &:before {
+      bottom: -12px;
+      left: -12px;
+    }
+  }
+  @else if ($pos == 'bottom right') {
+    &:before {
+      bottom: -12px;
+      right: -12px;
+    }
+  }
+}
+
+@mixin image-rounded($pos) {
+  @if ($pos == 'top left') {
+    border-top-left-radius: 60px;
+  }
+  @else if ($pos == 'top right') {
+    border-top-right-radius: 60px;
+  }
+  @else if ($pos == 'bottom left') {
+    border-bottom-left-radius: 60px;
+  }
+  @else if ($pos == 'bottom right') {
+    border-bottom-right-radius: 60px;
+  }
+}
+
 /* Button ( color, background, border )
 ========================================================= */
-%btn {
+@mixin button {
   @include trans;
-  border: 2px solid transparent;
+  @include font('heading');
+  border: 2px solid $red;
+  background: $red;
+  color: $white;
+  border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 10px 40px;
+  padding: 8px 30px;
   text-align: center;
   user-select: none;
   vertical-align: baseline;
-  font-size: rem(18);
+  font-size: rem(20);
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none;
-}
-@mixin button($color:black, $bg:white, $border:black) {
-  @extend %btn;
-  background-color: $bg;
-  color: $color;
-  border-color: $border;
-  &:hover, &:focus, &:active {
-    color: $bg;
-    background-color: $color;
-  }
 }

@@ -1,14 +1,33 @@
-@include for-size(tablet, up) {
+@include for-size(tablet, up, offset) {
   
   header.main-banner {
+    box-shadow: 2px 2px 28px rgba(0, 0, 0, 0.2);
+    min-height: 100px;
+    position: relative;
+    margin-bottom: 50px;
+    &:before {
+      content:'';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg, #FFFFFF 65.27%, rgba(255, 255, 255, 0) 100%);
+      width: 60%;
+      height: 150px;
+      z-index: 0;
+      // display: none; // temp
+    }
     .container {
       display: flex;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
     
     .logo-brand {
       margin-right: auto;
       img {
+        width: 275px;
         display: block;
       }
     }
