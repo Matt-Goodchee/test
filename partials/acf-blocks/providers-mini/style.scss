@@ -19,8 +19,22 @@ $class: '.providers-mini';
     max-width: 195px;
     min-height: 135px;
     @each $color, $hex in $providers {
-      &.#{$color} .name {
-        background-color: #{$hex};
+      &.#{$color} {
+        .name {
+          background-color: #{$hex};
+        }
+        a {
+          &:hover, &:focus, &:active {
+            figure {
+              border-color: #{$hex};
+            }
+          }
+        }
+      }
+      &.current {
+        figure {
+          border-color: #{$hex};
+        }
       }
     }
     a {
@@ -33,6 +47,7 @@ $class: '.providers-mini';
       text-decoration: none;
     }
     figure {
+      @include trans;
       display: flex;
       align-items: center;
       padding: 20px 25px;
@@ -40,6 +55,8 @@ $class: '.providers-mini';
       background-color: $white;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+      border: 3px solid transparent;
+      border-bottom: none;
       img {
         width: 100%;
       }

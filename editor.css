@@ -129,18 +129,12 @@ body .icon-link .kt-svg-icon-list-text a:hover {
 body .wp-block-image {
   margin-bottom: 20px
 }
-body .count-split-row.reverse .wp-block-kadence-countup {
-  flex-direction: row-reverse
-}
-body .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
-  margin-left: 20px;
-  margin-right: 0
-}
 body .count-split-row .wp-block-kadence-countup {
   display: flex;
   align-items: flex-start
 }
 body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+  flex: 0 0 60px;
   margin-right: 20px;
   background: var(--wp--preset--color--yellow);
   border-radius: 50%;
@@ -153,7 +147,7 @@ body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
   font-size: 30px
 }
 body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-  max-width: 325px
+  flex: 1
 }
 body .editor-styles-wrapper {
   font-family: var(--wp--preset--font-family--body)
@@ -487,6 +481,18 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   body .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
     margin-left: auto
   }
+  body .count-split-row.reverse .wp-block-kadence-countup {
+    flex-direction: row-reverse
+  }
+  body .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
+    margin-left: 20px;
+    margin-right: 0
+  }
+}
+@media only screen and (min-width:1025px) {
+  body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
+    max-width: 325px
+  }
 }
 @media only screen and (max-width:1024px) {
   .container {
@@ -520,6 +526,9 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     padding-top: 50px!important;
     padding-left: 0!important;
     padding-right: 0!important
+  }
+  body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
+    text-align: left
   }
   body .editor-styles-wrapper .h1,
   body .editor-styles-wrapper .preset1,

@@ -1572,18 +1572,12 @@ img {
 .wp-block-image {
   margin-bottom: 20px
 }
-.count-split-row.reverse .wp-block-kadence-countup {
-  flex-direction: row-reverse
-}
-.count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
-  margin-left: 20px;
-  margin-right: 0
-}
 .count-split-row .wp-block-kadence-countup {
   display: flex;
   align-items: flex-start
 }
 .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+  flex: 0 0 60px;
   margin-right: 20px;
   background: var(--wp--preset--color--yellow);
   border-radius: 50%;
@@ -1596,7 +1590,30 @@ img {
   font-size: 30px
 }
 .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-  max-width: 325px
+  flex: 1
+}
+.kt-row-column-wrap .wp-block-kadence-column.full-width {
+  grid-column: 1/-1
+}
+.wp-block-table table {
+  border: none
+}
+.wp-block-table table tr {
+  border-bottom: 1px solid #d9d9d9
+}
+.wp-block-table table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none
+}
+.wp-block-table table td:nth-child(2) {
+  text-align: right
+}
+.kt-tabs-wrap .kt-tabs-title-list li {
+  flex: 1
+}
+.kt-tabs-wrap .kt-tabs-content-wrap .wp-block-kadence-tab {
+  padding: 30px 0
 }
 .posts-grid .grid {
   grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
@@ -1638,6 +1655,13 @@ img {
   }
   .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
     margin-left: auto
+  }
+  .count-split-row.reverse .wp-block-kadence-countup {
+    flex-direction: row-reverse
+  }
+  .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
+    margin-left: 20px;
+    margin-right: 0
   }
 }
 @media only screen and (min-width:1025px) {
@@ -1721,6 +1745,9 @@ img {
     left: 0;
     margin: 0;
     padding: 20px
+  }
+  .count-split-row .wp-block-kadence-countup .kb-count-up-title {
+    max-width: 325px
   }
   .archive-index,
   .post-single,
@@ -2039,6 +2066,9 @@ img {
     padding-top: 50px!important;
     padding-left: 0!important;
     padding-right: 0!important
+  }
+  .count-split-row .wp-block-kadence-countup .kb-count-up-title {
+    text-align: left
   }
 }
 @media only screen and (max-width:640px) {

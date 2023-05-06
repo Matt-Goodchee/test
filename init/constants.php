@@ -18,7 +18,10 @@ add_theme_support('align-full');
 register_nav_menus(array(
   'primary_nav' => __('Primary Navigation'),
   'mobile_nav'  => __('Mobile Navigation'),
-  'footer_nav'  => __('Footer Navigation')
+  'footer_nav_1'  => __('Footer Column 1'),
+  'footer_nav_2'  => __('Footer Column 2'),
+  'footer_nav_3'  => __('Footer Column 3'),
+  'footer_nav_4'  => __('Footer Column 4')
 ));
 
 /* Custom Image Sizes

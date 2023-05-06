@@ -1,0 +1,42 @@
+@import "../../../assets/scss/core/variables/queries";
+@import "../../../assets/scss/core/variables/variables";
+@import "../../../assets/scss/core/typography/presets";
+
+/* Custom Block Styles
+========================================================= */
+$class: '.image-border-custom-block';
+
+#{$class} {
+  figure {
+    max-width: 500px;
+    img {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  &.border-top-left figure {
+    @include image-border('top left');
+  }
+  &.border-top-right figure {
+    @include image-border('top right');
+  }
+  &.border-bottom-left figure {
+    @include image-border('bottom left');
+  }
+  &.border-bottom-right figure {
+    @include image-border('bottom right');
+  }
+  
+  &.rounded-top-left figure img {
+    @include image-rounded('top left');
+  }
+  &.rounded-top-right figure img {
+    @include image-rounded('top right');
+  }
+  &.rounded-bottom-left figure img {
+    @include image-rounded('bottom left');
+  }
+  &.rounded-bottom-right figure img {
+    @include image-rounded('bottom right');
+  }
+}
