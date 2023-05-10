@@ -149,6 +149,29 @@ body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
 body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
   flex: 1
 }
+body .kt-row-column-wrap .wp-block-kadence-column.full-width {
+  grid-column: 1/-1
+}
+body .wp-block-table table {
+  border: none
+}
+body .wp-block-table table tr {
+  border-bottom: 1px solid #d9d9d9
+}
+body .wp-block-table table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none
+}
+body .wp-block-table table td:nth-child(2) {
+  text-align: right
+}
+body .kt-tabs-wrap .kt-tabs-title-list li {
+  flex: 1
+}
+body .kt-tabs-wrap .kt-tabs-content-wrap .wp-block-kadence-tab {
+  padding: 30px 0
+}
 body .editor-styles-wrapper {
   font-family: var(--wp--preset--font-family--body)
 }

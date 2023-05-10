@@ -1,3 +1,142 @@
 .footer {
-display: none;
+  background: $dark-brown;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include for-size(tablet) {
+    .col-1 {
+      order: 4;
+      padding-top: 50px;
+    } 
+    .col-2 {
+      order: 1;
+    } 
+    .col-3 {
+      order: 2;
+      &:before, &:after {
+        content:'';
+        display: block;
+        background: $yellow;
+        width: 160px;
+        height: 1px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      &:before {
+        margin-top: 10px;
+      }
+    } 
+    .col-4 {
+      order: 3;
+    } 
+  }
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    @include for-size(tablet) {
+      flex-direction: column;
+    }
+  }
+  ul {
+    @include list-reset;
+  }
+  li {
+    margin-bottom: 10px;
+    a {
+      @include font('heading');
+      font-size: rem(14);
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+  p, li, a {
+    line-height: 1.1;
+    color: $white;
+  }
+  .footer-col {
+    flex: 1 0 calc(2 / 12 * 100%);
+    p {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &:not(:first-child) {
+      @include for-size(tablet, up, offset) {
+        border-left: 1px solid $yellow;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .col-1 {
+    flex-basis: calc(6 / 12 * 100%) !important;
+    .logo {
+      padding-bottom: 30px;
+      img {
+        width: 200px;
+      }
+    }
+    ul {
+      @include for-size(tablet, up, offset) {
+        padding-left: 70px;
+      }
+    }
+    li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: baseline;
+      &:before {
+        content:'';
+        display: block;
+        background: $yellow;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      a {
+        font-size: rem(16);
+        font-weight: 700;
+      }
+    }
+    .copyright {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      @include for-size(tablet, up, offset) {
+        padding-top: 80px; 
+      }
+      p {
+        font-size: rem(12);
+        font-weight: 400;
+        margin-bottom: 0;
+        a {
+          text-decoration: none;
+          &:hover, &:focus, &:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .logo-alt {
+      margin-right: 20px;
+      img {
+        width: 122px;
+      }
+    }
+  }
+
+  .col-2 {
+
+    a {
+      font-weight: 700;
+    }
+  }
+
+  .col-3 {
+
+  }
+
+  .col-4 {
+
+  }
 }

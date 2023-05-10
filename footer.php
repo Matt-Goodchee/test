@@ -1,9 +1,10 @@
 
 <?php // VARs & Optional ACF Footer Code
-$logo = get_template_directory_uri() . '/assets/img/svg/logo.svg';
+$logo = get_template_directory_uri() . '/assets/img/svg/logo-invert.svg';
 $logo_copyright = get_template_directory_uri() . '/assets/img/svg/logo-county.svg';
 if ( function_exists('get_field') ) :
  $footer_code = get_field('footer_code', 'option');
+ $copyright = get_field('copyright', 'option');
 endif; ?>
 
 </main>
@@ -19,13 +20,18 @@ endif; ?>
         </div>
       <?php endif; ?>
       <?php include locate_template('partials/navs/nav-footer-1.php'); ?>
-      <?php if ( $logo_copyright ) : ?>
+      <div class="copyright">
+              <?php if ( $logo_copyright ) : ?>
         <div class="logo-alt">
           <a href="#" title="">
             <img src="<?= $logo_copyright; ?>" alt="Clackamas County Logo">
           </a>
         </div>
       <?php endif; ?>
+      <?php if ( !empty($copyright) ) : ?>
+        <?= $copyright; ?>
+      <?php endif; ?>
+      </div>
     </div>
 
     <div class="footer-col col-2">

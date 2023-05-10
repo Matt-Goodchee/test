@@ -1,0 +1,70 @@
+.providers-index {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .grid {
+    // grid-template-columns: repeat(3, 375px);
+    grid-template-columns: repeat(auto-fit, minmax(375px, max-content));
+    
+    justify-content: center;
+  }
+  .provider {
+    max-width: 375px;
+    @each $color, $hex in $providers {
+      &.#{$color} {
+        a {
+          &:hover, &:focus, &:active {
+            figure, .meta {
+              border-color: #{$hex};
+            }
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      border-radius: 10px;
+      box-shadow: 1.6px 1.6px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+    }
+    figure {
+      @include trans;
+      display: flex;
+      align-items: center;
+      padding: 40px 60px;
+      flex: 1;
+      background-color: $white;
+      border: 3px solid transparent;
+      border-bottom: 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    .meta {
+      @include trans;
+      background: $ivory;
+      padding: 20px 30px;
+      border: 3px solid transparent;
+      border-top: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    h2 {
+      @extend %body-copy;
+      color: $dark-brown;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .link {
+      p {
+        @include font('heading');
+        color: $red;
+      }
+    }
+  }
+}
+

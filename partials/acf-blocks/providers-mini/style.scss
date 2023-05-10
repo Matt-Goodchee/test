@@ -18,6 +18,8 @@ $class: '.providers-mini';
     flex: 1 1 195px;
     max-width: 195px;
     min-height: 135px;
+    border-radius: 10px;
+    box-shadow: 1.6px 1.6px 10px rgba(0, 0, 0, 0.2);
     @each $color, $hex in $providers {
       &.#{$color} {
         .name {
@@ -39,8 +41,8 @@ $class: '.providers-mini';
     }
     a {
       display: block;
-      border-radius: 10px;
-      box-shadow: 1.57219px 1.57219px 10px rgba(0, 0, 0, 0.2);
+      // border-radius: 10px;
+      // box-shadow: 1.6px 1.6px 10px rgba(0, 0, 0, 0.2);
       display: flex;
       flex-direction: column;
       height: 100%;

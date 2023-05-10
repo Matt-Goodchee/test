@@ -2,8 +2,8 @@
 ========================================================= */
 $width       : var(--wp--style--global--content-size);
 $padding-lg  : 100px;
-$padding-md  : 75px;
-$padding-sm  : 40px;
+$padding-md  : 40px;
+// $padding-sm  : 40px;
 
 /* Containers 
 ========================================================= */
@@ -16,8 +16,8 @@ $padding-sm  : 40px;
     padding-right: $padding-md;
   }
   @include for-size(tablet-sm) {
-    padding-left: $padding-sm;
-    padding-right: $padding-sm;
+    // padding-left: $padding-sm;
+    // padding-right: $padding-sm;
   }
 }
 
@@ -29,7 +29,7 @@ $padding-sm  : 40px;
 
 .grid {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 20px;
   grid-template-columns: 1fr;
 }
 

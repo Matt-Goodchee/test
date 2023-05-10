@@ -128,7 +128,7 @@ q:before {
 }
 .grid {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 20px;
   grid-template-columns: 1fr
 }
 .flex {
@@ -210,6 +210,7 @@ h6 {
   line-height: 1.2
 }
 .gform_confirmation_wrapper .gform_confirmation_message,
+.providers-index .provider h2,
 li,
 p {
   font-size: 1rem;
@@ -936,7 +937,95 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: block
 }
 .footer {
-  display: none
+  background: var(--wp--preset--color--dark-brown);
+  padding-top: 60px;
+  padding-bottom: 40px
+}
+.footer .container {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+.footer li {
+  margin-bottom: 10px
+}
+.footer li a {
+  font-family: var(--wp--preset--font-family--header);
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: none
+}
+.footer a,
+.footer li,
+.footer p {
+  line-height: 1.1;
+  color: var(--wp--preset--color--white)
+}
+.footer .footer-col {
+  flex: 1 0 16.6666666667%
+}
+.footer .footer-col p {
+  font-weight: 700;
+  margin-bottom: 10px
+}
+.footer .col-1 {
+  flex-basis: 50%!important
+}
+.footer .col-1 .logo {
+  padding-bottom: 30px
+}
+.footer .col-1 .logo img {
+  width: 200px
+}
+.footer .col-1 li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: baseline
+}
+.footer .col-1 li:before {
+  content: "";
+  display: block;
+  background: var(--wp--preset--color--yellow);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px
+}
+.footer .col-1 li a {
+  font-size: 1rem;
+  font-weight: 700
+}
+.footer .col-1 .copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 20px
+}
+.footer .col-1 .copyright p {
+  font-size: .75rem;
+  font-weight: 400;
+  margin-bottom: 0
+}
+.footer .col-1 .copyright p a {
+  text-decoration: none
+}
+.footer .col-1 .copyright p a:active,
+.footer .col-1 .copyright p a:focus,
+.footer .col-1 .copyright p a:hover {
+  text-decoration: underline
+}
+.footer .col-1 .logo-alt {
+  margin-right: 20px
+}
+.footer .col-1 .logo-alt img {
+  width: 122px
+}
+.footer .col-2 a {
+  font-weight: 700
 }
 form input[type],
 form select,
@@ -1649,6 +1738,108 @@ img {
   margin-right: auto;
   display: block
 }
+.providers-index {
+  padding-top: 100px;
+  padding-bottom: 100px
+}
+.providers-index .grid {
+  grid-template-columns: repeat(auto-fit,minmax(375px,-webkit-max-content));
+  grid-template-columns: repeat(auto-fit,minmax(375px,max-content));
+  justify-content: center
+}
+.providers-index .provider {
+  max-width: 375px
+}
+.providers-index .provider.green a:active .meta,
+.providers-index .provider.green a:active figure,
+.providers-index .provider.green a:focus .meta,
+.providers-index .provider.green a:focus figure,
+.providers-index .provider.green a:hover .meta,
+.providers-index .provider.green a:hover figure {
+  border-color: #47a842
+}
+.providers-index .provider.pink a:active .meta,
+.providers-index .provider.pink a:active figure,
+.providers-index .provider.pink a:focus .meta,
+.providers-index .provider.pink a:focus figure,
+.providers-index .provider.pink a:hover .meta,
+.providers-index .provider.pink a:hover figure {
+  border-color: #e31479
+}
+.providers-index .provider.teal a:active .meta,
+.providers-index .provider.teal a:active figure,
+.providers-index .provider.teal a:focus .meta,
+.providers-index .provider.teal a:focus figure,
+.providers-index .provider.teal a:hover .meta,
+.providers-index .provider.teal a:hover figure {
+  border-color: #459baf
+}
+.providers-index .provider.navy a:active .meta,
+.providers-index .provider.navy a:active figure,
+.providers-index .provider.navy a:focus .meta,
+.providers-index .provider.navy a:focus figure,
+.providers-index .provider.navy a:hover .meta,
+.providers-index .provider.navy a:hover figure {
+  border-color: #176a90
+}
+.providers-index .provider.blue a:active .meta,
+.providers-index .provider.blue a:active figure,
+.providers-index .provider.blue a:focus .meta,
+.providers-index .provider.blue a:focus figure,
+.providers-index .provider.blue a:hover .meta,
+.providers-index .provider.blue a:hover figure {
+  border-color: #0064cb
+}
+.providers-index .provider.lime a:active .meta,
+.providers-index .provider.lime a:active figure,
+.providers-index .provider.lime a:focus .meta,
+.providers-index .provider.lime a:focus figure,
+.providers-index .provider.lime a:hover .meta,
+.providers-index .provider.lime a:hover figure {
+  border-color: #8dc63f
+}
+.providers-index .provider a {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 1.6px 1.6px 10px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none
+}
+.providers-index .provider figure {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  display: flex;
+  align-items: center;
+  padding: 40px 60px;
+  flex: 1;
+  background-color: var(--wp--preset--color--white);
+  border: 3px solid transparent;
+  border-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px
+}
+.providers-index .provider figure img {
+  width: 100%
+}
+.providers-index .provider .meta {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  background: var(--wp--preset--color--ivory);
+  padding: 20px 30px;
+  border: 3px solid transparent;
+  border-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px
+}
+.providers-index .provider h2 {
+  color: var(--wp--preset--color--dark-brown);
+  font-weight: 700;
+  margin-bottom: 10px
+}
+.providers-index .provider .link p {
+  font-family: var(--wp--preset--font-family--header);
+  color: var(--wp--preset--color--red)
+}
 @media only screen and (min-width:769px) {
   .flex.reverse {
     flex-direction: row-reverse
@@ -1685,6 +1876,16 @@ img {
   }
   .fancybox__toolbar {
     padding: 8px
+  }
+  .footer .footer-col:not(:first-child) {
+    border-left: 1px solid var(--wp--preset--color--yellow);
+    padding-left: 20px
+  }
+  .footer .col-1 ul {
+    padding-left: 70px
+  }
+  .footer .col-1 .copyright {
+    padding-top: 80px
   }
   header.main-banner {
     box-shadow: 2px 2px 28px rgba(0,0,0,.2);
@@ -1759,11 +1960,40 @@ img {
 }
 @media only screen and (max-width:1024px) {
   .container {
-    padding-left: 75px;
-    padding-right: 75px
+    padding-left: 40px;
+    padding-right: 40px
   }
   .fancybox__slide {
     padding: 110px 50px 50px
+  }
+  .footer .col-1 {
+    order: 4;
+    padding-top: 50px
+  }
+  .footer .col-2 {
+    order: 1
+  }
+  .footer .col-3 {
+    order: 2
+  }
+  .footer .col-3:after,
+  .footer .col-3:before {
+    content: "";
+    display: block;
+    background: var(--wp--preset--color--yellow);
+    width: 160px;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px
+  }
+  .footer .col-3:before {
+    margin-top: 10px
+  }
+  .footer .col-4 {
+    order: 3
+  }
+  .footer .container {
+    flex-direction: column
   }
   .alignleft,
   .alignright {
@@ -2024,10 +2254,6 @@ img {
   }
 }
 @media only screen and (max-width:768px) {
-  .container {
-    padding-left: 40px;
-    padding-right: 40px
-  }
   .flex {
     flex-direction: column
   }
@@ -2078,6 +2304,7 @@ img {
 }
 @media only screen and (max-width:480px) {
   .gform_confirmation_wrapper .gform_confirmation_message,
+  .providers-index .provider h2,
   li,
   p {
     font-size: .875rem
