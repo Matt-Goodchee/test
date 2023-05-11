@@ -14,6 +14,6 @@ $value = is_search() ? get_search_query() : ''; ?>
     aria-label  = "Enter search term"
     name        = "s"
     >
-    <button type="submit" class="search-button">Search</button>
+    <!-- <button type="submit" class="search-button">Search</button> -->
   </form>
 </div>

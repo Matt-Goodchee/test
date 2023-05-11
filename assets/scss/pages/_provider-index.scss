@@ -4,7 +4,6 @@
   .grid {
     // grid-template-columns: repeat(3, 375px);
     grid-template-columns: repeat(auto-fit, minmax(375px, max-content));
-    
     justify-content: center;
   }
   .provider {

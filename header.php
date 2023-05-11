@@ -10,7 +10,7 @@
 
   <?php // Logos & Optional ACF Header Code
   require_once locate_template('/init/shortcodes.php');
-  $logo = get_template_directory_uri() . '/assets/img/svg/logo.svg';
+  // $logo = get_template_directory_uri() . '/assets/img/svg/logo.svg';
   if ( function_exists('get_field') ) :
     $head_code = get_field('head_code', 'option');
     $body_code = get_field('body_code', 'option');
@@ -27,20 +27,13 @@
   if ( isset($body_code) ) echo $body_code; ?>
 
   <header class="main-banner">
-    <div class="container">
-
-      <div class="logo-brand">
-        <a href="<?= home_url(); ?>" class="brand" title="Home">
-          <img src="<?= $logo; ?>" alt="Site Logo">
-        </a>
-      </div>
+    <!-- <div class="container"> -->
 
       <nav>
         <?php get_template_part('partials/navs/nav-desktop');?>
-        <?php get_template_part('partials/navs/nav-mobile');?>
       </nav>
 
-    </div>
+    <!-- </div> -->
   </header>
 
   <main id="top-of-content">
