@@ -1,11 +1,11 @@
 {
-  "name": "acf/page-hero",
-  "title": "Page Hero",
-  "description": "Page Hero with Background Image and Inner Blocks",
+  "name": "acf/news-posts",
+  "title": "News Posts",
+  "description": "",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
   "icon": "cover-image",
-  "keywords": ["hero","masthead","banner"],
+  "keywords": [],
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php",
@@ -31,22 +31,5 @@
         "lineHeight": false,
         "fontSize": false
     }
-  },
-  "example": {
-		"innerBlocks": [
-			{
-				"name": "core/heading",
-				"attributes": {
-					"level": 1,
-					"content": "Page Hero Header"
-				}
-			},
-			{
-				"name": "core/paragraph",
-				"attributes": {
-					"content": "Page Hero Copy"
-				}
-			}
-		]
-	}
+  }
 }

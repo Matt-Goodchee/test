@@ -1,36 +1,23 @@
 <article class="post-entry">
 
-  <div class="post-entry__title">
-    <h3>
-      <a 
-      href  = "<?php the_permalink();?>"
-      title = "Read more about <?php the_title(); ?>"
-      ><?php the_title(); ?></a>
-    </h3>
-  </div>
-
   <?php if ( has_post_thumbnail() ) : ?>
-    <div class="post-entry__image">
-      <a 
-      href  = "<?php the_permalink();?>"
-      title = "Read more about <?php the_title(); ?>"
-      ><?php the_post_thumbnail('medium' ); ?></a>
+    <div class="post-entry__primary">
+      <figure>
+        <?php the_post_thumbnail('medium'); ?>
+      </figure>
     </div>
   <?php endif; ?>
 
-  <div class="post-entry__meta">
-    <?php include( locate_template('partials/posts/post-meta.php') ); ?>
-  </div>
-
-  <div class="post-entry__excerpt">
-    <?php the_excerpt(); ?>
-    <div class="button-wrap">
-      <a 
-      class = "button"
-      href  = "<?php the_permalink(); ?>"
-      title = "Read more about <?php the_title(); ?>"
-      >Read More</a>
+  <div class="post-entry__secondary">
+    <div class="flex">
+      <h3><?php the_title(); ?></h3>
+      <time datetime="<?= get_the_time('c'); ?>"><?= get_the_date(); ?></time>
     </div>
+    <?php if ( get_the_content() ) : ?>
+      <div class="content">
+        <?php the_content(); ?>
+      </div>
+    <?php endif; ?>
   </div>
 
 </article>

@@ -20,31 +20,12 @@ $name
   'layout'       => 'block',
 ]) // REQUIRED GROUP
 
-  ->addButtonGroup('direction', [
-    'label'  => 'Image Side',
-    'layout' => 'vertical',
-    'choices' => [
-      'normal'  => 'Left',
-      'reverse' => 'Right',
-    ],
-    'wrapper' => [
-      'class' => 'center',
-      'width' => '20%',
-    ]
-  ])
-  ->addImage('image_bg', [
-    'label' => 'Background Image',
-    'wrapper' => [
-      'class' => 'center',
-      'width' => '40%',
-    ]
-  ])
-  ->addImage('image', [
-    'label' => 'Side Image',
-    'wrapper' => [
-      'class' => 'center',
-      'width' => '40%',
-    ]
+  ->addMessage('notice', 'message', [
+    'label' => 'Note:',
+    'message' => 'Recent news posts will appear here',
+      'wrapper' => [
+        'class' => 'center',
+      ]
   ])
 
 ->endGroup() // END REQUIRED GROUP
