@@ -4,10 +4,34 @@ body {
   color: $black;
 }
 
+p {
+  &.has-small-font-size {
+
+  }
+  &.has-medium-font-size {
+
+  }
+  &.has-large-font-size {
+
+  }
+  &.has-x-large-font-size {
+    @extend %preset4;
+    font-weight: 400;
+    font-size: rem(20) !important;
+  }
+}
 p, li {
   @extend %body-copy;
   color: $dark-brown;
   margin-bottom: 20px;
+  a {
+    @include trans;
+    color: inherit;
+    text-decoration: underline;
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 blockquote {
@@ -33,11 +57,5 @@ body {
 }
 
 main {
-  a {
-    @include trans;
-    color: $red;
-    &:hover, &:focus, &:active {
-      // color: purple;
-    }
-  }
+
 }

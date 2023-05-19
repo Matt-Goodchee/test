@@ -187,13 +187,13 @@ $browser-context: 16; // Default
 @mixin button {
   @include trans;
   @include font('heading');
-  border: 2px solid $red;
+  border: 0;
   background: $red;
   color: $white;
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   user-select: none;
   vertical-align: baseline;
@@ -201,4 +201,7 @@ $browser-context: 16; // Default
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none;
+  &:hover, &:focus, &:active {
+    background-color: $dark-brown;
+  }
 }

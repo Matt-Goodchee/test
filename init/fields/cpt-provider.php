@@ -9,13 +9,13 @@ $templates
   'instructions' => '',
   'layout'       => 'block',
 ])
-  ->addText('long_name', [
-    'label' => 'Long Name',
-    'wrapper' => [
-      'class' => 'center',
-      'width' => '50%',
-    ]
-  ])
+  // ->addText('long_name', [
+  //   'label' => 'Long Name',
+  //   'wrapper' => [
+  //     'class' => 'center',
+  //     'width' => '50%',
+  //   ]
+  // ])
   ->addText('short_name', [
     'label' => 'Short Name',
     'wrapper' => [
@@ -25,7 +25,7 @@ $templates
   ])
   ->addButtonGroup('accent_color', [
     'label'  => 'Accent Color',
-    'layout' => 'horizontal',
+    'layout' => 'vertical',
     'default_value' => '',
     'choices' => [
       'green' => 'Green',
@@ -37,7 +37,7 @@ $templates
     ],
     'wrapper' => [
       'class' => 'center',
-      // 'width' => '50%',
+      'width' => '50%',
     ]
   ])
 ->endGroup()

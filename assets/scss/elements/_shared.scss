@@ -1,19 +1,7 @@
 
 /* Misc
 ========================================================= */
-.has-small-font-size {
 
-}
-.has-medium-font-size {
-
-}
-.has-large-font-size {
-
-}
-.has-x-large-font-size {
-  @extend %preset4;
-  font-weight: 400;
-}
 
 
 
@@ -35,6 +23,11 @@
 
 /* Buttons
 ========================================================= */
+.wp-block-buttons {
+  &.is-layout-flex {
+    gap: 30px;
+  }
+}
 .wp-block-button {
   .wp-block-button__link {
     @include button;
@@ -206,7 +199,7 @@
 .kt-row-column-wrap {
   .wp-block-kadence-column {
     &.full-width {
-      grid-column: 1/-1;
+      // grid-column: 1/-1;
     }
   }
 }

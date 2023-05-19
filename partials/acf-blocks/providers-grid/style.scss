@@ -1,10 +1,19 @@
-.providers-index {
-  padding-top: 100px;
-  padding-bottom: 100px;
+@import "../../../assets/scss/core/variables/queries";
+@import "../../../assets/scss/core/variables/variables";
+@import "../../../assets/scss/core/typography/presets";
+@import "../../../assets/scss/core/variables/color-vars";
+
+/* Custom Block Styles
+========================================================= */
+$class: '.providers-index';
+
+#{$class} {
   .grid {
-    // grid-template-columns: repeat(3, 375px);
     grid-template-columns: repeat(auto-fit, minmax(375px, max-content));
     justify-content: center;
+    @include for-size(phone) {
+      grid-template-columns: 1fr;
+    }
   }
   .provider {
     max-width: 375px;
@@ -15,9 +24,30 @@
             figure, .meta {
               border-color: #{$hex};
             }
+            .link p {
+              color: $dark-brown;
+            }
           }
         }
       }
+    }
+    &.canby-area-transit img {
+      max-width: 255px;
+    }
+    &.clackco img {
+      max-width: 300px;
+    }
+    &.mhx-village-shuttle img {
+      max-width: 300px;
+    }
+    &.sandy-area-metro img {
+      max-width: 230px;
+    }
+    &.south-clackamas-transportation-district img {
+      max-width: 310px;
+    }
+    &.south-metro-area-regional-transit img {
+      max-width: 300px;
     }
     a {
       display: block;
@@ -32,19 +62,21 @@
       @include trans;
       display: flex;
       align-items: center;
-      padding: 40px 60px;
-      flex: 1;
+      padding: 20px;
+      flex: 0 0 200px;
       background-color: $white;
       border: 3px solid transparent;
       border-bottom: 0;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       img {
+        @include margin-center;
         width: 100%;
       }
     }
     .meta {
       @include trans;
+      flex: 1;
       background: $ivory;
       padding: 20px 30px;
       border: 3px solid transparent;
@@ -61,9 +93,9 @@
     .link {
       p {
         @include font('heading');
+        @include trans;
         color: $red;
       }
     }
   }
 }
-

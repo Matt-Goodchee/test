@@ -18,6 +18,12 @@ body {
     @import "layout/global-forms";
     
 
+    .icon-heading {
+      display: flex;
+      justify-content: center;
+    }
+
+
     h1.wp-block-post-title {
      font-size: 40px; 
     }

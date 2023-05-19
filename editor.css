@@ -35,9 +35,6 @@
   --global-kb-spacing-4xl: 200px;
   --global-kb-spacing-5xl: 250px
 }
-body .has-x-large-font-size {
-  font-weight: 400
-}
 body .buttons-wrap {
   display: flex;
   align-items: center;
@@ -50,16 +47,19 @@ body .buttons-wrap .button {
 body .button-wrap {
   padding-top: 30px
 }
+body .wp-block-buttons.is-layout-flex {
+  gap: 30px
+}
 body .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header);
-  border: 2px solid var(--wp--preset--color--red);
+  border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -70,6 +70,11 @@ body .wp-block-button .wp-block-button__link {
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none
+}
+body .wp-block-button .wp-block-button__link:active,
+body .wp-block-button .wp-block-button__link:focus,
+body .wp-block-button .wp-block-button__link:hover {
+  background-color: var(--wp--preset--color--dark-brown)
 }
 body .social-icons ul {
   margin: 0;
@@ -149,9 +154,6 @@ body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
 body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
   flex: 1
 }
-body .kt-row-column-wrap .wp-block-kadence-column.full-width {
-  grid-column: 1/-1
-}
 body .wp-block-table table {
   border: none
 }
@@ -204,9 +206,9 @@ body .editor-styles-wrapper h3 {
   line-height: 1.2
 }
 body .editor-styles-wrapper .h4,
-body .editor-styles-wrapper .has-x-large-font-size,
 body .editor-styles-wrapper .preset4,
-body .editor-styles-wrapper h4 {
+body .editor-styles-wrapper h4,
+body .editor-styles-wrapper p.has-x-large-font-size {
   font-family: var(--wp--preset--font-family--header);
   font-size: 1.25rem;
   font-weight: 600;
@@ -237,10 +239,28 @@ body .editor-styles-wrapper p {
 body .editor-styles-wrapper body {
   color: var(--wp--preset--color--black)
 }
+body .editor-styles-wrapper p.has-x-large-font-size {
+  font-weight: 400;
+  font-size: 1.25rem!important
+}
 body .editor-styles-wrapper li,
 body .editor-styles-wrapper p {
   color: var(--wp--preset--color--dark-brown);
   margin-bottom: 20px
+}
+body .editor-styles-wrapper li a,
+body .editor-styles-wrapper p a {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  color: inherit;
+  text-decoration: underline
+}
+body .editor-styles-wrapper li a:active,
+body .editor-styles-wrapper li a:focus,
+body .editor-styles-wrapper li a:hover,
+body .editor-styles-wrapper p a:active,
+body .editor-styles-wrapper p a:focus,
+body .editor-styles-wrapper p a:hover {
+  text-decoration: none
 }
 body .editor-styles-wrapper blockquote {
   border-top: 2px solid var(--wp--preset--color--black);
@@ -257,10 +277,6 @@ body .editor-styles-wrapper blockquote p:last-of-type {
 }
 body .editor-styles-wrapper body:not(.wp-admin) {
   font-family: var(--wp--preset--font-family--body)
-}
-body .editor-styles-wrapper main a {
-  transition: .6s cubic-bezier(.23,1,.32,1);
-  color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper h1,
 body .editor-styles-wrapper h2,
@@ -366,13 +382,13 @@ body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer {
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header);
-  border: 2px solid var(--wp--preset--color--red);
+  border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -384,6 +400,11 @@ body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer butt
   text-decoration: none;
   -webkit-appearance: none;
   margin: 0
+}
+body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button:active,
+body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button:focus,
+body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button:hover {
+  background-color: var(--wp--preset--color--dark-brown)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gform_validation_errors {
   margin-bottom: 25px;
@@ -426,25 +447,28 @@ body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .validation_message {
   display: none
 }
+body .editor-styles-wrapper .icon-heading {
+  display: flex;
+  justify-content: center
+}
 body .editor-styles-wrapper h1.wp-block-post-title {
   font-size: 40px
 }
 body .editor-styles-wrapper .acf-block-preview .button,
 body .editor-styles-wrapper .edit-post-visual-editor .button .button,
 body .editor-styles-wrapper .mce-content-body .button .button,
-body .editor-styles-wrapper .wp-block-button .wp-block-button__link,
 body .editor-styles-wrapper .wp-block-button__link .button,
 body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button,
 body .editor-styles-wrapper .wp-block.editor-block .button .button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header);
-  border: 2px solid var(--wp--preset--color--red);
+  border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -455,6 +479,52 @@ body .editor-styles-wrapper .wp-block.editor-block .button .button {
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none
+}
+body .editor-styles-wrapper .acf-block-preview .button:active,
+body .editor-styles-wrapper .acf-block-preview .button:focus,
+body .editor-styles-wrapper .acf-block-preview .button:hover,
+body .editor-styles-wrapper .edit-post-visual-editor .button .button:active,
+body .editor-styles-wrapper .edit-post-visual-editor .button .button:focus,
+body .editor-styles-wrapper .edit-post-visual-editor .button .button:hover,
+body .editor-styles-wrapper .mce-content-body .button .button:active,
+body .editor-styles-wrapper .mce-content-body .button .button:focus,
+body .editor-styles-wrapper .mce-content-body .button .button:hover,
+body .editor-styles-wrapper .wp-block-button__link .button:active,
+body .editor-styles-wrapper .wp-block-button__link .button:focus,
+body .editor-styles-wrapper .wp-block-button__link .button:hover,
+body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button:active,
+body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button:focus,
+body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce .button .button:hover,
+body .editor-styles-wrapper .wp-block.editor-block .button .button:active,
+body .editor-styles-wrapper .wp-block.editor-block .button .button:focus,
+body .editor-styles-wrapper .wp-block.editor-block .button .button:hover {
+  background-color: var(--wp--preset--color--dark-brown)
+}
+body .editor-styles-wrapper .wp-block-button .wp-block-button__link {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  font-family: var(--wp--preset--font-family--header);
+  border: 0;
+  background: var(--wp--preset--color--red);
+  color: var(--wp--preset--color--white);
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: baseline;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-decoration: none;
+  -webkit-appearance: none
+}
+body .editor-styles-wrapper .wp-block-button .wp-block-button__link:active,
+body .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus,
+body .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
+  background-color: var(--wp--preset--color--dark-brown)
 }
 .interface-interface-skeleton__editor {
   overflow: auto!important

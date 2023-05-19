@@ -185,10 +185,10 @@ h3 {
   line-height: 1.2
 }
 .h4,
-.has-x-large-font-size,
 .mobile-nav-wrap .mobile-nav ul li a,
 .preset4,
-h4 {
+h4,
+p.has-x-large-font-size {
   font-family: var(--wp--preset--font-family--header);
   font-size: 1.25rem;
   font-weight: 600;
@@ -212,7 +212,6 @@ h6 {
   line-height: 1.2
 }
 .gform_confirmation_wrapper .gform_confirmation_message,
-.providers-index .provider h2,
 li,
 p {
   font-size: 1rem;
@@ -221,10 +220,28 @@ p {
 body {
   color: var(--wp--preset--color--black)
 }
+p.has-x-large-font-size {
+  font-weight: 400;
+  font-size: 1.25rem!important
+}
 li,
 p {
   color: var(--wp--preset--color--dark-brown);
   margin-bottom: 20px
+}
+li a,
+p a {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  color: inherit;
+  text-decoration: underline
+}
+li a:active,
+li a:focus,
+li a:hover,
+p a:active,
+p a:focus,
+p a:hover {
+  text-decoration: none
 }
 blockquote {
   border-top: 2px solid var(--wp--preset--color--black);
@@ -241,10 +258,6 @@ blockquote p:last-of-type {
 }
 body:not(.wp-admin) {
   font-family: var(--wp--preset--font-family--body)
-}
-main a {
-  transition: .6s cubic-bezier(.23,1,.32,1);
-  color: var(--wp--preset--color--red)
 }
 h1,
 h2,
@@ -1125,13 +1138,13 @@ form textarea:focus {
 .gform_wrapper.gravity-theme form .gform_footer button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header);
-  border: 2px solid var(--wp--preset--color--red);
+  border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1143,6 +1156,11 @@ form textarea:focus {
   text-decoration: none;
   -webkit-appearance: none;
   margin: 0
+}
+.gform_wrapper.gravity-theme form .gform_footer button:active,
+.gform_wrapper.gravity-theme form .gform_footer button:focus,
+.gform_wrapper.gravity-theme form .gform_footer button:hover {
+  background-color: var(--wp--preset--color--dark-brown)
 }
 .gform_wrapper.gform_validation_error .gform_validation_errors {
   margin-bottom: 25px;
@@ -1523,13 +1541,13 @@ button,
 input[type=submit] {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header);
-  border: 2px solid var(--wp--preset--color--red);
+  border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1540,6 +1558,17 @@ input[type=submit] {
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none
+}
+.button:active,
+.button:focus,
+.button:hover,
+button:active,
+button:focus,
+button:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=submit]:hover {
+  background-color: var(--wp--preset--color--dark-brown)
 }
 .button::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -1706,9 +1735,6 @@ img {
   text-align: center;
   z-index: 100000
 }
-.has-x-large-font-size {
-  font-weight: 400
-}
 .buttons-wrap {
   display: flex;
   align-items: center;
@@ -1721,16 +1747,19 @@ img {
 .button-wrap {
   padding-top: 30px
 }
+.wp-block-buttons.is-layout-flex {
+  gap: 30px
+}
 .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header);
-  border: 2px solid var(--wp--preset--color--red);
+  border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 30px;
+  padding: 10px 30px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1741,6 +1770,11 @@ img {
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none
+}
+.wp-block-button .wp-block-button__link:active,
+.wp-block-button .wp-block-button__link:focus,
+.wp-block-button .wp-block-button__link:hover {
+  background-color: var(--wp--preset--color--dark-brown)
 }
 .social-icons ul {
   margin: 0;
@@ -1820,9 +1854,6 @@ img {
 .count-split-row .wp-block-kadence-countup .kb-count-up-title {
   flex: 1
 }
-.kt-row-column-wrap .wp-block-kadence-column.full-width {
-  grid-column: 1/-1
-}
 .wp-block-table table {
   border: none
 }
@@ -1877,107 +1908,47 @@ img {
   margin-right: auto;
   display: block
 }
-.providers-index {
-  padding-top: 100px;
-  padding-bottom: 100px
+.provider-content-row .meta-group {
+  border-left: 4px solid var(--wp--preset--color--red);
+  padding-left: 20px;
+  margin-top: 60px;
+  margin-left: 60px
 }
-.providers-index .grid {
-  grid-template-columns: repeat(auto-fit,minmax(375px,-webkit-max-content));
-  grid-template-columns: repeat(auto-fit,minmax(375px,max-content));
-  justify-content: center
+.provider-content-row .meta-group li {
+  margin-bottom: 0
 }
-.providers-index .provider {
-  max-width: 375px
-}
-.providers-index .provider.green a:active .meta,
-.providers-index .provider.green a:active figure,
-.providers-index .provider.green a:focus .meta,
-.providers-index .provider.green a:focus figure,
-.providers-index .provider.green a:hover .meta,
-.providers-index .provider.green a:hover figure {
-  border-color: #47a842
-}
-.providers-index .provider.pink a:active .meta,
-.providers-index .provider.pink a:active figure,
-.providers-index .provider.pink a:focus .meta,
-.providers-index .provider.pink a:focus figure,
-.providers-index .provider.pink a:hover .meta,
-.providers-index .provider.pink a:hover figure {
-  border-color: #e31479
-}
-.providers-index .provider.teal a:active .meta,
-.providers-index .provider.teal a:active figure,
-.providers-index .provider.teal a:focus .meta,
-.providers-index .provider.teal a:focus figure,
-.providers-index .provider.teal a:hover .meta,
-.providers-index .provider.teal a:hover figure {
-  border-color: #459baf
-}
-.providers-index .provider.navy a:active .meta,
-.providers-index .provider.navy a:active figure,
-.providers-index .provider.navy a:focus .meta,
-.providers-index .provider.navy a:focus figure,
-.providers-index .provider.navy a:hover .meta,
-.providers-index .provider.navy a:hover figure {
-  border-color: #176a90
-}
-.providers-index .provider.blue a:active .meta,
-.providers-index .provider.blue a:active figure,
-.providers-index .provider.blue a:focus .meta,
-.providers-index .provider.blue a:focus figure,
-.providers-index .provider.blue a:hover .meta,
-.providers-index .provider.blue a:hover figure {
-  border-color: #0064cb
-}
-.providers-index .provider.lime a:active .meta,
-.providers-index .provider.lime a:active figure,
-.providers-index .provider.lime a:focus .meta,
-.providers-index .provider.lime a:focus figure,
-.providers-index .provider.lime a:hover .meta,
-.providers-index .provider.lime a:hover figure {
-  border-color: #8dc63f
-}
-.providers-index .provider a {
-  display: block;
-  border-radius: 10px;
-  box-shadow: 1.6px 1.6px 10px rgba(0,0,0,.2);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.provider-content-row .meta-group a,
+.provider-content-row .meta-group a[href^=tel] {
+  color: var(--wp--preset--color--dark-brown);
   text-decoration: none
 }
-.providers-index .provider figure {
+.provider-content-row .meta-group a:active,
+.provider-content-row .meta-group a:focus,
+.provider-content-row .meta-group a:hover,
+.provider-content-row .meta-group a[href^=tel]:active,
+.provider-content-row .meta-group a[href^=tel]:focus,
+.provider-content-row .meta-group a[href^=tel]:hover {
+  text-decoration: underline
+}
+.provider-tabs-row li.kt-tab-title-active .kb-svg-icon-wrap svg {
+  color: var(--wp--preset--color--dark-brown)
+}
+.provider-tabs-row .kt-tab-title .kb-svg-icon-wrap {
+  flex-shrink: 0;
+  margin-right: 5px
+}
+.provider-tabs-row .kt-tab-title .kb-svg-icon-wrap svg {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  display: flex;
-  align-items: center;
-  padding: 40px 60px;
-  flex: 1;
-  background-color: var(--wp--preset--color--white);
-  border: 3px solid transparent;
-  border-bottom: 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px
-}
-.providers-index .provider figure img {
-  width: 100%
-}
-.providers-index .provider .meta {
-  transition: .6s cubic-bezier(.23,1,.32,1);
-  background: var(--wp--preset--color--ivory);
-  padding: 20px 30px;
-  border: 3px solid transparent;
-  border-top: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px
-}
-.providers-index .provider h2 {
-  color: var(--wp--preset--color--dark-brown);
-  font-weight: 700;
-  margin-bottom: 10px
-}
-.providers-index .provider .link p {
-  font-family: var(--wp--preset--font-family--header);
   color: var(--wp--preset--color--red)
+}
+.provider-tabs-row .kt-tab-title .kt-title-text {
+  color: var(--wp--preset--color--dark-brown);
+  font-weight: 700
+}
+.provider-tabs-row .kt-tab-title:active .kb-svg-icon-wrap svg,
+.provider-tabs-row .kt-tab-title:focus .kb-svg-icon-wrap svg,
+.provider-tabs-row .kt-tab-title:hover .kb-svg-icon-wrap svg {
+  color: var(--wp--preset--color--dark-brown)
 }
 @media only screen and (min-width:769px) {
   .flex.reverse {
@@ -1992,6 +1963,25 @@ img {
   .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
     margin-left: 20px;
     margin-right: 0
+  }
+  .provider-tabs-row .kt-row-column-wrap {
+    grid-template-areas: "f f f f f f f f f f" "p p p p s s s s s s"
+  }
+  .provider-outro-row .kt-row-column-wrap {
+    grid-template-areas: "f f f f f f f f f f" "p p p s s s s s s s"
+  }
+  .grid-custom .kt-row-column-wrap {
+    grid-template-columns: repeat(10,1fr)!important;
+    grid-template-rows: auto 1fr!important
+  }
+  .grid-custom .full-width {
+    grid-area: f
+  }
+  .grid-custom .primary {
+    grid-area: p
+  }
+  .grid-custom .secondary {
+    grid-area: s
   }
 }
 @media only screen and (min-width:1025px) {
@@ -2142,7 +2132,6 @@ img {
 }
 @media only screen and (max-width:480px) {
   .gform_confirmation_wrapper .gform_confirmation_message,
-  .providers-index .provider h2,
   li,
   p {
     font-size: .875rem
