@@ -129,7 +129,12 @@ body .icon-link .kt-svg-icon-list-text a {
 body .icon-link .kt-svg-icon-list-text a:active,
 body .icon-link .kt-svg-icon-list-text a:focus,
 body .icon-link .kt-svg-icon-list-text a:hover {
-  text-decoration: underline
+  color: var(--wp--preset--color--dark-brown)!important
+}
+body .icon-link .kt-svg-icon-list-text a:active svg,
+body .icon-link .kt-svg-icon-list-text a:focus svg,
+body .icon-link .kt-svg-icon-list-text a:hover svg {
+  stroke: var(--wp--preset--color--dark-brown)!important
 }
 body .wp-block-image {
   margin-bottom: 20px
@@ -174,6 +179,99 @@ body .kt-tabs-wrap .kt-tabs-title-list li {
 body .kt-tabs-wrap .kt-tabs-content-wrap .wp-block-kadence-tab {
   padding: 30px 0
 }
+body .other-ways-row .kt-row-column-wrap {
+  grid-template-areas: ". b b b b c c c c c";
+  grid-template-columns: repeat(10,1fr)!important;
+  position: relative;
+  -moz-column-gap: 35px;
+  column-gap: 35px
+}
+body .other-ways-row .col-menu {
+  grid-area: a;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: 1
+}
+body .other-ways-row .col-menu ul {
+  display: block;
+  background: var(--wp--preset--color--yellow);
+  padding: 17px 23px 17px 0
+}
+body .other-ways-row .col-menu li {
+  display: block;
+  margin: 0
+}
+body .other-ways-row .col-menu li:not(:last-child) {
+  margin-bottom: 5px
+}
+body .other-ways-row .col-menu li.icon-train a:before {
+  content: "\f239"
+}
+body .other-ways-row .col-menu li.icon-tram a:before {
+  content: "\f238"
+}
+body .other-ways-row .col-menu li.icon-bus a:before {
+  content: "\f207"
+}
+body .other-ways-row .col-menu li.icon-park a:before {
+  content: "\f540"
+}
+body .other-ways-row .col-menu li.icon-car a:before {
+  content: "\f5e4"
+}
+body .other-ways-row .col-menu li.icon-van a:before {
+  content: "\f5b6"
+}
+body .other-ways-row .col-menu li.icon-phone a:before {
+  content: "\f3cd"
+}
+body .other-ways-row .col-menu li.current-menu-item a,
+body .other-ways-row .col-menu li:active a,
+body .other-ways-row .col-menu li:focus a,
+body .other-ways-row .col-menu li:hover a {
+  background: var(--wp--preset--color--dark-brown);
+  color: var(--wp--preset--color--white)
+}
+body .other-ways-row .col-menu li.current-menu-item a:before,
+body .other-ways-row .col-menu li:active a:before,
+body .other-ways-row .col-menu li:focus a:before,
+body .other-ways-row .col-menu li:hover a:before {
+  color: var(--wp--preset--color--white)
+}
+body .other-ways-row .col-menu a {
+  font-family: var(--wp--preset--font-family--header);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-radius: 0 60px 60px 0;
+  padding: 10px 30px;
+  text-decoration: none
+}
+body .other-ways-row .col-menu a:before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  margin-right: 15px;
+  width: 20px
+}
+body .other-ways-row .col-image {
+  grid-area: b;
+  position: relative;
+  z-index: 0
+}
+body .other-ways-row .col-text {
+  grid-area: c
+}
+body .about-form-row .gform_fields .gfield.email .gfield_label {
+  opacity: 0;
+  visibility: hidden
+}
 body .editor-styles-wrapper {
   font-family: var(--wp--preset--font-family--body)
 }
@@ -207,8 +305,8 @@ body .editor-styles-wrapper h3 {
 }
 body .editor-styles-wrapper .h4,
 body .editor-styles-wrapper .preset4,
-body .editor-styles-wrapper h4,
-body .editor-styles-wrapper p.has-x-large-font-size {
+body .editor-styles-wrapper body p.has-x-large-font-size,
+body .editor-styles-wrapper h4 {
   font-family: var(--wp--preset--font-family--header);
   font-size: 1.25rem;
   font-weight: 600;
@@ -231,35 +329,40 @@ body .editor-styles-wrapper h6 {
   line-height: 1.2
 }
 body .editor-styles-wrapper .gform_confirmation_wrapper .gform_confirmation_message,
-body .editor-styles-wrapper li,
-body .editor-styles-wrapper p {
+body .editor-styles-wrapper body li,
+body .editor-styles-wrapper body p {
   font-size: 1rem;
   line-height: 1.7
 }
 body .editor-styles-wrapper body {
   color: var(--wp--preset--color--black)
 }
-body .editor-styles-wrapper p.has-x-large-font-size {
+body .editor-styles-wrapper body p {
+  margin-bottom: 20px
+}
+body .editor-styles-wrapper body p.has-x-large-font-size {
   font-weight: 400;
   font-size: 1.25rem!important
 }
-body .editor-styles-wrapper li,
-body .editor-styles-wrapper p {
-  color: var(--wp--preset--color--dark-brown);
-  margin-bottom: 20px
+body .editor-styles-wrapper body li {
+  margin-bottom: 10px
 }
-body .editor-styles-wrapper li a,
-body .editor-styles-wrapper p a {
+body .editor-styles-wrapper body li,
+body .editor-styles-wrapper body p {
+  color: var(--wp--preset--color--dark-brown)
+}
+body .editor-styles-wrapper body li a,
+body .editor-styles-wrapper body p a {
   transition: .6s cubic-bezier(.23,1,.32,1);
   color: inherit;
   text-decoration: underline
 }
-body .editor-styles-wrapper li a:active,
-body .editor-styles-wrapper li a:focus,
-body .editor-styles-wrapper li a:hover,
-body .editor-styles-wrapper p a:active,
-body .editor-styles-wrapper p a:focus,
-body .editor-styles-wrapper p a:hover {
+body .editor-styles-wrapper body li a:active,
+body .editor-styles-wrapper body li a:focus,
+body .editor-styles-wrapper body li a:hover,
+body .editor-styles-wrapper body p a:active,
+body .editor-styles-wrapper body p a:focus,
+body .editor-styles-wrapper body p a:hover {
   text-decoration: none
 }
 body .editor-styles-wrapper blockquote {
@@ -290,16 +393,17 @@ body .editor-styles-wrapper form input[type],
 body .editor-styles-wrapper form select,
 body .editor-styles-wrapper form textarea {
   transition: .3s cubic-bezier(.23,1,.32,1);
-  border-color: #000;
+  border-color: var(--wp--preset--color--gray);
   border-radius: 0;
   box-shadow: none;
+  min-height: 60px;
   display: inline-block;
   border-style: solid;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-family: inherit;
   line-height: normal;
   color: #000;
-  border-width: 2px
+  border-width: 0 0 3px
 }
 body .editor-styles-wrapper form input[type]:active,
 body .editor-styles-wrapper form input[type]:focus,
@@ -310,7 +414,7 @@ body .editor-styles-wrapper form select:hover,
 body .editor-styles-wrapper form textarea:active,
 body .editor-styles-wrapper form textarea:focus,
 body .editor-styles-wrapper form textarea:hover {
-  border-color: green
+  border-color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper form input[type]::-moz-placeholder,
 body .editor-styles-wrapper form select::-moz-placeholder,
@@ -330,7 +434,7 @@ body .editor-styles-wrapper form textarea::placeholder {
 body .editor-styles-wrapper form input[type]:focus,
 body .editor-styles-wrapper form select:focus,
 body .editor-styles-wrapper form textarea:focus {
-  border-color: green
+  border-color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gravity-theme {
   margin: 0
@@ -343,16 +447,23 @@ body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body {
   padding-bottom: 25px
 }
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body .gform_fields {
-  grid-row-gap: 25px
+  grid-gap: 60px 30px
 }
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body .gfield_label {
-  font-weight: 400;
+  font-family: var(--wp--preset--font-family--header);
   display: block;
-  margin-bottom: 6px;
-  font-size: .875rem
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 1rem
 }
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body .gfield_label .gfield_required {
-  color: red
+  color: var(--wp--preset--color--red);
+  display: none
+}
+body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body .gfield_description {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 10px
 }
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body .ginput_container_address label {
   padding-top: 15px
@@ -408,40 +519,108 @@ body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer butt
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gform_validation_errors {
   margin-bottom: 25px;
-  border-color: red
+  border-color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gform_validation_errors h2.gform_submission_error {
   font-size: 18px;
-  color: red
+  color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea {
-  color: red;
-  border-color: red
+  color: var(--wp--preset--color--red);
+  border-color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input::-moz-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label::-moz-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend::-moz-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select::-moz-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea::-moz-placeholder {
-  color: red
+  color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input:-ms-input-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label:-ms-input-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend:-ms-input-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select:-ms-input-placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea:-ms-input-placeholder {
-  color: red
+  color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input::placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label::placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend::placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select::placeholder,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea::placeholder {
-  color: red
+  color: var(--wp--preset--color--red)
+}
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input input,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input select,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input textarea,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label input,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label select,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label textarea,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend input,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend select,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select input,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select select,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select textarea,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea input,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea select,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea {
+  border-color: var(--wp--preset--color--gray);
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 60px;
+  border-width: 0 0 3px
+}
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input input:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input input:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input input:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input select:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input select:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input select:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input textarea:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input textarea:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error input textarea:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label input:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label input:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label input:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label select:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label select:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label select:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label textarea:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label textarea:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error label textarea:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend input:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend input:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend input:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend select:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend select:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend select:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select input:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select input:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select input:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select select:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select select:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select select:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select textarea:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select textarea:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error select textarea:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea input:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea input:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea input:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea select:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea select:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea select:hover,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea:active,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea:focus,
+body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea:hover {
+  border-color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error .gfield_description,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .validation_message {
@@ -639,10 +818,16 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     font-size: 1.75rem
   }
 }
+@media only screen and (max-width:640px) {
+  body .about-form-row .gform_fields .gfield.email .gfield_label {
+    height: 0;
+    margin-bottom: 0
+  }
+}
 @media only screen and (max-width:480px) {
   body .editor-styles-wrapper .gform_confirmation_wrapper .gform_confirmation_message,
-  body .editor-styles-wrapper li,
-  body .editor-styles-wrapper p {
+  body .editor-styles-wrapper body li,
+  body .editor-styles-wrapper body p {
     font-size: .875rem
   }
 }

@@ -187,8 +187,8 @@ h3 {
 .h4,
 .mobile-nav-wrap .mobile-nav ul li a,
 .preset4,
-h4,
-p.has-x-large-font-size {
+body p.has-x-large-font-size,
+h4 {
   font-family: var(--wp--preset--font-family--header);
   font-size: 1.25rem;
   font-weight: 600;
@@ -212,35 +212,40 @@ h6 {
   line-height: 1.2
 }
 .gform_confirmation_wrapper .gform_confirmation_message,
-li,
-p {
+body li,
+body p {
   font-size: 1rem;
   line-height: 1.7
 }
 body {
   color: var(--wp--preset--color--black)
 }
-p.has-x-large-font-size {
+body p {
+  margin-bottom: 20px
+}
+body p.has-x-large-font-size {
   font-weight: 400;
   font-size: 1.25rem!important
 }
-li,
-p {
-  color: var(--wp--preset--color--dark-brown);
-  margin-bottom: 20px
+body li {
+  margin-bottom: 10px
 }
-li a,
-p a {
+body li,
+body p {
+  color: var(--wp--preset--color--dark-brown)
+}
+body li a,
+body p a {
   transition: .6s cubic-bezier(.23,1,.32,1);
   color: inherit;
   text-decoration: underline
 }
-li a:active,
-li a:focus,
-li a:hover,
-p a:active,
-p a:focus,
-p a:hover {
+body li a:active,
+body li a:focus,
+body li a:hover,
+body p a:active,
+body p a:focus,
+body p a:hover {
   text-decoration: none
 }
 blockquote {
@@ -1046,16 +1051,17 @@ form input[type],
 form select,
 form textarea {
   transition: .3s cubic-bezier(.23,1,.32,1);
-  border-color: #000;
+  border-color: var(--wp--preset--color--gray);
   border-radius: 0;
   box-shadow: none;
+  min-height: 60px;
   display: inline-block;
   border-style: solid;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-family: inherit;
   line-height: normal;
   color: #000;
-  border-width: 2px
+  border-width: 0 0 3px
 }
 form input[type]:active,
 form input[type]:focus,
@@ -1066,7 +1072,7 @@ form select:hover,
 form textarea:active,
 form textarea:focus,
 form textarea:hover {
-  border-color: green
+  border-color: var(--wp--preset--color--red)
 }
 form input[type]::-moz-placeholder,
 form select::-moz-placeholder,
@@ -1086,7 +1092,7 @@ form textarea::placeholder {
 form input[type]:focus,
 form select:focus,
 form textarea:focus {
-  border-color: green
+  border-color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gravity-theme {
   margin: 0
@@ -1099,16 +1105,23 @@ form textarea:focus {
   padding-bottom: 25px
 }
 .gform_wrapper.gravity-theme form .gform-body .gform_fields {
-  grid-row-gap: 25px
+  grid-gap: 60px 30px
 }
 .gform_wrapper.gravity-theme form .gform-body .gfield_label {
-  font-weight: 400;
+  font-family: var(--wp--preset--font-family--header);
   display: block;
-  margin-bottom: 6px;
-  font-size: .875rem
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 1rem
 }
 .gform_wrapper.gravity-theme form .gform-body .gfield_label .gfield_required {
-  color: red
+  color: var(--wp--preset--color--red);
+  display: none
+}
+.gform_wrapper.gravity-theme form .gform-body .gfield_description {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 10px
 }
 .gform_wrapper.gravity-theme form .gform-body .ginput_container_address label {
   padding-top: 15px
@@ -1164,40 +1177,108 @@ form textarea:focus {
 }
 .gform_wrapper.gform_validation_error .gform_validation_errors {
   margin-bottom: 25px;
-  border-color: red
+  border-color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gform_validation_errors h2.gform_submission_error {
   font-size: 18px;
-  color: red
+  color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gfield.gfield_error input,
 .gform_wrapper.gform_validation_error .gfield.gfield_error label,
 .gform_wrapper.gform_validation_error .gfield.gfield_error legend,
 .gform_wrapper.gform_validation_error .gfield.gfield_error select,
 .gform_wrapper.gform_validation_error .gfield.gfield_error textarea {
-  color: red;
-  border-color: red
+  color: var(--wp--preset--color--red);
+  border-color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gfield.gfield_error input::-moz-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error label::-moz-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error legend::-moz-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error select::-moz-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error textarea::-moz-placeholder {
-  color: red
+  color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gfield.gfield_error input:-ms-input-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error label:-ms-input-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error legend:-ms-input-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error select:-ms-input-placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error textarea:-ms-input-placeholder {
-  color: red
+  color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gfield.gfield_error input::placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error label::placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error legend::placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error select::placeholder,
 .gform_wrapper.gform_validation_error .gfield.gfield_error textarea::placeholder {
-  color: red
+  color: var(--wp--preset--color--red)
+}
+.gform_wrapper.gform_validation_error .gfield.gfield_error input input,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input select,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input textarea,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label input,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label select,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label textarea,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend input,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend select,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select input,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select select,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select textarea,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea input,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea select,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea {
+  border-color: var(--wp--preset--color--gray);
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 60px;
+  border-width: 0 0 3px
+}
+.gform_wrapper.gform_validation_error .gfield.gfield_error input input:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input input:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input input:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input select:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input select:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input select:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input textarea:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input textarea:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error input textarea:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label input:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label input:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label input:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label select:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label select:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label select:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label textarea:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label textarea:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error label textarea:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend input:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend input:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend input:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend select:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend select:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend select:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error legend textarea:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select input:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select input:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select input:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select select:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select select:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select select:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select textarea:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select textarea:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error select textarea:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea input:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea input:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea input:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea select:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea select:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea select:hover,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea:active,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea:focus,
+.gform_wrapper.gform_validation_error .gfield.gfield_error textarea textarea:hover {
+  border-color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gfield.gfield_error .gfield_description,
 .gform_wrapper.gform_validation_error .validation_message {
@@ -1829,7 +1910,12 @@ img {
 .icon-link .kt-svg-icon-list-text a:active,
 .icon-link .kt-svg-icon-list-text a:focus,
 .icon-link .kt-svg-icon-list-text a:hover {
-  text-decoration: underline
+  color: var(--wp--preset--color--dark-brown)!important
+}
+.icon-link .kt-svg-icon-list-text a:active svg,
+.icon-link .kt-svg-icon-list-text a:focus svg,
+.icon-link .kt-svg-icon-list-text a:hover svg {
+  stroke: var(--wp--preset--color--dark-brown)!important
 }
 .wp-block-image {
   margin-bottom: 20px
@@ -1873,6 +1959,122 @@ img {
 }
 .kt-tabs-wrap .kt-tabs-content-wrap .wp-block-kadence-tab {
   padding: 30px 0
+}
+.other-ways-row .kt-row-column-wrap {
+  grid-template-areas: ". b b b b c c c c c";
+  grid-template-columns: repeat(10,1fr)!important;
+  position: relative;
+  -moz-column-gap: 35px;
+  column-gap: 35px
+}
+.other-ways-row .col-menu {
+  grid-area: a;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: 1
+}
+.other-ways-row .col-menu ul {
+  display: block;
+  background: var(--wp--preset--color--yellow);
+  padding: 17px 23px 17px 0
+}
+.other-ways-row .col-menu li {
+  display: block;
+  margin: 0
+}
+.other-ways-row .col-menu li:not(:last-child) {
+  margin-bottom: 5px
+}
+.other-ways-row .col-menu li.icon-train a:before {
+  content: "\f239"
+}
+.other-ways-row .col-menu li.icon-tram a:before {
+  content: "\f238"
+}
+.other-ways-row .col-menu li.icon-bus a:before {
+  content: "\f207"
+}
+.other-ways-row .col-menu li.icon-park a:before {
+  content: "\f540"
+}
+.other-ways-row .col-menu li.icon-car a:before {
+  content: "\f5e4"
+}
+.other-ways-row .col-menu li.icon-van a:before {
+  content: "\f5b6"
+}
+.other-ways-row .col-menu li.icon-phone a:before {
+  content: "\f3cd"
+}
+.other-ways-row .col-menu li.current-menu-item a,
+.other-ways-row .col-menu li:active a,
+.other-ways-row .col-menu li:focus a,
+.other-ways-row .col-menu li:hover a {
+  background: var(--wp--preset--color--dark-brown);
+  color: var(--wp--preset--color--white)
+}
+.other-ways-row .col-menu li.current-menu-item a:before,
+.other-ways-row .col-menu li:active a:before,
+.other-ways-row .col-menu li:focus a:before,
+.other-ways-row .col-menu li:hover a:before {
+  color: var(--wp--preset--color--white)
+}
+.other-ways-row .col-menu a {
+  font-family: var(--wp--preset--font-family--header);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-radius: 0 60px 60px 0;
+  padding: 10px 30px;
+  text-decoration: none
+}
+.other-ways-row .col-menu a:before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  margin-right: 15px;
+  width: 20px
+}
+.other-ways-row .col-image {
+  grid-area: b;
+  position: relative;
+  z-index: 0
+}
+.other-ways-row .col-text {
+  grid-area: c
+}
+.about-form-row .gform_fields .gfield.email .gfield_label {
+  opacity: 0;
+  visibility: hidden
+}
+.home-row .meta-group {
+  border-left: 9px solid var(--wp--preset--color--yellow);
+  padding-left: 25px;
+  margin-top: 60px;
+  margin-left: 60px
+}
+.home-row .meta-group h1 {
+  font-size: 1.5rem;
+  font-weight: 700
+}
+.home-row .kt-svg-icon-list a {
+  display: inline-flex!important;
+  padding: 8px 20px!important;
+  border: 3px solid var(--wp--preset--color--red);
+  border-radius: 60px;
+  text-decoration: none
+}
+.home-row .kt-svg-icon-list .kt-svg-icon-list-text {
+  font-family: var(--wp--preset--font-family--header);
+  color: var(--wp--preset--color--dark-brown);
+  font-size: 1.5rem;
+  font-weight: 700
 }
 .posts-grid .grid {
   grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
@@ -2129,11 +2331,15 @@ img {
   .fancybox__toolbar__items--center:not(:last-child) {
     display: none
   }
+  .about-form-row .gform_fields .gfield.email .gfield_label {
+    height: 0;
+    margin-bottom: 0
+  }
 }
 @media only screen and (max-width:480px) {
   .gform_confirmation_wrapper .gform_confirmation_message,
-  li,
-  p {
+  body li,
+  body p {
     font-size: .875rem
   }
 }

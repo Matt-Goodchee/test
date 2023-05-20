@@ -11,13 +11,13 @@
 }
 
 // Settings
-$border-width-top    : 2;
-$border-width-bottom : 2;
-$border-width-right  : 2;
-$border-width-left   : 2;
-$border-color        : black;
-$border-color-active : green;
-$border-color-error  : red;
+$border-width-top    : 0;
+$border-width-bottom : 3;
+$border-width-right  : 0;
+$border-width-left   : 0;
+$border-color        : $gray;
+$border-color-active : $red;
+$border-color-error  : $red;
 $border-radius       : 0;
 $box-shadow          : none;
 
@@ -29,6 +29,7 @@ $box-shadow          : none;
   border-color: $border-color;
   border-radius: $border-radius+px;
   box-shadow : $box-shadow;
+  min-height: 60px;
   &:hover, &:focus, &:active {
     border-color:$border-color-active;
   }
@@ -43,7 +44,7 @@ form {
     @include formInputStyles;
     display: inline-block;
     border-style: solid;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-family: inherit;
     line-height: normal;
     color: black;
@@ -68,16 +69,25 @@ form {
       padding-top: 25px;
       padding-bottom: 25px;
       .gform_fields {
-        grid-row-gap: 25px;
+        grid-gap: 60px 30px;
       }
       .gfield_label {
+        @include font('heading');
         font-weight: 400;
         display: block;
         margin-bottom: 6px;
-        font-size: rem(14);
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: rem(16);
         .gfield_required {
           color: $border-color-error;
+          display: none;
         }
+      }
+      .gfield_description {
+        font-size: rem(16);
+        margin: 0;
+        padding-bottom: 10px;
       }
       .ginput_container_address {
         label {
@@ -142,7 +152,9 @@ form {
       @include placeholder {
         color: $border-color-error;
       }
-      
+      input, select, textarea {
+        @include formInputStyles;
+      }
     }
   }
   .validation_message, .gfield.gfield_error .gfield_description {
