@@ -182,7 +182,7 @@
     .kb-count-up-title {
       flex: 1;
       @include for-size(tablet, up, offset) {
-        max-width: 325px;
+        max-width: 350px;
       }
       @include for-size(tablet-sm) {
         text-align: left;

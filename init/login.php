@@ -27,7 +27,7 @@ function custom_login_screen() { ?>
       background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/img/svg/logo.svg');
       background-size: contain;
       width: 320px;
-      height: 200px;
+      height: 90px;
     }
 
     #login a {
@@ -40,23 +40,22 @@ function custom_login_screen() { ?>
     }
 
     #login #wp-submit {
-      background: #333;
-      border-radius: 0;
-      border: 2px solid #333;
-      box-shadow: none;
-      color: white;
+      transition: .6s cubic-bezier(.23,1,.32,1);
+      font-family: "Montserrat", sans-serif;
+      border: 0;
+      background: #F0421C;
+      color: #ffffff;
+      border-radius: 80px;
       cursor: pointer;
       display: inline-block;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1;
-      padding: 10px 30px;
+      padding: 10px 25px;
       text-align: center;
-      text-shadow: none;
-      transition: .6s cubic-bezier(.23, 1, .32, 1);
       user-select: none;
       vertical-align: baseline;
-      white-space: nowrap;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      font-weight: 600;
+      text-decoration: none;
       zoom: 1;
       -moz-user-select: none;
       -ms-user-select: none;
@@ -65,9 +64,7 @@ function custom_login_screen() { ?>
     }
 
     #login #wp-submit:hover {
-      border-color: #333;
-      color: #333;
-      background: white;
+      background-color: #212121;
     }
   </style>
 <?php }
