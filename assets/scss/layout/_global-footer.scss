@@ -1,8 +1,9 @@
 .footer {
   background: $dark-brown;
-  padding-top: 60px;
-  padding-bottom: 40px;
   @include for-size(tablet) {
+    &.alt .container {
+      display: none;
+    }
     .col-1 {
       order: 4;
       padding-top: 50px;
@@ -30,8 +31,9 @@
     } 
   }
   .container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 60px 40px 40px 40px;
+  }
+  .wrapper {
     display: flex;
     @include for-size(tablet) {
       flex-direction: column;
@@ -67,6 +69,22 @@
     }
   }
 
+  .show-more {
+    @include for-size(tablet, up, offset) {
+      display: none;
+    }
+    a {
+      padding: 20px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    span {
+      margin-left: 8px;
+      color: $red;
+    }
+  }
   .col-1 {
     flex-basis: calc(6 / 12 * 100%) !important;
     .logo {

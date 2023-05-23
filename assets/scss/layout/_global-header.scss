@@ -11,16 +11,18 @@ main {
   box-shadow: 2px 2px 28px rgba(0, 0, 0, 0.2);
   position: relative;
   margin-bottom: 50px;
-  &:before {
-    content:'';
-    display: block;
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    background: linear-gradient(90deg, #FFFFFF 65.27%, rgba(255, 255, 255, 0) 100%);
-    width: 60%;
-    height: 50px;
-    z-index: 0;
+  @include for-size(tablet, up, offset) {
+    &:before {
+      content:'';
+      display: block;
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      background: linear-gradient(90deg, #FFFFFF 65.27%, rgba(255, 255, 255, 0) 100%);
+      width: 60%;
+      height: 50px;
+      z-index: 0;
+    }
   }
   .container {
     display: flex;
@@ -29,14 +31,36 @@ main {
     padding-right: 40px;
     min-height: 100px;
     width: 100%;
+    @include for-size(tablet-sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
     .mobile-brand {
       @include trans($prop:opacity);
-      margin-right: auto;
-      position: relative;
-      top: 40px;
+      @include for-size(tablet, up, offset) {
+        position: relative;
+        top: 40px;
+      }
       img {
         display: block;
         max-width: 275px;
+        @include for-size(tablet) {
+          max-width: 200px;
+        }
+        @include for-size(tablet-sm) {
+          max-width: 150px;
+        }
+      }
+    }
+    .wrapper {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    .translate {
+      margin-right: 25px;
+      @include for-size(tablet-sm) {
+        display: none;
       }
     }
     button {
@@ -45,8 +69,19 @@ main {
       display: inline-flex;
       align-items: center;
       padding: 13px 20px;
+      min-height: 50px;
+      @include for-size(tablet-sm) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        span {
+          font-size: rem(16);
+        }
+      }
       &:not(:last-of-type) {
         margin-right: 25px;
+        @include for-size(tablet-sm) {
+          margin-right: 15px;
+        }
       }
       &:hover, &:focus, &:active {
         border-color: $black;
@@ -110,7 +145,7 @@ main {
     }
     figure {
       padding-top: 50px;
-        margin-right: -40px;
+      margin-right: -40px;
       img {
         margin-left: auto;
         position: relative;

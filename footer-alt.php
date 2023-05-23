@@ -9,7 +9,12 @@ endif; ?>
 
 </main>
 
-<footer class="footer">
+<footer class="footer alt">
+  <div class="show-more">
+    <a href="#" title="Tap to show full menu">
+      Show Menu<span class="fas fa-angle-double-down"></span>
+    </a>
+  </div>
   <div class="container">
     <div class="wrapper">
       <div class="footer-col col-1">
