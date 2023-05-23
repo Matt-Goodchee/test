@@ -184,9 +184,11 @@ h3 {
   font-weight: 500;
   line-height: 1.2
 }
+.archive-index .results-entry h2,
 .h4,
 .mobile-nav-wrap .mobile-nav ul li a,
 .preset4,
+.search-index .results-entry h2,
 body p.has-x-large-font-size,
 h4 {
   font-family: var(--wp--preset--font-family--header);
@@ -1058,9 +1060,15 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .footer .col-2 a {
   font-weight: 700
 }
-form input[type],
-form select,
-form textarea {
+.gform_wrapper.gravity-theme {
+  margin: 0
+}
+.gform_wrapper.gravity-theme .gform_heading {
+  display: none
+}
+.gform_wrapper.gravity-theme form input[type],
+.gform_wrapper.gravity-theme form select,
+.gform_wrapper.gravity-theme form textarea {
   transition: .3s cubic-bezier(.23,1,.32,1);
   border-color: var(--wp--preset--color--gray);
   border-radius: 0;
@@ -1074,42 +1082,36 @@ form textarea {
   color: #000;
   border-width: 0 0 3px
 }
-form input[type]:active,
-form input[type]:focus,
-form input[type]:hover,
-form select:active,
-form select:focus,
-form select:hover,
-form textarea:active,
-form textarea:focus,
-form textarea:hover {
+.gform_wrapper.gravity-theme form input[type]:active,
+.gform_wrapper.gravity-theme form input[type]:focus,
+.gform_wrapper.gravity-theme form input[type]:hover,
+.gform_wrapper.gravity-theme form select:active,
+.gform_wrapper.gravity-theme form select:focus,
+.gform_wrapper.gravity-theme form select:hover,
+.gform_wrapper.gravity-theme form textarea:active,
+.gform_wrapper.gravity-theme form textarea:focus,
+.gform_wrapper.gravity-theme form textarea:hover {
   border-color: var(--wp--preset--color--red)
 }
-form input[type]::-moz-placeholder,
-form select::-moz-placeholder,
-form textarea::-moz-placeholder {
+.gform_wrapper.gravity-theme form input[type]::-moz-placeholder,
+.gform_wrapper.gravity-theme form select::-moz-placeholder,
+.gform_wrapper.gravity-theme form textarea::-moz-placeholder {
   color: #000
 }
-form input[type]:-ms-input-placeholder,
-form select:-ms-input-placeholder,
-form textarea:-ms-input-placeholder {
+.gform_wrapper.gravity-theme form input[type]:-ms-input-placeholder,
+.gform_wrapper.gravity-theme form select:-ms-input-placeholder,
+.gform_wrapper.gravity-theme form textarea:-ms-input-placeholder {
   color: #000
 }
-form input[type]::placeholder,
-form select::placeholder,
-form textarea::placeholder {
+.gform_wrapper.gravity-theme form input[type]::placeholder,
+.gform_wrapper.gravity-theme form select::placeholder,
+.gform_wrapper.gravity-theme form textarea::placeholder {
   color: #000
 }
-form input[type]:focus,
-form select:focus,
-form textarea:focus {
+.gform_wrapper.gravity-theme form input[type]:focus,
+.gform_wrapper.gravity-theme form select:focus,
+.gform_wrapper.gravity-theme form textarea:focus {
   border-color: var(--wp--preset--color--red)
-}
-.gform_wrapper.gravity-theme {
-  margin: 0
-}
-.gform_wrapper.gravity-theme .gform_heading {
-  display: none
 }
 .gform_wrapper.gravity-theme form .gform-body {
   padding-top: 25px;
@@ -2140,31 +2142,129 @@ body:not(.wp-admin) .other-ways-row .col-image {
 body:not(.wp-admin) .other-ways-row .col-text {
   grid-area: c
 }
-.posts-grid .grid {
-  grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
-  justify-content: center
-}
-.posts-grid .post-entry {
-  padding: 20px;
-  border: 1px solid #000
-}
-.posts-grid .post-entry__image a,
-.posts-grid .post-entry__image img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block
-}
-.post-meta {
-  margin-bottom: 25px
-}
-.post-meta p {
-  margin-bottom: 0
+.archive-index,
+.search-index {
+  padding-top: 40px
 }
 .archive-index--title,
-.posts-index--title,
 .search-index--title {
   text-align: center;
   margin-bottom: 50px
+}
+.archive-index--title h1,
+.search-index--title h1 {
+  margin-bottom: 40px
+}
+.archive-index--title input,
+.search-index--title input {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #000;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 35px;
+  padding: 10px 15px;
+  background: url(assets/img/svg/icon-search.svg) 95%/20px 20px no-repeat
+}
+.archive-index--title input::-moz-placeholder,
+.search-index--title input::-moz-placeholder {
+  color: var(--wp--preset--color--dark-brown);
+  font-size: 1.25rem;
+  font-weight: 500
+}
+.archive-index--title input:-ms-input-placeholder,
+.search-index--title input:-ms-input-placeholder {
+  color: var(--wp--preset--color--dark-brown);
+  font-size: 1.25rem;
+  font-weight: 500
+}
+.archive-index--title input::placeholder,
+.search-index--title input::placeholder {
+  color: var(--wp--preset--color--dark-brown);
+  font-size: 1.25rem;
+  font-weight: 500
+}
+.archive-index--content,
+.search-index--content {
+  padding-top: 50px;
+  padding-bottom: 100px
+}
+.archive-index--pagination,
+.search-index--pagination {
+  padding-top: 75px
+}
+.archive-index--pagination .pagination,
+.search-index--pagination .pagination {
+  text-align: center
+}
+.archive-index--pagination .pagination a,
+.archive-index--pagination .pagination span,
+.search-index--pagination .pagination a,
+.search-index--pagination .pagination span {
+  font-family: var(--wp--preset--font-family--header);
+  font-size: 1.25rem;
+  color: var(--wp--preset--color--dark-brown);
+  display: inline-block;
+  padding: 10px;
+  font-weight: 700;
+  text-decoration: none
+}
+.archive-index--pagination .pagination span,
+.search-index--pagination .pagination span {
+  color: var(--wp--preset--color--red)
+}
+.archive-index--pagination .pagination a,
+.search-index--pagination .pagination a {
+  transition: .6s cubic-bezier(.23,1,.32,1)
+}
+.archive-index--pagination .pagination a:active,
+.archive-index--pagination .pagination a:focus,
+.archive-index--pagination .pagination a:hover,
+.search-index--pagination .pagination a:active,
+.search-index--pagination .pagination a:focus,
+.search-index--pagination .pagination a:hover {
+  color: var(--wp--preset--color--red)
+}
+.archive-index .posts-grid,
+.search-index .posts-grid {
+  grid-template-columns: repeat(auto-fit,minmax(390px,-webkit-max-content));
+  grid-template-columns: repeat(auto-fit,minmax(390px,max-content));
+  justify-content: center;
+  gap: 35px
+}
+.archive-index .results-entry,
+.search-index .results-entry {
+  box-shadow: 1.57219px 1.57219px 10px rgba(0,0,0,.2)
+}
+.archive-index .results-entry a,
+.search-index .results-entry a {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  padding: clamp(25px,4vw,40px);
+  display: block;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  min-height: 250px
+}
+.archive-index .results-entry a:active,
+.archive-index .results-entry a:focus,
+.archive-index .results-entry a:hover,
+.search-index .results-entry a:active,
+.search-index .results-entry a:focus,
+.search-index .results-entry a:hover {
+  border-color: var(--wp--preset--color--red)
+}
+.archive-index .results-entry h2,
+.search-index .results-entry h2 {
+  font-size: 1.5rem
+}
+.archive-index .results-entry hr,
+.search-index .results-entry hr {
+  margin: 20px 0;
+  border-bottom: 3px solid var(--wp--preset--color--yellow);
+  width: 110px
 }
 .post-single--content .article-single__title h1 {
   text-align: center
@@ -2316,10 +2416,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
     left: 0;
     z-index: 1
   }
-  .archive-index,
-  .post-single,
-  .posts-index,
-  .search-index {
+  .post-single {
     padding-top: 120px;
     padding-bottom: 120px
   }
@@ -2384,10 +2481,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
     column-gap: 0!important;
     grid-template-areas: "a a a a a b b b b b" "c c c c c c c c c c"
   }
-  .archive-index,
-  .post-single,
-  .posts-index,
-  .search-index {
+  .post-single {
     padding-top: 60px;
     padding-bottom: 60px
   }
@@ -2467,6 +2561,11 @@ body:not(.wp-admin) .other-ways-row .col-text {
   }
   body:not(.wp-admin) .other-ways-row .col-image {
     margin-right: -30px
+  }
+  .archive-index .results-entry hr,
+  .search-index .results-entry hr {
+    margin-left: auto;
+    margin-right: auto
   }
 }
 @media only screen and (max-width:640px) {

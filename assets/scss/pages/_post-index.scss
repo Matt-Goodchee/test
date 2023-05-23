@@ -1,57 +1,92 @@
 
-/* Post Grid Index (shared)
+/* Archive / Search Index Pages (shared)
 ========================================================= */
-.posts-grid {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    justify-content: center;
-  }
-
-  .post-entry {
-    padding: 20px;
-    border: 1px solid black;
-
-    &__title {}
-
-    &__image {
-      a, img {
-        @include margin-center;
-        display: block;
-      }
-    }
-
-    &__meta {}
-
-    &__excerpt {}
-  }
-}
-
-
-/* Post Meta (shared)
-========================================================= */
-.post-meta {
-  margin-bottom: 25px;
-  p {
-    margin-bottom: 0;
-  }
-  .date {}
-  .categories {}
-  .tags {}
-  .author {}
-}
-
-
-/* Posts / Archive / Search Index Pages (shared)
-========================================================= */
-.posts-index,
 .archive-index,
 .search-index {
-  @include row-padding;
+  padding-top: 40px;
 
   &--title {
     text-align: center;
     margin-bottom: 50px;
+    h1 {
+      margin-bottom: 40px;
+    }
+    input {
+      @include margin-center;
+      border-color: black;
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 35px;
+      padding: 10px 15px;
+      background: url(assets/img/svg/icon-search.svg) 95%/20px 20px no-repeat;
+      @include placeholder {
+        color: $dark-brown;
+        font-size: rem(20);
+        font-weight: 500;
+      }
+    }
   }
 
-  &--content {}
+  &--content {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  &--pagination {
+    padding-top: 75px;
+    .pagination {
+      text-align: center;
+      span, a {
+        @include font('heading');
+        font-size: rem(20);
+        color: $dark-brown;
+        display: inline-block;
+        padding: 10px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      span {
+        color: $red;
+      }
+      a {
+        @include trans;
+        &:hover, &:focus, &:active {
+          color: $red;
+        }
+      }
+    }
+  }
+  .posts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(390px, max-content));
+    justify-content: center;
+    gap: 35px;
+  }
+  .results-entry {
+    box-shadow: 1.57219px 1.57219px 10px rgba(0, 0, 0, 0.2);
+    a {
+      @include trans;
+      padding: clamp(25px, 4vw, 40px);
+      display: block;
+      border: 2px solid transparent;
+      text-decoration: none;
+      color: inherit;
+      height: 100%;
+      min-height: 250px;
+      &:hover, &:focus, &:active {
+        border-color: $red;
+      }
+    }
+    h2 {
+      @extend %preset4;
+      font-size: rem(24);
+    }
+    hr {
+      margin: 20px 0;
+      border-bottom: 3px solid $yellow;
+      width: 110px;
+      @include for-size(tablet-sm) {
+        @include margin-center;
+      }
+    }
+  }
 }
