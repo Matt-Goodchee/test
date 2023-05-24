@@ -16,14 +16,28 @@ $options
     'ui_off_text' => 'No',
     'wrapper' => [
       'class' => 'center',
-      'width' => '50%',
+      'width' => '33%',
     ]
   ])
   ->addText('heading', [
     'label' => 'Heading',
     'wrapper' => [
       'class' => 'center',
-      'width' => '50%',
+      'width' => '33%',
+    ],
+    'conditional_logic' => [
+      [[
+        'field' => 'toggle',
+        'operator' => '==',
+        'value' => '1',
+      ]]
+    ]
+  ])
+  ->addText('updated', [
+    'label' => 'Updated Date',
+    'wrapper' => [
+      'class' => 'center',
+      'width' => '33%',
     ],
     'conditional_logic' => [
       [[

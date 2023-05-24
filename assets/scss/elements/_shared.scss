@@ -325,7 +325,7 @@ body:not(.wp-admin) {
         display: block;
         margin: 0;
         &:not(:last-child) {
-          margin-bottom: 5px;
+          margin-bottom: 2px;
         }
         &.icon-train a:before {
           content:'\f239';
@@ -348,8 +348,7 @@ body:not(.wp-admin) {
         &.icon-phone a:before {
           content:'\f3cd';
         }
-        &.current-menu-item,
-        &:hover, &:focus, &:active {
+        &.current-menu-item {
           a {
             background: $dark-brown;
             color: $white;
@@ -361,6 +360,7 @@ body:not(.wp-admin) {
       }
       a {
         @include font('heading');
+        color: $dark-brown;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -372,6 +372,9 @@ body:not(.wp-admin) {
           @include trans;
           margin-right: 15px;
           width: 20px;
+        }
+        &:hover, &:focus, &:active {
+          background: $white;
         }
       }
     }

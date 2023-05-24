@@ -17,17 +17,17 @@ $show_logo = $args['show_logo'];
       <?php endif; ?>
       <div class="wrapper">
         <div class="translate">TRANSLATE</div>
-        <button class="map-toggle" title="Tap to Open Map" aria-label="Open Map">
+        <button href="#" class="map-toggle" title="Tap to Open Map" aria-label="Open Map**">
           <span>Map</span><img src="<?= $icon_map; ?>" alt="">
         </button>
-        <button class="navbar-toggle" title="Tap to Open Menu" aria-label="Open Menu">
+        <button id="navbar-toggle" class="navbar-toggle" title="Tap to Open Menu" aria-label="Open Menu">
           <span>Menu</span><img src="<?= $icon_menu; ?>" alt="">
         </button>
       </div>
     </div>
   </div>
 
-  <div class="mobile-nav">
+  <div id="mobile-nav" class="mobile-nav">
 
     <?php if ( has_nav_menu( 'primary_nav' ) ) :
 

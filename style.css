@@ -1108,10 +1108,16 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .gform_wrapper.gravity-theme form textarea::placeholder {
   color: #000
 }
+.gform_wrapper.gravity-theme form input[type]:active,
 .gform_wrapper.gravity-theme form input[type]:focus,
+.gform_wrapper.gravity-theme form input[type]:hover,
+.gform_wrapper.gravity-theme form select:active,
 .gform_wrapper.gravity-theme form select:focus,
-.gform_wrapper.gravity-theme form textarea:focus {
-  border-color: var(--wp--preset--color--red)
+.gform_wrapper.gravity-theme form select:hover,
+.gform_wrapper.gravity-theme form textarea:active,
+.gform_wrapper.gravity-theme form textarea:focus,
+.gform_wrapper.gravity-theme form textarea:hover {
+  border-color: var(--wp--preset--color--red)!important
 }
 .gform_wrapper.gravity-theme form .gform-body {
   padding-top: 25px;
@@ -1315,7 +1321,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%
 }
 .mobile-nav-wrap .container .mobile-brand {
-  transition: opacity .6s cubic-bezier(.23,1,.32,1)
+  transition: opacity .6s cubic-bezier(.23,1,.32,1);
+  margin-right: 15px
 }
 .mobile-nav-wrap .container .mobile-brand img {
   display: block;
@@ -1347,8 +1354,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 .mobile-nav-wrap .container button span {
   color: #212121;
-  font-weight: 700;
-  margin-right: 10px
+  font-weight: 700
+}
+.mobile-nav-wrap .container button img {
+  margin-left: 10px
 }
 .mobile-nav-wrap .mobile-nav {
   overflow: hidden;
@@ -1858,9 +1867,22 @@ img {
   font-weight: 700
 }
 .notice-bar p {
-  font-size: .875rem;
+  font-size: 1rem;
   margin-bottom: 0;
   color: var(--wp--preset--color--white)
+}
+.notice-bar p a {
+  color: var(--wp--preset--color--white);
+  text-decoration: underline;
+  font-weight: 400
+}
+.notice-bar p a:active,
+.notice-bar p a:focus,
+.notice-bar p a:hover {
+  text-decoration: none
+}
+.notice-bar p.updated {
+  font-size: .875rem
 }
 .notice-bar .close-bar {
   position: absolute;
@@ -2077,7 +2099,7 @@ body:not(.wp-admin) .other-ways-row .col-menu li {
   margin: 0
 }
 body:not(.wp-admin) .other-ways-row .col-menu li:not(:last-child) {
-  margin-bottom: 5px
+  margin-bottom: 2px
 }
 body:not(.wp-admin) .other-ways-row .col-menu li.icon-train a:before {
   content: "\f239"
@@ -2100,21 +2122,16 @@ body:not(.wp-admin) .other-ways-row .col-menu li.icon-van a:before {
 body:not(.wp-admin) .other-ways-row .col-menu li.icon-phone a:before {
   content: "\f3cd"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.current-menu-item a,
-body:not(.wp-admin) .other-ways-row .col-menu li:active a,
-body:not(.wp-admin) .other-ways-row .col-menu li:focus a,
-body:not(.wp-admin) .other-ways-row .col-menu li:hover a {
+body:not(.wp-admin) .other-ways-row .col-menu li.current-menu-item a {
   background: var(--wp--preset--color--dark-brown);
   color: var(--wp--preset--color--white)
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.current-menu-item a:before,
-body:not(.wp-admin) .other-ways-row .col-menu li:active a:before,
-body:not(.wp-admin) .other-ways-row .col-menu li:focus a:before,
-body:not(.wp-admin) .other-ways-row .col-menu li:hover a:before {
+body:not(.wp-admin) .other-ways-row .col-menu li.current-menu-item a:before {
   color: var(--wp--preset--color--white)
 }
 body:not(.wp-admin) .other-ways-row .col-menu a {
   font-family: var(--wp--preset--font-family--header);
+  color: var(--wp--preset--color--dark-brown);
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -2133,6 +2150,11 @@ body:not(.wp-admin) .other-ways-row .col-menu a:before {
   transition: .6s cubic-bezier(.23,1,.32,1);
   margin-right: 15px;
   width: 20px
+}
+body:not(.wp-admin) .other-ways-row .col-menu a:active,
+body:not(.wp-admin) .other-ways-row .col-menu a:focus,
+body:not(.wp-admin) .other-ways-row .col-menu a:hover {
+  background: var(--wp--preset--color--white)
 }
 body:not(.wp-admin) .other-ways-row .col-image {
   grid-area: b;
@@ -2461,6 +2483,9 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .footer .wrapper {
     flex-direction: column
   }
+  .mobile-nav-wrap {
+    margin-bottom: 30px
+  }
   .mobile-nav-wrap .container .mobile-brand img {
     max-width: 200px
   }
@@ -2527,6 +2552,9 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .mobile-nav-wrap .container button:not(:last-of-type) {
     margin-right: 15px
   }
+  .notice-bar .container {
+    padding-left: 20px
+  }
   .social-icons ul {
     justify-content: center
   }
@@ -2582,6 +2610,12 @@ body:not(.wp-admin) .other-ways-row .col-text {
   body li,
   body p {
     font-size: .875rem
+  }
+  .mobile-nav-wrap .container button:not(:last-of-type) {
+    margin-right: 5px
+  }
+  .mobile-nav-wrap .container button img {
+    display: none
   }
 }
 @-webkit-keyframes fancybox-rotate {

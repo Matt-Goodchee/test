@@ -9,6 +9,9 @@
   .container {
     max-width: 1100px;
     position: relative;
+    @include for-size(tablet-sm) {
+      padding-left: 20px;
+    }
   }
   .wrapper {
     padding-top: 20px;
@@ -31,9 +34,20 @@
     font-weight: 700;
   }
   p {
-    font-size: rem(14);
+    font-size: rem(16);
     margin-bottom: 0;
     color: $white;
+    a {
+      color: $white;
+      text-decoration: underline;
+      font-weight: 400;
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
+    }
+    &.updated {
+      font-size: rem(14);
+    }
   }
   .close-bar {
     position: absolute;

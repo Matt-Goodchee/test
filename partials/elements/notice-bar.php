@@ -4,8 +4,9 @@
 $group = get_field('notice_bar_group', 'option');
 if ( $group ) :
   $toggle    = $group['toggle'];
-  $heading    = $group['heading'];
+  $heading   = $group['heading'];
   $content   = $group['content'];
+  $updated   = $group['updated'];
   $dateStart = $group['start_date'];
   $dateEnd   = $group['end_date'];
   $dateToday = date('Y-m-d');
@@ -29,7 +30,10 @@ endif;
           <span class="fas fa-exclamation-triangle"></span>
           <?php if ( !empty($heading) ) { ?><p class="heading"><?= $heading; ?></p><?php } ?>
         </div>
-        <div class="lower"><?=$content; ?></div>
+        <div class="lower">
+          <?=$content; ?>
+            <?php if ( !empty($updated) ) { ?><p class="updated">Updated: <?= $updated; ?></p><?php } ?>
+          </div>
       </div>
     </div>
   </div>

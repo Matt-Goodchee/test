@@ -56,8 +56,8 @@ $box-shadow          : none;
       @include placeholder {
         color: black;
       }
-      &:focus {
-        border-color: $border-color-active;
+      &:hover, &:focus, &:active {
+        border-color: $border-color-active !important;
       }
     }
     .gform-body {
