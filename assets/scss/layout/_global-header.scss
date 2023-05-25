@@ -35,7 +35,8 @@ main {
     min-height: 100px;
     width: 100%;
     @include for-size(tablet-sm) {
-      padding-left: 20px;
+      min-height: 80px;
+      padding-left: 10px;
       padding-right: 20px;
     }
     .mobile-brand {
@@ -87,7 +88,7 @@ main {
           margin-right: 15px;
         }
         @include for-size(phone) {
-          margin-right: 5px;
+          margin-right: 10px;
         }
       }
       &:hover, &:focus, &:active {
@@ -111,7 +112,7 @@ main {
     overflow: hidden;
     padding: 30px;
     background: $white;
-    border: 1px solid black; // temp
+    border: 1px solid green; // temp
     clear: both;
     display: none;
     right: 0;
@@ -119,6 +120,19 @@ main {
     position: fixed;
     z-index: 9999;
     box-shadow: 1.892px 1.892px 26.488px rgba(0, 0, 0, 0.2);
+    @include for-size(tablet-sm) {
+      top: 80px;
+      width: 100vw;
+      height: calc(100vh - 100px);
+      padding-bottom: 0;
+    }
+    .inner {
+      display: flex;
+      flex-direction: column;
+      @include for-size(tablet-sm) {
+        height: 100%;
+      }
+    }
     ul {
       @include list-reset;
       li {
@@ -158,6 +172,9 @@ main {
     figure {
       padding-top: 50px;
       margin-right: -40px;
+      @include for-size(tablet-sm) {
+        margin-top: auto;
+      }
       img {
         margin-left: auto;
         position: relative;

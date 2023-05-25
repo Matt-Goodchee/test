@@ -28,28 +28,29 @@ $show_logo = $args['show_logo'];
   </div>
 
   <div id="mobile-nav" class="mobile-nav">
+    <div class="inner">
+      <?php if ( has_nav_menu( 'primary_nav' ) ) :
 
-    <?php if ( has_nav_menu( 'primary_nav' ) ) :
-
-    // Use mobile nav if assigned, else use desktop nav instead
-    $theme_location = has_nav_menu( 'mobile_nav' ) ? 'mobile_nav' : 'primary_nav';
-    wp_nav_menu( array(
-      'theme_location'       => $theme_location,
-      'container'            => '',
-      'container_class'      => '',
-      'container_aria_label' => '',
-      'menu_id'              => '',
-      'menu_class'           => 'mobile-menu',
-      'echo'                 => true,
-      'fallback_cb'          => 'wp_page_menu',
-      'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-      'depth'                => 1
-    )); ?>
-  <?php endif; ?>
-  <?php get_search_form(); ?>
-  <figure>
-    <img src="<?= $logo_icon; ?>" alt="">
-  </figure>
-</div>
+        // Use mobile nav if assigned, else use desktop nav instead
+        $theme_location = has_nav_menu( 'mobile_nav' ) ? 'mobile_nav' : 'primary_nav';
+        wp_nav_menu( array(
+          'theme_location'       => $theme_location,
+          'container'            => '',
+          'container_class'      => '',
+          'container_aria_label' => '',
+          'menu_id'              => '',
+          'menu_class'           => 'mobile-menu',
+          'echo'                 => true,
+          'fallback_cb'          => 'wp_page_menu',
+          'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          'depth'                => 1
+        )); ?>
+      <?php endif; ?>
+      <?php get_search_form(); ?>
+      <figure>
+        <img src="<?= $logo_icon; ?>" alt="">
+      </figure>
+    </div>
+  </div>
 
 </div>

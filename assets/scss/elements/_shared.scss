@@ -274,6 +274,13 @@
       &:hover, &:focus, &:active {
         border-color: $black;
       }
+      @include for-size(tablet-sm) {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        .kt-svg-icon-list-text {
+          font-size: rem(20);
+        }
+      }
     }
     .kt-svg-icon-list-text {
       @include font('heading');
@@ -312,7 +319,7 @@ body:not(.wp-admin) {
         z-index: 1;
       }
       @include for-size(tablet-sm) {
-        margin-left: -40px;
+        margin-left: -$padding-md;
       }
       ul {
         margin: 0;
@@ -367,6 +374,12 @@ body:not(.wp-admin) {
         border-radius: 0px 60px 60px 0px;
         padding: 10px 30px;
         text-decoration: none;
+        @include for-size(tablet-sm) {
+          padding-left: 20px;
+          &:before {
+            margin-right: 5px;
+          }
+        }
         &:before {
           @include fa;
           @include trans;

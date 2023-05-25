@@ -25,7 +25,7 @@ body {
   p, li {
     @extend %body-copy;
     color: $dark-brown;
-    a {
+    a, a[href^='tel'] {
       @include trans;
       color: $red;
       font-weight: 700;

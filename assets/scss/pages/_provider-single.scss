@@ -3,7 +3,41 @@
 
 }
 
-.provider-content-row{
+.provider-content-row {
+  .desktop {
+    @include for-size(tablet-sm) {
+      display: none;
+    }
+  }
+  .tablet {
+    @include for-size(tablet, up, offset) {
+      display: none;
+    }
+  }
+  h1 {
+    font-weight: 600;
+  }
+  .wp-block-buttons {
+    @include for-size(tablet-sm) {
+      flex-direction: column;
+    }
+  }
+  .primary {
+    @include for-size(tablet) {
+      .acf-innerblocks-container {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .wp-block-image {
+        margin-left: -$padding-md;
+      }
+      .meta-group {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        margin-left: 0;
+      }
+    }
+  }
   .meta-group {
     border-left: 4px solid $red;
     padding-left: 20px;
@@ -30,15 +64,44 @@
 }
 
 .provider-tabs-row {
-  li.kt-tab-title-active {
-    .kb-svg-icon-wrap svg {
-      color: $dark-brown;
+  .wp-block-image {
+    @include for-size(tablet) {
+      @include margin-center;
+      max-width: 500px;
     }
   }
-  .kt-tab-title {
+  ul.kt-tabs-title-list {
+    @include for-size(tablet-sm) {
+      margin-left: -$padding-md !important;
+      margin-right: -$padding-md !important;
+    }
+    @include for-size(phone) {
+      display: block;
+    }
+  }
+  li.kt-title-item {
+    &:last-child {
+      margin-right: 0;
+    }
+    &.kt-tab-title-active {
+      .kb-svg-icon-wrap svg {
+        color: $dark-brown;
+      }
+    }
+  }
+  a.kt-tab-title {
+    @include for-size(tablet-sm) {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+    @include for-size(phone) {
+      padding-left: $padding-md !important;
+    }
     .kb-svg-icon-wrap {
       flex-shrink: 0;
-      margin-right: 5px;
+      @include for-size(tablet-sm, up, offset) {
+        margin-right: 5px;
+      }
       svg {
         @include trans;
         color: $red;
@@ -47,6 +110,9 @@
     .kt-title-text {
       color: $dark-brown;
       font-weight: 700;
+      @include for-size(tablet-sm) {
+        font-size: rem(12);
+      }
     }
     &:hover, &:focus, &:active {
       .kb-svg-icon-wrap svg {
@@ -57,6 +123,11 @@
 }
 
 .provider-outro-row {
+  .wp-block-kadence-image {
+    @include for-size(tablet) {
+      @include margin-center;
+    }
+  }
   > .kt-row-column-wrap {
 
   }
@@ -71,7 +142,7 @@
 
 /* Custom
 ========================================================= */
-@include for-size(tablet-sm, up, offset) {
+@include for-size(tablet, up, offset) {
   .provider-tabs-row .kt-row-column-wrap {
     grid-template-areas: 
     "f f f f f f f f f f"

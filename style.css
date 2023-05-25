@@ -237,7 +237,9 @@ body p {
   color: var(--wp--preset--color--dark-brown)
 }
 body li a,
-body p a {
+body li a[href^=tel],
+body p a,
+body p a[href^=tel] {
   transition: .6s cubic-bezier(.23,1,.32,1);
   color: var(--wp--preset--color--red);
   font-weight: 700;
@@ -246,9 +248,15 @@ body p a {
 body li a:active,
 body li a:focus,
 body li a:hover,
+body li a[href^=tel]:active,
+body li a[href^=tel]:focus,
+body li a[href^=tel]:hover,
 body p a:active,
 body p a:focus,
-body p a:hover {
+body p a:hover,
+body p a[href^=tel]:active,
+body p a[href^=tel]:focus,
+body p a[href^=tel]:hover {
   text-decoration: underline
 }
 blockquote {
@@ -1363,7 +1371,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   overflow: hidden;
   padding: 30px;
   background: var(--wp--preset--color--white);
-  border: 1px solid #000;
+  border: 1px solid green;
   clear: both;
   display: none;
   right: 0;
@@ -1371,6 +1379,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   position: fixed;
   z-index: 9999;
   box-shadow: 1.892px 1.892px 26.488px rgba(0,0,0,.2)
+}
+.mobile-nav-wrap .mobile-nav .inner {
+  display: flex;
+  flex-direction: column
 }
 .mobile-nav-wrap .mobile-nav ul {
   margin: 0;
@@ -2296,6 +2308,9 @@ body:not(.wp-admin) .other-ways-row .col-text {
   margin-right: auto;
   display: block
 }
+.provider-content-row h1 {
+  font-weight: 600
+}
 .provider-content-row .meta-group {
   border-left: 4px solid var(--wp--preset--color--red);
   padding-left: 20px;
@@ -2318,24 +2333,26 @@ body:not(.wp-admin) .other-ways-row .col-text {
 .provider-content-row .meta-group a[href^=tel]:hover {
   text-decoration: underline
 }
-.provider-tabs-row li.kt-tab-title-active .kb-svg-icon-wrap svg {
+.provider-tabs-row li.kt-title-item:last-child {
+  margin-right: 0
+}
+.provider-tabs-row li.kt-title-item.kt-tab-title-active .kb-svg-icon-wrap svg {
   color: var(--wp--preset--color--dark-brown)
 }
-.provider-tabs-row .kt-tab-title .kb-svg-icon-wrap {
-  flex-shrink: 0;
-  margin-right: 5px
+.provider-tabs-row a.kt-tab-title .kb-svg-icon-wrap {
+  flex-shrink: 0
 }
-.provider-tabs-row .kt-tab-title .kb-svg-icon-wrap svg {
+.provider-tabs-row a.kt-tab-title .kb-svg-icon-wrap svg {
   transition: .6s cubic-bezier(.23,1,.32,1);
   color: var(--wp--preset--color--red)
 }
-.provider-tabs-row .kt-tab-title .kt-title-text {
+.provider-tabs-row a.kt-tab-title .kt-title-text {
   color: var(--wp--preset--color--dark-brown);
   font-weight: 700
 }
-.provider-tabs-row .kt-tab-title:active .kb-svg-icon-wrap svg,
-.provider-tabs-row .kt-tab-title:focus .kb-svg-icon-wrap svg,
-.provider-tabs-row .kt-tab-title:hover .kb-svg-icon-wrap svg {
+.provider-tabs-row a.kt-tab-title:active .kb-svg-icon-wrap svg,
+.provider-tabs-row a.kt-tab-title:focus .kb-svg-icon-wrap svg,
+.provider-tabs-row a.kt-tab-title:hover .kb-svg-icon-wrap svg {
   color: var(--wp--preset--color--dark-brown)
 }
 @media only screen and (min-width:769px) {
@@ -2352,24 +2369,8 @@ body:not(.wp-admin) .other-ways-row .col-text {
     margin-left: 20px;
     margin-right: 0
   }
-  .provider-tabs-row .kt-row-column-wrap {
-    grid-template-areas: "f f f f f f f f f f" "p p p p s s s s s s"
-  }
-  .provider-outro-row .kt-row-column-wrap {
-    grid-template-areas: "f f f f f f f f f f" "p p p s s s s s s s"
-  }
-  .grid-custom .kt-row-column-wrap {
-    grid-template-columns: repeat(10,1fr)!important;
-    grid-template-rows: auto 1fr!important
-  }
-  .grid-custom .full-width {
-    grid-area: f
-  }
-  .grid-custom .primary {
-    grid-area: p
-  }
-  .grid-custom .secondary {
-    grid-area: s
+  .provider-tabs-row a.kt-tab-title .kb-svg-icon-wrap {
+    margin-right: 5px
   }
 }
 @media only screen and (min-width:1025px) {
@@ -2442,6 +2443,28 @@ body:not(.wp-admin) .other-ways-row .col-text {
     padding-top: 120px;
     padding-bottom: 120px
   }
+  .provider-content-row .tablet {
+    display: none
+  }
+  .provider-tabs-row .kt-row-column-wrap {
+    grid-template-areas: "f f f f f f f f f f" "p p p p s s s s s s"
+  }
+  .provider-outro-row .kt-row-column-wrap {
+    grid-template-areas: "f f f f f f f f f f" "p p p s s s s s s s"
+  }
+  .grid-custom .kt-row-column-wrap {
+    grid-template-columns: repeat(10,1fr)!important;
+    grid-template-rows: auto 1fr!important
+  }
+  .grid-custom .full-width {
+    grid-area: f
+  }
+  .grid-custom .primary {
+    grid-area: p
+  }
+  .grid-custom .secondary {
+    grid-area: s
+  }
 }
 @media only screen and (max-width:1024px) {
   .container {
@@ -2510,6 +2533,27 @@ body:not(.wp-admin) .other-ways-row .col-text {
     padding-top: 60px;
     padding-bottom: 60px
   }
+  .provider-content-row .primary .acf-innerblocks-container {
+    display: flex;
+    flex-direction: column-reverse
+  }
+  .provider-content-row .primary .wp-block-image {
+    margin-left: -40px
+  }
+  .provider-content-row .primary .meta-group {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 0
+  }
+  .provider-tabs-row .wp-block-image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px
+  }
+  .provider-outro-row .wp-block-kadence-image {
+    margin-left: auto;
+    margin-right: auto
+  }
 }
 @media only screen and (max-width:768px) {
   .flex {
@@ -2533,7 +2577,8 @@ body:not(.wp-admin) .other-ways-row .col-text {
     font-size: 1.75rem
   }
   .mobile-nav-wrap .container {
-    padding-left: 20px;
+    min-height: 80px;
+    padding-left: 10px;
     padding-right: 20px
   }
   .mobile-nav-wrap .container .mobile-brand img {
@@ -2552,8 +2597,23 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .mobile-nav-wrap .container button:not(:last-of-type) {
     margin-right: 15px
   }
+  .mobile-nav-wrap .mobile-nav {
+    top: 80px;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    padding-bottom: 0
+  }
+  .mobile-nav-wrap .mobile-nav .inner {
+    height: 100%
+  }
+  .mobile-nav-wrap .mobile-nav figure {
+    margin-top: auto
+  }
   .notice-bar .container {
     padding-left: 20px
+  }
+  .notice-bar p {
+    line-height: 1.4
   }
   .social-icons ul {
     justify-content: center
@@ -2581,11 +2641,24 @@ body:not(.wp-admin) .other-ways-row .col-text {
     margin-top: 40px;
     margin-left: 40px
   }
+  .home-row .kt-svg-icon-list a {
+    padding-top: 4px;
+    padding-bottom: 4px
+  }
+  .home-row .kt-svg-icon-list a .kt-svg-icon-list-text {
+    font-size: 1.25rem
+  }
   body:not(.wp-admin) .other-ways-row .kt-row-column-wrap {
     grid-template-areas: "a a a a a a b b b b" "c c c c c c c c c c"
   }
   body:not(.wp-admin) .other-ways-row .col-menu {
     margin-left: -40px
+  }
+  body:not(.wp-admin) .other-ways-row .col-menu a {
+    padding-left: 20px
+  }
+  body:not(.wp-admin) .other-ways-row .col-menu a:before {
+    margin-right: 5px
   }
   body:not(.wp-admin) .other-ways-row .col-image {
     margin-right: -30px
@@ -2594,6 +2667,23 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .search-index .results-entry hr {
     margin-left: auto;
     margin-right: auto
+  }
+  .provider-content-row .desktop {
+    display: none
+  }
+  .provider-content-row .wp-block-buttons {
+    flex-direction: column
+  }
+  .provider-tabs-row ul.kt-tabs-title-list {
+    margin-left: -40px!important;
+    margin-right: -40px!important
+  }
+  .provider-tabs-row a.kt-tab-title {
+    padding-left: 10px!important;
+    padding-right: 10px!important
+  }
+  .provider-tabs-row a.kt-tab-title .kt-title-text {
+    font-size: .75rem
   }
 }
 @media only screen and (max-width:640px) {
@@ -2612,10 +2702,16 @@ body:not(.wp-admin) .other-ways-row .col-text {
     font-size: .875rem
   }
   .mobile-nav-wrap .container button:not(:last-of-type) {
-    margin-right: 5px
+    margin-right: 10px
   }
   .mobile-nav-wrap .container button img {
     display: none
+  }
+  .provider-tabs-row ul.kt-tabs-title-list {
+    display: block
+  }
+  .provider-tabs-row a.kt-tab-title {
+    padding-left: 40px!important
   }
 }
 @-webkit-keyframes fancybox-rotate {

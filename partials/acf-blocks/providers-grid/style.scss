@@ -9,7 +9,7 @@ $class: '.providers-index';
 
 #{$class} {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(375px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
     justify-content: center;
     @include for-size(phone) {
       grid-template-columns: 1fr;

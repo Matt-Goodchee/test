@@ -37,6 +37,9 @@
     font-size: rem(16);
     margin-bottom: 0;
     color: $white;
+    @include for-size(tablet-sm) {
+      line-height: 1.4;
+    }
     a {
       color: $white;
       text-decoration: underline;

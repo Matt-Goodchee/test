@@ -4,43 +4,39 @@
 
 // });
 
-// Doc Ready
-
+// jQuery Doc Ready
 (function($){
 
   // Mobile Menu
   let menuButton = $('#navbar-toggle');
   let menu = $('#mobile-nav');
-
-  function openMenu() {
-    menu.fadeIn();
-    menu.addClass('open');
-  }
-  function closeMenu() {
-    menu.fadeOut();
-    menu.removeClass('open');
-  }
-  menuButton.click( function(e) {
+  if ( menuButton.length && menu.length ) {
+    function openMenu() {
+      menu.fadeIn();
+      menu.addClass('open');
+    }
+    function closeMenu() {
+      menu.fadeOut();
+      menu.removeClass('open');
+    }
+    menuButton.click( function(e) {
     // close
     if ( menu.hasClass('open') ) {
       closeMenu();
       $(document).off('click.menuToggle');
-          console.log('STOP watching DOC 1');
     } 
     // open
     else {
       openMenu();
       $(document).on('click.menuToggle', function(e) {
-        console.log('watching DOC');
         if ( !$(e.target).closest(menuButton).length && !$(e.target).closest(menu).length ) {
           closeMenu();
           $(document).off('click.menuToggle');
-          console.log('STOP watching DOC 2');
         }
       });
     }
   });
-
+  }
 
   // Notice Bar
   let noticeClose = $('#notice-close');
