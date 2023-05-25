@@ -1,11 +1,11 @@
 {
   "name": "acf/news-posts",
   "title": "News Posts",
-  "description": "",
+  "description": "Custom news posts listings",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
   "icon": "cover-image",
-  "keywords": [],
+  "keywords": ["news", "post"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php",

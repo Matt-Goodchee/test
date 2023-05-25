@@ -94,6 +94,11 @@ main {
       &:hover, &:focus, &:active {
         border-color: $black;
       }
+      &.map-toggle {
+        svg {
+          width: 20px;
+        }
+      }
       &.navbar-toggle {
         &.open {
           svg {

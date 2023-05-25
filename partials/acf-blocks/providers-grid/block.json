@@ -1,11 +1,11 @@
 {
   "name": "acf/providers-grid",
   "title": "Providers Grid",
-  "description": "",
+  "description": "Custom Providers large index grid",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
   "icon": "cover-image",
-  "keywords": [""],
+  "keywords": ["provider", "grid", "index"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php",
