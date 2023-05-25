@@ -154,11 +154,15 @@
   &.reverse {
     @include for-size(tablet-sm, up, offset) {
       .wp-block-kadence-countup {
-        flex-direction: row-reverse;
         .kb-count-up-number {
           margin-left: 20px;
           margin-right: 0;
         }
+      }
+    }
+    @include between-sizes(tablet-sm, tablet) {
+      .wp-block-kadence-countup {
+        align-items: flex-end;
       }
     }
   }
@@ -166,18 +170,29 @@
     @extend %preset3;
     display: flex;
     align-items: flex-start;
+    @include for-size(tablet) {
+      flex-direction: column;
+      .kb-count-up-number {
+        margin-bottom: 20px;
+      }
+    }
+    @include for-size(tablet-sm) {
+      align-items: center;
+    }
     .kb-count-up-number {
       flex: 0 0 60px;
-      margin-right: 20px;
       background: $yellow;
       border-radius: 50%;
-      margin-top: -5px;
       width: 60px;
       height: 60px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 30px;
+      @include for-size(tablet, up, offset) {
+        margin-right: 20px;
+        margin-top: -5px;
+      }
     }
     .kb-count-up-title {
       flex: 1;
@@ -186,6 +201,7 @@
       }
       @include for-size(tablet-sm) {
         text-align: left;
+        font-size: rem(22);
       }
     }
   }

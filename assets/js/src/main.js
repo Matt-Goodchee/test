@@ -14,10 +14,13 @@
     function openMenu() {
       menu.fadeIn();
       menu.addClass('open');
+      menuButton.addClass('open');
+      
     }
     function closeMenu() {
       menu.fadeOut();
       menu.removeClass('open');
+      menuButton.removeClass('open');
     }
     menuButton.click( function(e) {
     // close

@@ -446,7 +446,9 @@ body .editor-styles-wrapper body p {
   color: var(--wp--preset--color--dark-brown)
 }
 body .editor-styles-wrapper body li a,
-body .editor-styles-wrapper body p a {
+body .editor-styles-wrapper body li a[href^=tel],
+body .editor-styles-wrapper body p a,
+body .editor-styles-wrapper body p a[href^=tel] {
   transition: .6s cubic-bezier(.23,1,.32,1);
   color: var(--wp--preset--color--red);
   font-weight: 700;
@@ -455,9 +457,15 @@ body .editor-styles-wrapper body p a {
 body .editor-styles-wrapper body li a:active,
 body .editor-styles-wrapper body li a:focus,
 body .editor-styles-wrapper body li a:hover,
+body .editor-styles-wrapper body li a[href^=tel]:active,
+body .editor-styles-wrapper body li a[href^=tel]:focus,
+body .editor-styles-wrapper body li a[href^=tel]:hover,
 body .editor-styles-wrapper body p a:active,
 body .editor-styles-wrapper body p a:focus,
-body .editor-styles-wrapper body p a:hover {
+body .editor-styles-wrapper body p a:hover,
+body .editor-styles-wrapper body p a[href^=tel]:active,
+body .editor-styles-wrapper body p a[href^=tel]:focus,
+body .editor-styles-wrapper body p a[href^=tel]:hover {
   text-decoration: underline
 }
 body .editor-styles-wrapper blockquote {
@@ -901,6 +909,9 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   body .notice-bar .container {
     padding-left: 20px
   }
+  body .notice-bar p {
+    line-height: 1.4
+  }
   body .social-icons ul {
     justify-content: center
   }
@@ -920,6 +931,9 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     padding-left: 0!important;
     padding-right: 0!important
   }
+  body .count-split-row .wp-block-kadence-countup {
+    flex-direction: column
+  }
   body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
     text-align: left
   }
@@ -927,11 +941,24 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     margin-top: 40px;
     margin-left: 40px
   }
+  body .home-row .kt-svg-icon-list a {
+    padding-top: 4px;
+    padding-bottom: 4px
+  }
+  body .home-row .kt-svg-icon-list a .kt-svg-icon-list-text {
+    font-size: 1.25rem
+  }
   body body:not(.wp-admin) .other-ways-row .kt-row-column-wrap {
     grid-template-areas: "a a a a a a b b b b" "c c c c c c c c c c"
   }
   body body:not(.wp-admin) .other-ways-row .col-menu {
     margin-left: -40px
+  }
+  body body:not(.wp-admin) .other-ways-row .col-menu a {
+    padding-left: 20px
+  }
+  body body:not(.wp-admin) .other-ways-row .col-menu a:before {
+    margin-right: 5px
   }
   body body:not(.wp-admin) .other-ways-row .col-image {
     margin-right: -30px

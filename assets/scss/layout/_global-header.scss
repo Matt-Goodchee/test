@@ -94,14 +94,30 @@ main {
       &:hover, &:focus, &:active {
         border-color: $black;
       }
+      &.navbar-toggle {
+        &.open {
+          svg {
+            &.open {
+              display: none;
+            }
+            &.close {
+              display: block;
+            }
+          }
+        }
+      }
       span {
         @extend %preset5;
         color: #212121;
         font-weight: 700;
       }
-      img {
+      svg {
         margin-left: 10px;
+        width: 23px;
         @include for-size(phone) {
+          display: none;
+        }
+        &.close {
           display: none;
         }
       }

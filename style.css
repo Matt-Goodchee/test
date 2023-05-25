@@ -1360,12 +1360,22 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .mobile-nav-wrap .container button:hover {
   border-color: var(--wp--preset--color--black)
 }
+.mobile-nav-wrap .container button.navbar-toggle.open svg.open {
+  display: none
+}
+.mobile-nav-wrap .container button.navbar-toggle.open svg.close {
+  display: block
+}
 .mobile-nav-wrap .container button span {
   color: #212121;
   font-weight: 700
 }
-.mobile-nav-wrap .container button img {
-  margin-left: 10px
+.mobile-nav-wrap .container button svg {
+  margin-left: 10px;
+  width: 23px
+}
+.mobile-nav-wrap .container button svg.close {
+  display: none
 }
 .mobile-nav-wrap .mobile-nav {
   overflow: hidden;
@@ -2019,10 +2029,8 @@ img {
 }
 .count-split-row .wp-block-kadence-countup .kb-count-up-number {
   flex: 0 0 60px;
-  margin-right: 20px;
   background: var(--wp--preset--color--yellow);
   border-radius: 50%;
-  margin-top: -5px;
   width: 60px;
   height: 60px;
   display: inline-flex;
@@ -2355,15 +2363,17 @@ body:not(.wp-admin) .other-ways-row .col-text {
 .provider-tabs-row a.kt-tab-title:hover .kb-svg-icon-wrap svg {
   color: var(--wp--preset--color--dark-brown)
 }
+@media only screen and (min-width:768px) and (max-width:1024px) {
+  .count-split-row.reverse .wp-block-kadence-countup {
+    align-items: flex-end
+  }
+}
 @media only screen and (min-width:769px) {
   .flex.reverse {
     flex-direction: row-reverse
   }
   .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
     margin-left: auto
-  }
-  .count-split-row.reverse .wp-block-kadence-countup {
-    flex-direction: row-reverse
   }
   .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
     margin-left: 20px;
@@ -2422,6 +2432,10 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .mobile-nav-wrap .container .mobile-brand {
     position: relative;
     top: 40px
+  }
+  .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+    margin-right: 20px;
+    margin-top: -5px
   }
   .count-split-row .wp-block-kadence-countup .kb-count-up-title {
     max-width: 350px
@@ -2520,6 +2534,12 @@ body:not(.wp-admin) .other-ways-row .col-text {
   }
   .wp-caption {
     width: auto!important
+  }
+  .count-split-row .wp-block-kadence-countup {
+    flex-direction: column
+  }
+  .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+    margin-bottom: 20px
   }
   .home-row .kt-svg-icon-list {
     margin-top: 20px!important
@@ -2634,8 +2654,12 @@ body:not(.wp-admin) .other-ways-row .col-text {
     padding-left: 0!important;
     padding-right: 0!important
   }
+  .count-split-row .wp-block-kadence-countup {
+    align-items: center
+  }
   .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-    text-align: left
+    text-align: left;
+    font-size: 1.375rem
   }
   .home-row .meta-group {
     margin-top: 40px;
@@ -2704,7 +2728,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .mobile-nav-wrap .container button:not(:last-of-type) {
     margin-right: 10px
   }
-  .mobile-nav-wrap .container button img {
+  .mobile-nav-wrap .container button svg {
     display: none
   }
   .provider-tabs-row ul.kt-tabs-title-list {

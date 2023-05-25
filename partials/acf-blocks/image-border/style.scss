@@ -9,6 +9,9 @@ $class: '.image-border-custom-block';
 #{$class} {
   figure {
     max-width: 500px;
+    @include for-size(tablet) {
+      @include margin-center;
+    }
     img {
       position: relative;
       z-index: 1;
