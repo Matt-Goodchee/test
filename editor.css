@@ -209,10 +209,8 @@ body .count-split-row .wp-block-kadence-countup {
 }
 body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
   flex: 0 0 60px;
-  margin-right: 20px;
   background: var(--wp--preset--color--yellow);
   border-radius: 50%;
-  margin-top: -5px;
   width: 60px;
   height: 60px;
   display: inline-flex;
@@ -855,6 +853,11 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   z-index: 20;
   position: relative
 }
+@media only screen and (min-width:768px) and (max-width:1024px) {
+  body .count-split-row.reverse .wp-block-kadence-countup {
+    align-items: flex-end
+  }
+}
 @media only screen and (min-width:769px) {
   .flex.reverse {
     flex-direction: row-reverse
@@ -862,15 +865,16 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   body .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
     margin-left: auto
   }
-  body .count-split-row.reverse .wp-block-kadence-countup {
-    flex-direction: row-reverse
-  }
   body .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
     margin-left: 20px;
     margin-right: 0
   }
 }
 @media only screen and (min-width:1025px) {
+  body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+    margin-right: 20px;
+    margin-top: -5px
+  }
   body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
     max-width: 350px
   }
@@ -892,6 +896,12 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   .container {
     padding-left: 40px;
     padding-right: 40px
+  }
+  body .count-split-row .wp-block-kadence-countup {
+    flex-direction: column
+  }
+  body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+    margin-bottom: 20px
   }
   body .home-row .kt-svg-icon-list {
     margin-top: 20px!important
@@ -932,10 +942,11 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     padding-right: 0!important
   }
   body .count-split-row .wp-block-kadence-countup {
-    flex-direction: column
+    align-items: center
   }
   body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-    text-align: left
+    text-align: left;
+    font-size: 1.375rem
   }
   body .home-row .meta-group {
     margin-top: 40px;

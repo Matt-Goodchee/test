@@ -12,12 +12,25 @@ function getCookie(name) {
 function setCookie(name, value, days) {
   var d = new Date;
   if ( days != '0' ) {
-  d.setTime(d.getTime() + 24*60*60*1000*days);
+    d.setTime(d.getTime() + 24*60*60*1000*days);
     var expiretime = d.toGMTString();
   } else {
     var expiretime = 0;
   }
   document.cookie = name + "=" + value + ";path=/;expires=" + expiretime;
+}
+
+// Debounce
+function debounce(func, delay) {
+  let timerId;
+  return function() {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timerId);
+    timerId = setTimeout(function() {
+      func.apply(context, args);
+    }, delay);
+  };
 }
 
 (function($) { // Doc Ready

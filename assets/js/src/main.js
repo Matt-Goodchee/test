@@ -62,4 +62,50 @@
     });
   }
 
+  // Mini Provider Grid
+  let slides = $('.providers-mini .wrapper');
+  if ( slides.length ) {
+    function initSlickSlider() {
+      slides.slick({
+        infinite: false,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3.5,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2.5,
+          }
+        }
+        ]
+      });
+    }
+
+    function destroySlickSlider() {
+      slides.slick('unslick');
+    }
+
+    function checkViewportWidth() {
+      if ($(window).width() <= 1024) {
+        initSlickSlider();
+      } else {
+        destroySlickSlider();
+      }
+    }
+
+    checkViewportWidth();
+
+    $(window).resize( debounce(function() {
+      checkViewportWidth();
+    }, 250));
+  }
+
+
 })(jQuery);
