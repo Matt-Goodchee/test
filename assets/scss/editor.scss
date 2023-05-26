@@ -3,50 +3,50 @@
 @import "core/variables/queries";
 @import "core/layout/grid";
 @import "core/variables/variables";
-@import "core/typography/fonts";
 
 /* Typography
 ========================================================= */
 
 
 body {
-  @import "elements/**/*.scss";
-  .editor-styles-wrapper {
-    
-    @include font;
-    @import "core/typography/main";
-    @import "layout/global-forms";
-    
 
+  .editor-styles-wrapper {
+    @include font;
+    @import "core/typography/presets";
+    @import "core/typography/base";
+    @import "core/typography/headings";
+    @import "layout/global-forms";
+    @import "pages/**/*.scss";
+    @import "elements/**/*.scss";
+    @import "acf-blocks/**/*.scss";
+    
     .icon-heading {
       display: flex;
       justify-content: center;
     }
 
-
     h1.wp-block-post-title {
      font-size: 40px; 
-    }
-  
-    .edit-post-visual-editor .button,
-    .mce-content-body .button,
-    .wp-block.editor-block .button,
-    .wp-block-freeform.block-library-rich-text__tinymce .button, .wp-block-button__link,
-    .acf-block-preview {
-      .button {
-       @include button;
-     }
-    }
-    .wp-block-button .wp-block-button__link {
+   }
+
+   .edit-post-visual-editor .button,
+   .mce-content-body .button,
+   .wp-block.editor-block .button,
+   .wp-block-freeform.block-library-rich-text__tinymce .button, .wp-block-button__link,
+   .acf-block-preview {
+    .button {
      @include button;
    }
-  }
+ }
+ .wp-block-button .wp-block-button__link {
+   @include button;
+ }
+}
 }
 
 
 /* Additional Styles
 ========================================================= */
-
 .interface-interface-skeleton__editor {
   overflow: auto !important;
 }

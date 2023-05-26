@@ -8,7 +8,7 @@ $class: '.image-border-custom-block';
 
 #{$class} {
   figure {
-    max-width: 500px;
+    max-width: 575px;
     @include for-size(tablet) {
       @include margin-center;
     }

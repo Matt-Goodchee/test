@@ -67,7 +67,7 @@
   .wp-block-image {
     @include for-size(tablet) {
       @include margin-center;
-      max-width: 500px;
+      max-width: 575px;
     }
   }
   ul.kt-tabs-title-list {

@@ -71,7 +71,8 @@ main {
         display: none;
       }
     }
-    button {
+    .nav-button {
+      @include button;
       border: 3px solid $red;
       background: $white;
       display: inline-flex;
@@ -102,6 +103,7 @@ main {
       }
       &:hover, &:focus, &:active {
         border-color: $black;
+        background: $white;
       }
       &.map-toggle {
         svg {
@@ -147,7 +149,6 @@ main {
     overflow: hidden;
     padding: 30px;
     background: $white;
-    border: 1px solid green; // temp
     clear: both;
     display: none;
     right: 0;
