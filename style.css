@@ -747,7 +747,8 @@ h6 {
   display: inline-flex;
   align-items: center;
   padding: 13px 20px;
-  min-height: 50px
+  min-height: 50px;
+  line-height: 1
 }
 .mobile-nav-wrap .container button:not(:last-of-type) {
   margin-right: 25px
@@ -771,6 +772,7 @@ h6 {
   font-weight: 700
 }
 .mobile-nav-wrap .container button svg {
+  flex-shrink: 0;
   margin-left: 10px;
   width: 23px
 }
@@ -1404,11 +1406,11 @@ img {
 }
 .icon-link .kb-svg-icon-wrap {
   margin-right: 0;
-  margin-left: 5px
+  margin-left: 8px
 }
 .icon-link .kt-svg-icon-list-text a {
-  font-family: var(--wp--preset--font-family--header);
-  font-weight: 500;
+  font-family: var(--wp--preset--font-family--header)!important;
+  font-weight: 500!important;
   text-decoration: none
 }
 .icon-link .kt-svg-icon-list-text a:active,
@@ -1440,7 +1442,8 @@ img {
   font-size: 30px
 }
 .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-  flex: 1
+  flex: 1;
+  line-height: 1.4
 }
 .wp-block-table table {
   border: none
@@ -1776,10 +1779,6 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
     margin-left: auto
   }
-  .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
-    margin-left: 20px;
-    margin-right: 0
-  }
   .provider-tabs-row a.kt-tab-title .kb-svg-icon-wrap {
     margin-right: 5px
   }
@@ -1812,6 +1811,13 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .mobile-nav-wrap .container .mobile-brand {
     position: relative;
     top: 40px
+  }
+  .count-split-row.reverse .wp-block-kadence-countup {
+    flex-direction: row-reverse
+  }
+  .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
+    margin-left: 20px;
+    margin-right: 0
   }
   .count-split-row .wp-block-kadence-countup .kb-count-up-number {
     margin-right: 20px;
@@ -1916,7 +1922,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
     flex-direction: column
   }
   .count-split-row .wp-block-kadence-countup .kb-count-up-number {
-    margin-bottom: 20px
+    margin-bottom: 15px
   }
   .home-row .kt-svg-icon-list {
     margin-top: 20px!important
@@ -1976,7 +1982,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .mobile-nav-wrap .container {
     min-height: 80px;
     padding-left: 10px;
-    padding-right: 20px
+    padding-right: 10px
   }
   .mobile-nav-wrap .container .mobile-brand img {
     max-width: 150px
@@ -2034,8 +2040,11 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .count-split-row .wp-block-kadence-countup {
     align-items: center
   }
+  .count-split-row .wp-block-kadence-countup .kb-count-up-number {
+    margin-bottom: 25px
+  }
   .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-    text-align: left;
+    text-align: center;
     font-size: 1.375rem
   }
   .home-row .meta-group {
@@ -2099,11 +2108,23 @@ body:not(.wp-admin) .other-ways-row .col-text {
   body p {
     font-size: .875rem
   }
+  .mobile-nav-wrap .container .mobile-brand img {
+    max-width: 125px
+  }
+  .mobile-nav-wrap .container button {
+    min-height: 45px;
+    padding-top: 0;
+    padding-bottom: 0
+  }
   .mobile-nav-wrap .container button:not(:last-of-type) {
     margin-right: 10px
   }
+  .mobile-nav-wrap .container button span {
+    font-size: .875rem
+  }
   .mobile-nav-wrap .container button svg {
-    display: none
+    margin-left: 7px;
+    width: 14px!important
   }
   .provider-tabs-row ul.kt-tabs-title-list {
     display: block

@@ -95,6 +95,12 @@ $class: '.providers-index';
         @include font('heading');
         @include trans;
         color: $red;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+      }
+      span {
+        margin-left: 10px;
       }
     }
   }

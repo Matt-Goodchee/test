@@ -91,7 +91,6 @@
     function destroySlickSlider() {
       slides.slick('unslick');
     }
-
     function checkViewportWidth() {
       if ($(window).width() <= 1024) {
         initSlickSlider();
@@ -99,12 +98,12 @@
         destroySlickSlider();
       }
     }
-
-    checkViewportWidth();
-
     $(window).resize( debounce(function() {
       checkViewportWidth();
     }, 250));
+
+    // run
+    checkViewportWidth();
   }
 
 

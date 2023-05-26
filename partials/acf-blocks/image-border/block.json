@@ -1,7 +1,7 @@
 {
   "name": "acf/image-border",
   "title": "Image w/ Border",
-  "description": "Custome image block w/ border & rounded corners",
+  "description": "Custom image block w/ border & rounded corners",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
   "icon": "screenoptions",

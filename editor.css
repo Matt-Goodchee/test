@@ -133,7 +133,8 @@ body .wp-block-button .wp-block-button__link {
   font-size: 1.25rem;
   line-height: 1.2;
   text-decoration: none;
-  -webkit-appearance: none
+  -webkit-appearance: none;
+  font-weight: 500
 }
 body .wp-block-button .wp-block-button__link:active,
 body .wp-block-button .wp-block-button__link:focus,
@@ -183,11 +184,11 @@ body .icon-link li {
 }
 body .icon-link .kb-svg-icon-wrap {
   margin-right: 0;
-  margin-left: 5px
+  margin-left: 8px
 }
 body .icon-link .kt-svg-icon-list-text a {
-  font-family: var(--wp--preset--font-family--header);
-  font-weight: 500;
+  font-family: var(--wp--preset--font-family--header)!important;
+  font-weight: 500!important;
   text-decoration: none
 }
 body .icon-link .kt-svg-icon-list-text a:active,
@@ -219,7 +220,8 @@ body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
   font-size: 30px
 }
 body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-  flex: 1
+  flex: 1;
+  line-height: 1.4
 }
 body .wp-block-table table {
   border: none
@@ -865,12 +867,15 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   body .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
     margin-left: auto
   }
+}
+@media only screen and (min-width:1025px) {
+  body .count-split-row.reverse .wp-block-kadence-countup {
+    flex-direction: row-reverse
+  }
   body .count-split-row.reverse .wp-block-kadence-countup .kb-count-up-number {
     margin-left: 20px;
     margin-right: 0
   }
-}
-@media only screen and (min-width:1025px) {
   body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
     margin-right: 20px;
     margin-top: -5px
@@ -901,7 +906,7 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     flex-direction: column
   }
   body .count-split-row .wp-block-kadence-countup .kb-count-up-number {
-    margin-bottom: 20px
+    margin-bottom: 25px
   }
   body .home-row .kt-svg-icon-list {
     margin-top: 20px!important
@@ -945,7 +950,7 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     align-items: center
   }
   body .count-split-row .wp-block-kadence-countup .kb-count-up-title {
-    text-align: left;
+    text-align: center;
     font-size: 1.375rem
   }
   body .home-row .meta-group {

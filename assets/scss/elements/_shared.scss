@@ -128,12 +128,12 @@
   }
   .kb-svg-icon-wrap {
     margin-right: 0;
-    margin-left: 5px;
+    margin-left: 8px;
   }
   .kt-svg-icon-list-text {
     a {
-      @include font('heading');
-      font-weight: 500;
+      font-family: var(--wp--preset--font-family--header) !important;
+      font-weight: 500 !important;
       text-decoration: none;
       &:hover, &:focus, &:active {
         color: $dark-brown !important;
@@ -153,8 +153,9 @@
 
 .count-split-row {
   &.reverse {
-    @include for-size(tablet-sm, up, offset) {
+    @include for-size(tablet, up, offset) {
       .wp-block-kadence-countup {
+        flex-direction: row-reverse;
         .kb-count-up-number {
           margin-left: 20px;
           margin-right: 0;
@@ -173,9 +174,6 @@
     align-items: flex-start;
     @include for-size(tablet) {
       flex-direction: column;
-      .kb-count-up-number {
-        margin-bottom: 20px;
-      }
     }
     @include for-size(tablet-sm) {
       align-items: center;
@@ -194,14 +192,21 @@
         margin-right: 20px;
         margin-top: -5px;
       }
+      @include for-size(tablet) {
+        margin-bottom: 15px;
+      }
+      @include for-size(tablet-sm) {
+        margin-bottom: 25px;
+      }
     }
     .kb-count-up-title {
       flex: 1;
+      line-height: 1.4;
       @include for-size(tablet, up, offset) {
         max-width: 350px;
       }
       @include for-size(tablet-sm) {
-        text-align: left;
+        text-align: center;
         font-size: rem(22);
       }
     }

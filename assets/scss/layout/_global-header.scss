@@ -37,7 +37,7 @@ main {
     @include for-size(tablet-sm) {
       min-height: 80px;
       padding-left: 10px;
-      padding-right: 20px;
+      padding-right: 10px;
     }
     .mobile-brand {
       @include trans($prop:opacity);
@@ -54,6 +54,9 @@ main {
         }
         @include for-size(tablet-sm) {
           max-width: 150px;
+        }
+        @include for-size(phone) {
+          max-width: 125px;
         }
       }
     }
@@ -75,12 +78,18 @@ main {
       align-items: center;
       padding: 13px 20px;
       min-height: 50px;
+      line-height: 1;
       @include for-size(tablet-sm) {
         padding-top: 10px;
         padding-bottom: 10px;
         span {
           font-size: rem(16);
         }
+      }
+      @include for-size(phone) {
+        min-height: 45px;
+        padding-top: 0;
+        padding-bottom: 0;
       }
       &:not(:last-of-type) {
         margin-right: 25px;
@@ -115,12 +124,17 @@ main {
         @extend %preset5;
         color: #212121;
         font-weight: 700;
+        @include for-size(phone) {
+          font-size: rem(14);
+        }
       }
       svg {
+        flex-shrink: 0;
         margin-left: 10px;
         width: 23px;
         @include for-size(phone) {
-          display: none;
+          margin-left: 7px;
+          width: 14px !important;
         }
         &.close {
           display: none;
