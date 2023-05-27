@@ -1,24 +1,16 @@
-/* Imports
-========================================================= */
 @import "core/variables/queries";
 @import "core/layout/grid";
 @import "core/variables/variables";
 
 /* Typography
 ========================================================= */
-
-
 body {
+  @import "elements/**/*.scss";
 
   .editor-styles-wrapper {
     @include font;
-    @import "core/typography/presets";
-    @import "core/typography/base";
-    @import "core/typography/headings";
+    @import "core/typography/main";
     @import "layout/global-forms";
-    @import "pages/**/*.scss";
-    @import "elements/**/*.scss";
-    @import "acf-blocks/**/*.scss";
     
     .icon-heading {
       display: flex;

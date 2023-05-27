@@ -1505,6 +1505,7 @@ img {
   display: flex;
   justify-content: center
 }
+.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap,
 .home-row .kt-svg-icon-list a {
   display: inline-flex!important;
   padding: 8px 20px!important;
@@ -1512,6 +1513,9 @@ img {
   border-radius: 60px;
   text-decoration: none
 }
+.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:active,
+.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:focus,
+.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:hover,
 .home-row .kt-svg-icon-list a:active,
 .home-row .kt-svg-icon-list a:focus,
 .home-row .kt-svg-icon-list a:hover {
@@ -1523,59 +1527,59 @@ img {
   font-size: 1.5rem;
   font-weight: 700
 }
-body:not(.wp-admin) .other-ways-row .kt-row-column-wrap {
+.other-ways-row .kt-row-column-wrap {
   grid-template-areas: ". b b b b c c c c c";
   grid-template-columns: repeat(10,1fr)!important;
   position: relative;
   -moz-column-gap: 35px;
   column-gap: 35px
 }
-body:not(.wp-admin) .other-ways-row .col-menu {
+.other-ways-row .col-menu {
   grid-area: a
 }
-body:not(.wp-admin) .other-ways-row .col-menu ul {
+.other-ways-row .col-menu ul {
   margin: 0;
   display: block;
   background: var(--wp--preset--color--yellow);
   padding: 17px 23px 17px 0;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .25))
 }
-body:not(.wp-admin) .other-ways-row .col-menu li {
+.other-ways-row .col-menu li {
   display: block;
   margin: 0
 }
-body:not(.wp-admin) .other-ways-row .col-menu li:not(:last-child) {
+.other-ways-row .col-menu li:not(:last-child) {
   margin-bottom: 2px
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-train a:before {
+.other-ways-row .col-menu li.icon-train a:before {
   content: "\f239"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-tram a:before {
+.other-ways-row .col-menu li.icon-tram a:before {
   content: "\f238"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-bus a:before {
+.other-ways-row .col-menu li.icon-bus a:before {
   content: "\f207"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-park a:before {
+.other-ways-row .col-menu li.icon-park a:before {
   content: "\f540"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-car a:before {
+.other-ways-row .col-menu li.icon-car a:before {
   content: "\f5e4"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-van a:before {
+.other-ways-row .col-menu li.icon-van a:before {
   content: "\f5b6"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.icon-phone a:before {
+.other-ways-row .col-menu li.icon-phone a:before {
   content: "\f3cd"
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.current-menu-item a {
+.other-ways-row .col-menu li.current-menu-item a {
   background: var(--wp--preset--color--dark-brown);
   color: var(--wp--preset--color--white)
 }
-body:not(.wp-admin) .other-ways-row .col-menu li.current-menu-item a:before {
+.other-ways-row .col-menu li.current-menu-item a:before {
   color: var(--wp--preset--color--white)
 }
-body:not(.wp-admin) .other-ways-row .col-menu a {
+.other-ways-row .col-menu a {
   font-family: var(--wp--preset--font-family--header);
   color: var(--wp--preset--color--dark-brown);
   font-weight: 600;
@@ -1585,7 +1589,7 @@ body:not(.wp-admin) .other-ways-row .col-menu a {
   padding: 10px 30px;
   text-decoration: none
 }
-body:not(.wp-admin) .other-ways-row .col-menu a:before {
+.other-ways-row .col-menu a:before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -1597,17 +1601,17 @@ body:not(.wp-admin) .other-ways-row .col-menu a:before {
   margin-right: 15px;
   width: 20px
 }
-body:not(.wp-admin) .other-ways-row .col-menu a:active,
-body:not(.wp-admin) .other-ways-row .col-menu a:focus,
-body:not(.wp-admin) .other-ways-row .col-menu a:hover {
+.other-ways-row .col-menu a:active,
+.other-ways-row .col-menu a:focus,
+.other-ways-row .col-menu a:hover {
   background: var(--wp--preset--color--white)
 }
-body:not(.wp-admin) .other-ways-row .col-image {
+.other-ways-row .col-image {
   grid-area: b;
   position: relative;
   z-index: 0
 }
-body:not(.wp-admin) .other-ways-row .col-text {
+.other-ways-row .col-text {
   grid-area: c
 }
 .archive-index,
@@ -1789,11 +1793,6 @@ body:not(.wp-admin) .other-ways-row .col-text {
 .provider-tabs-row a.kt-tab-title:hover .kb-svg-icon-wrap svg {
   color: var(--wp--preset--color--dark-brown)
 }
-@media only screen and (min-width:768px) and (max-width:1024px) {
-  .count-split-row.reverse .wp-block-kadence-countup {
-    align-items: flex-end
-  }
-}
 @media only screen and (min-width:769px) {
   .flex.reverse {
     flex-direction: row-reverse
@@ -1803,6 +1802,11 @@ body:not(.wp-admin) .other-ways-row .col-text {
   }
   .provider-tabs-row a.kt-tab-title .kb-svg-icon-wrap {
     margin-right: 5px
+  }
+}
+@media only screen and (min-width:769px) and (max-width:1024px) {
+  .count-split-row.reverse .wp-block-kadence-countup {
+    align-items: flex-end
   }
 }
 @media only screen and (min-width:1025px) {
@@ -1855,7 +1859,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
     position: relative;
     z-index: 1
   }
-  body:not(.wp-admin) .other-ways-row .col-menu {
+  .other-ways-row .col-menu {
     position: absolute;
     top: 75px;
     left: 0;
@@ -1949,7 +1953,7 @@ body:not(.wp-admin) .other-ways-row .col-text {
   .home-row .kt-svg-icon-list {
     margin-top: 20px!important
   }
-  body:not(.wp-admin) .other-ways-row .kt-row-column-wrap {
+  .other-ways-row .kt-row-column-wrap {
     -moz-column-gap: 0!important;
     column-gap: 0!important;
     grid-template-areas: "a a a a a b b b b b" "c c c c c c c c c c"
@@ -2073,26 +2077,28 @@ body:not(.wp-admin) .other-ways-row .col-text {
     margin-top: 40px;
     margin-left: 40px
   }
+  .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap,
   .home-row .kt-svg-icon-list a {
     padding-top: 4px;
     padding-bottom: 4px
   }
+  .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap .kt-svg-icon-list-text,
   .home-row .kt-svg-icon-list a .kt-svg-icon-list-text {
     font-size: 1.25rem
   }
-  body:not(.wp-admin) .other-ways-row .kt-row-column-wrap {
+  .other-ways-row .kt-row-column-wrap {
     grid-template-areas: "a a a a a a b b b b" "c c c c c c c c c c"
   }
-  body:not(.wp-admin) .other-ways-row .col-menu {
+  .other-ways-row .col-menu {
     margin-left: -40px
   }
-  body:not(.wp-admin) .other-ways-row .col-menu a {
+  .other-ways-row .col-menu a {
     padding-left: 20px
   }
-  body:not(.wp-admin) .other-ways-row .col-menu a:before {
+  .other-ways-row .col-menu a:before {
     margin-right: 5px
   }
-  body:not(.wp-admin) .other-ways-row .col-image {
+  .other-ways-row .col-image {
     margin-right: -30px
   }
   .archive-index .results-entry hr,

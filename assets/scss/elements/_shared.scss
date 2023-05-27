@@ -287,7 +287,7 @@
     @include for-size(tablet) {
       margin-top: 20px !important;
     }
-    a {
+    a, .kt-svg-icon-list-item-wrap {
       display: inline-flex !important;
       padding: 8px 20px !important;
       border: 3px solid $red;
@@ -313,116 +313,114 @@
   }
 }
 
-body:not(.wp-admin) {
-  .other-ways-row {
-    .kt-row-column-wrap {
-      grid-template-areas: ". b b b b c c c c c";
-      grid-template-columns: repeat(10, 1fr) !important; 
-      position: relative;
-      column-gap: 35px;
-      @include for-size(tablet) {
-        column-gap: 0 !important;
-        grid-template-areas: 
-        "a a a a a b b b b b"
-        "c c c c c c c c c c";
-      }
-      @include for-size(tablet-sm) {
-        grid-template-areas: 
-        "a a a a a a b b b b"
-        "c c c c c c c c c c";
-      }
+.other-ways-row {
+  .kt-row-column-wrap {
+    grid-template-areas: ". b b b b c c c c c";
+    grid-template-columns: repeat(10, 1fr) !important; 
+    position: relative;
+    column-gap: 35px;
+    @include for-size(tablet) {
+      column-gap: 0 !important;
+      grid-template-areas: 
+      "a a a a a b b b b b"
+      "c c c c c c c c c c";
     }
-    .col-menu {
-      grid-area: a;
-      @include for-size(tablet, up, offset) {
-        position: absolute;
-        top: 75px;
-        left: 0;
-        z-index: 1;
+    @include for-size(tablet-sm) {
+      grid-template-areas: 
+      "a a a a a a b b b b"
+      "c c c c c c c c c c";
+    }
+  }
+  .col-menu {
+    grid-area: a;
+    @include for-size(tablet, up, offset) {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      z-index: 1;
+    }
+    @include for-size(tablet-sm) {
+      margin-left: -$padding-md;
+    }
+    ul {
+      margin: 0;
+      display: block;
+      background: $yellow;
+      padding: 17px 23px 17px 0;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    }
+    li {
+      display: block;
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 2px;
       }
-      @include for-size(tablet-sm) {
-        margin-left: -$padding-md;
+      &.icon-train a:before {
+        content:'\f239';
       }
-      ul {
-        margin: 0;
-        display: block;
-        background: $yellow;
-        padding: 17px 23px 17px 0;
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+      &.icon-tram a:before {
+        content:'\f238';
       }
-      li {
-        display: block;
-        margin: 0;
-        &:not(:last-child) {
-          margin-bottom: 2px;
-        }
-        &.icon-train a:before {
-          content:'\f239';
-        }
-        &.icon-tram a:before {
-          content:'\f238';
-        }
-        &.icon-bus a:before {
-          content:'\f207';
-        }
-        &.icon-park a:before {
-          content:'\f540';
-        }
-        &.icon-car a:before {
-          content:'\f5e4';
-        }
-        &.icon-van a:before {
-          content:'\f5b6';
-        }
-        &.icon-phone a:before {
-          content:'\f3cd';
-        }
-        &.current-menu-item {
-          a {
-            background: $dark-brown;
-            color: $white;
-            &:before {
-              color: $white;
-            }
-          }
-        }
+      &.icon-bus a:before {
+        content:'\f207';
       }
-      a {
-        @include font('heading');
-        color: $dark-brown;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        border-radius: 0px 60px 60px 0px;
-        padding: 10px 30px;
-        text-decoration: none;
-        @include for-size(tablet-sm) {
-          padding-left: 20px;
+      &.icon-park a:before {
+        content:'\f540';
+      }
+      &.icon-car a:before {
+        content:'\f5e4';
+      }
+      &.icon-van a:before {
+        content:'\f5b6';
+      }
+      &.icon-phone a:before {
+        content:'\f3cd';
+      }
+      &.current-menu-item {
+        a {
+          background: $dark-brown;
+          color: $white;
           &:before {
-            margin-right: 5px;
+            color: $white;
           }
         }
-        &:before {
-          @include fa;
-          @include trans;
-          margin-right: 15px;
-          width: 20px;
-        }
-        &:hover, &:focus, &:active {
-          background: $white;
-        }
       }
     }
-    .col-image {
-      grid-area: b;
-      position: relative;
-      z-index: 0;
+    a {
+      @include font('heading');
+      color: $dark-brown;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      border-radius: 0px 60px 60px 0px;
+      padding: 10px 30px;
+      text-decoration: none;
       @include for-size(tablet-sm) {
-        margin-right: -30px;
+        padding-left: 20px;
+        &:before {
+          margin-right: 5px;
+        }
+      }
+      &:before {
+        @include fa;
+        @include trans;
+        margin-right: 15px;
+        width: 20px;
+      }
+      &:hover, &:focus, &:active {
+        background: $white;
       }
     }
-    .col-text {
-      grid-area: c;
+  }
+  .col-image {
+    grid-area: b;
+    position: relative;
+    z-index: 0;
+    @include for-size(tablet-sm) {
+      margin-right: -30px;
     }
+  }
+  .col-text {
+    grid-area: c;
   }
 }
