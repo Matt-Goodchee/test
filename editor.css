@@ -261,7 +261,6 @@ body .home-row .kt-svg-icon-list {
   display: flex;
   justify-content: center
 }
-body .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap,
 body .home-row .kt-svg-icon-list a {
   display: inline-flex!important;
   padding: 8px 20px!important;
@@ -269,9 +268,6 @@ body .home-row .kt-svg-icon-list a {
   border-radius: 60px;
   text-decoration: none
 }
-body .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:active,
-body .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:focus,
-body .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:hover,
 body .home-row .kt-svg-icon-list a:active,
 body .home-row .kt-svg-icon-list a:focus,
 body .home-row .kt-svg-icon-list a:hover {
@@ -964,12 +960,10 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
     margin-top: 40px;
     margin-left: 40px
   }
-  body .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap,
   body .home-row .kt-svg-icon-list a {
     padding-top: 4px;
     padding-bottom: 4px
   }
-  body .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap .kt-svg-icon-list-text,
   body .home-row .kt-svg-icon-list a .kt-svg-icon-list-text {
     font-size: 1.25rem
   }

@@ -1485,7 +1485,7 @@ img {
   flex: 1
 }
 .kt-tabs-wrap .kt-tabs-content-wrap .wp-block-kadence-tab {
-  padding: 30px 0
+  padding: 30px 0 0
 }
 .about-form-row .gform_fields .gfield.email .gfield_label {
   opacity: 0;
@@ -1505,7 +1505,6 @@ img {
   display: flex;
   justify-content: center
 }
-.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap,
 .home-row .kt-svg-icon-list a {
   display: inline-flex!important;
   padding: 8px 20px!important;
@@ -1513,9 +1512,6 @@ img {
   border-radius: 60px;
   text-decoration: none
 }
-.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:active,
-.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:focus,
-.home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap:hover,
 .home-row .kt-svg-icon-list a:active,
 .home-row .kt-svg-icon-list a:focus,
 .home-row .kt-svg-icon-list a:hover {
@@ -1707,7 +1703,8 @@ img {
 }
 .archive-index .results-entry,
 .search-index .results-entry {
-  box-shadow: 1.57219px 1.57219px 10px rgba(0,0,0,.2)
+  box-shadow: 1.57219px 1.57219px 10px rgba(0,0,0,.2);
+  max-width: 480px
 }
 .archive-index .results-entry a,
 .search-index .results-entry a {
@@ -1730,11 +1727,12 @@ img {
 }
 .archive-index .results-entry h2,
 .search-index .results-entry h2 {
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  text-align: center
 }
 .archive-index .results-entry hr,
 .search-index .results-entry hr {
-  margin: 20px 0;
+  margin: 20px auto;
   border-bottom: 3px solid var(--wp--preset--color--yellow);
   width: 110px
 }
@@ -2077,12 +2075,10 @@ img {
     margin-top: 40px;
     margin-left: 40px
   }
-  .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap,
   .home-row .kt-svg-icon-list a {
     padding-top: 4px;
     padding-bottom: 4px
   }
-  .home-row .kt-svg-icon-list .kt-svg-icon-list-item-wrap .kt-svg-icon-list-text,
   .home-row .kt-svg-icon-list a .kt-svg-icon-list-text {
     font-size: 1.25rem
   }
@@ -2101,8 +2097,12 @@ img {
   .other-ways-row .col-image {
     margin-right: -30px
   }
-  .archive-index .results-entry hr,
-  .search-index .results-entry hr {
+  .archive-index .posts-grid,
+  .search-index .posts-grid {
+    grid-template-columns: 1fr
+  }
+  .archive-index .results-entry,
+  .search-index .results-entry {
     margin-left: auto;
     margin-right: auto
   }

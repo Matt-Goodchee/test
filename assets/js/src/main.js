@@ -23,11 +23,14 @@
       menuButton.removeClass('open');
     }
     menuButton.click( function(e) {
+    e.preventDefault();
+    
     // close
     if ( menu.hasClass('open') ) {
       closeMenu();
       $(document).off('click.menuToggle');
     } 
+    
     // open
     else {
       openMenu();

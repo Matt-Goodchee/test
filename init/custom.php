@@ -1,9 +1,11 @@
 <?php 
-/* Exclude Posts from 
+
+/* Highlight Provider in menu
 ========================================================= */
-// function tg_exclude_pages_from_search_results( $query ) {
-//     if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
-//         $query->set( 'post_type', array( 'post' ) );
-//     }    
-// }
-// add_action( 'pre_get_posts', 'tg_exclude_pages_from_search_results' );
+function highlight_specific_menu_item($classes, $item) {
+  if (is_singular('provider') && $item->ID === 204) { // "Bus Systems"
+    $classes[] = 'current-menu-item';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'highlight_specific_menu_item', 10, 2);

@@ -60,9 +60,16 @@
     grid-template-columns: repeat(auto-fit, minmax(390px, max-content));
     justify-content: center;
     gap: 35px;
+    @include for-size(tablet-sm) {
+      grid-template-columns: 1fr;
+    }
   }
   .results-entry {
     box-shadow: 1.57219px 1.57219px 10px rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    @include for-size(tablet-sm) {
+      @include margin-center;
+    }
     a {
       @include trans;
       padding: clamp(25px, 4vw, 40px);
@@ -79,14 +86,13 @@
     h2 {
       @extend %preset4;
       font-size: rem(24);
+      text-align: center;
     }
     hr {
       margin: 20px 0;
       border-bottom: 3px solid $yellow;
       width: 110px;
-      @include for-size(tablet-sm) {
-        @include margin-center;
-      }
+      @include margin-center;
     }
   }
 }

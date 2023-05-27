@@ -188,7 +188,7 @@
 <!-- /wp:kadence/column -->
 <!-- /wp:kadence/rowlayout -->
 
-<!-- wp:kadence/rowlayout {"uniqueID":"_29de78-b6","columns":3,"tabletLayout":"row","columnGutter":"wider","customGutter":[64,"",""],"colLayout":"first-row","align":"full","tabletPadding":["","md","","md"],"inheritMaxWidth":true,"padding":["lg","xxl","xl","xxl"],"mobilePadding":["","","lg",""],"kbVersion":2,"className":"provider-tabs-row grid-custom"} -->
+<!-- wp:kadence/rowlayout {"uniqueID":"_29de78-b6","columns":3,"tabletLayout":"row","columnGutter":"wider","customGutter":[64,"",""],"colLayout":"first-row","align":"full","tabletPadding":["","md","","md"],"inheritMaxWidth":true,"padding":["lg","xxl","xxl","xxl"],"mobilePadding":["","","lg",""],"kbVersion":2,"className":"provider-tabs-row grid-custom"} -->
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"_a35770-36","collapseOrder":1,"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"full-width"} -->
 <div class="wp-block-kadence-column kadence-column_a35770-36 full-width"><div class="kt-inside-inner-col"><!-- wp:kadence/iconlist {"listLabelGap":15,"uniqueID":"_247224-b4","blockAlignment":"center","listMargin":["0","0","xs","0"],"iconSize":[36,"",""],"color":"#E3B505","className":"icon-heading"} -->
 <div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_247224-b4 kt-svg-icon-list-columns-1 aligncenter icon-heading"><ul class="kt-svg-icon-list"><!-- wp:kadence/listitem {"uniqueID":"_897ba7-e8","icon":"fas_bus-alt","text":"How to Ride"} -->
@@ -207,8 +207,18 @@
 
 <!-- wp:kadence/column {"id":3,"borderWidth":["","","",""],"uniqueID":"_087bf3-bf","collapseOrder":3,"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"secondary"} -->
 <div class="wp-block-kadence-column kadence-column_087bf3-bf secondary"><div class="kt-inside-inner-col"><!-- wp:kadence/tabs {"uniqueID":"_65e801-26","tabCount":4,"contentBorderStyles":[{"top":["#dee2e6","",0],"right":["#dee2e6","",0],"bottom":["#dee2e6","",0],"left":["#dee2e6","",0],"unit":"px"}],"titles":[{"text":"Rules","icon":"fas_clipboard-list","iconSide":"left","onlyIcon":false,"subText":"","anchor":"rules"},{"text":"Accessibility","icon":"fas_wheelchair","iconSide":"left","onlyIcon":false,"subText":"","anchor":"accessibility"},{"text":"Bikes","icon":"fas_bicycle","iconSide":"left","onlyIcon":false,"subText":"","anchor":"bikes"},{"text":"Safety","icon":"fas_shield-alt","iconSide":"left","onlyIcon":false,"subText":"","anchor":"safety"}],"iSize":20,"titleColor":"#212121","titleBg":"#FAFAF2","titleBgHover":"#E3B505","titleBgActive":"#E3B505","titleBorder":"#FAFAF2","titleBorderHover":"#E3B505","titleBorderActive":"#E3B505","titleBorderRadius":[0,0,0,0],"titlePadding":["xxs","xs","xxs","xs"],"startTab":1} -->
-<div class="wp-block-kadence-tabs alignnone"><div class="kt-tabs-wrap kt-tabs-id_65e801-26 kt-tabs-has-4-tabs kt-active-tab-1 kt-tabs-layout-tabs kt-tabs-tablet-layout-inherit kt-tabs-mobile-layout-inherit kt-tab-alignment-left "><ul class="kt-tabs-title-list"><li id="rules" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-active"><a href="#rules" data-tab="1" class="kt-tab-title kt-tab-title-1 "><span data-name="fas_clipboard-list" class="kadence-dynamic-icon"></span><span class="kt-title-text">Rules</span></a></li><li id="accessibility" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#accessibility" data-tab="2" class="kt-tab-title kt-tab-title-2 "><span data-name="fas_wheelchair" class="kadence-dynamic-icon"></span><span class="kt-title-text">Accessibility</span></a></li><li id="bikes" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#bikes" data-tab="3" class="kt-tab-title kt-tab-title-3 "><span data-name="fas_bicycle" class="kadence-dynamic-icon"></span><span class="kt-title-text">Bikes</span></a></li><li id="safety" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#safety" data-tab="4" class="kt-tab-title kt-tab-title-4 "><span data-name="fas_shield-alt" class="kadence-dynamic-icon"></span><span class="kt-title-text">Safety</span></a></li></ul><div class="kt-tabs-content-wrap"><!-- wp:kadence/tab {"uniqueID":"_cf5f62-49","className":"clipboard"} -->
-<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-1 kt-inner-tab_cf5f62-49 clipboard"><div class="kt-tab-inner-content-inner"><!-- wp:heading {"level":3} -->
+<div class="wp-block-kadence-tabs alignnone"><div class="kt-tabs-wrap kt-tabs-id_65e801-26 kt-tabs-has-4-tabs kt-active-tab-1 kt-tabs-layout-tabs kt-tabs-tablet-layout-inherit kt-tabs-mobile-layout-inherit kt-tab-alignment-left "><ul class="kt-tabs-title-list"><li id="rules" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-active"><a href="#rules" data-tab="1" class="kt-tab-title kt-tab-title-1 "><span data-name="fas_clipboard-list" class="kadence-dynamic-icon"></span><span class="kt-title-text">Rules</span></a></li><li id="accessibility" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#accessibility" data-tab="2" class="kt-tab-title kt-tab-title-2 "><span data-name="fas_wheelchair" class="kadence-dynamic-icon"></span><span class="kt-title-text">Accessibility</span></a></li><li id="bikes" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#bikes" data-tab="3" class="kt-tab-title kt-tab-title-3 "><span data-name="fas_bicycle" class="kadence-dynamic-icon"></span><span class="kt-title-text">Bikes</span></a></li><li id="safety" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#safety" data-tab="4" class="kt-tab-title kt-tab-title-4 "><span data-name="fas_shield-alt" class="kadence-dynamic-icon"></span><span class="kt-title-text">Safety</span></a></li></ul><div class="kt-tabs-content-wrap"><!-- wp:kadence/tab {"uniqueID":"_abf69c-04","className":"clipboard"} -->
+<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-1 kt-inner-tab_abf69c-04 clipboard"><div class="kt-tab-inner-content-inner"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Rules</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Paragraph text</p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:kadence/tab -->
+
+<!-- wp:kadence/tab {"id":2,"uniqueID":"_d18c01-19","className":"wheelchair"} -->
+<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-2 kt-inner-tab_d18c01-19 wheelchair"><div class="kt-tab-inner-content-inner"><!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Accessibility</h3>
 <!-- /wp:heading -->
 
@@ -229,16 +239,24 @@
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:kadence/tab -->
 
-<!-- wp:kadence/tab {"id":2,"uniqueID":"_71e3b1-0d","className":"wheelchair"} -->
-<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-2 kt-inner-tab_71e3b1-0d wheelchair"><div class="kt-tab-inner-content-inner"></div></div>
+<!-- wp:kadence/tab {"id":3,"uniqueID":"_4e0774-29","className":"bike"} -->
+<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-3 kt-inner-tab_4e0774-29 bike"><div class="kt-tab-inner-content-inner"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Bikes</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Paragraph text</p>
+<!-- /wp:paragraph --></div></div>
 <!-- /wp:kadence/tab -->
 
-<!-- wp:kadence/tab {"id":3,"uniqueID":"_008741-3e","className":"bike"} -->
-<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-3 kt-inner-tab_008741-3e bike"><div class="kt-tab-inner-content-inner"></div></div>
-<!-- /wp:kadence/tab -->
+<!-- wp:kadence/tab {"id":4,"uniqueID":"_7b33d0-c6"} -->
+<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-4 kt-inner-tab_7b33d0-c6"><div class="kt-tab-inner-content-inner"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Safety</h3>
+<!-- /wp:heading -->
 
-<!-- wp:kadence/tab {"id":4,"uniqueID":"_e33ca3-f1"} -->
-<div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-4 kt-inner-tab_e33ca3-f1"><div class="kt-tab-inner-content-inner"></div></div>
+<!-- wp:paragraph -->
+<p>Paragraph text</p>
+<!-- /wp:paragraph --></div></div>
 <!-- /wp:kadence/tab --></div></div></div>
 <!-- /wp:kadence/tabs --></div></div>
 <!-- /wp:kadence/column -->
