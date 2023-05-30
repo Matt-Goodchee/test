@@ -241,7 +241,7 @@ body .kt-tabs-wrap .kt-tabs-title-list li {
   flex: 1
 }
 body .kt-tabs-wrap .kt-tabs-content-wrap .wp-block-kadence-tab {
-  padding: 30px 0
+  padding: 30px 0 0
 }
 body .about-form-row .gform_fields .gfield.email .gfield_label {
   opacity: 0;
@@ -734,6 +734,12 @@ body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield_error .gfield_description,
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .validation_message {
   display: none
+}
+body .editor-styles-wrapper .other-ways-row .kadence-column {
+  grid-area: unset!important
+}
+body .editor-styles-wrapper .other-ways-row .col-menu {
+  position: unset!important
 }
 body .editor-styles-wrapper .icon-heading {
   display: flex;

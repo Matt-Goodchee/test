@@ -12,6 +12,16 @@ body {
     @import "core/typography/main";
     @import "layout/global-forms";
     
+
+    .other-ways-row {
+      .kadence-column {
+        grid-area: unset !important;
+      }
+      .col-menu {
+        position: unset !important;
+      }
+    }
+
     .icon-heading {
       display: flex;
       justify-content: center;
