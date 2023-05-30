@@ -31,7 +31,7 @@
 
 <!-- wp:kadence/column {"id":2,"borderWidth":["","","",""],"uniqueID":"_30aed8-17","borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"col-text"} -->
 <div class="wp-block-kadence-column kadence-column_30aed8-17 col-text"><div class="kt-inside-inner-col"><!-- wp:heading {"placeholder":"Heading"} -->
-<h2 class="wp-block-heading">MAX Light Rail</h2>
+<h2 class="wp-block-heading">Provider Name</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"placeholder":"Paragraph text","textColor":"dark-brown","fontSize":"x-large"} -->
