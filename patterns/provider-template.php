@@ -5,8 +5,7 @@
 * Description: Example provider page template
 * Categories: rc
 */
-?>
-<!-- wp:kadence/rowlayout {"uniqueID":"_a440a0-1c","columns":1,"customRowGutter":[30,"",""],"colLayout":"equal","tabletPadding":["","md","","md"],"inheritMaxWidth":true,"vsdesk":true,"padding":["md","xxl","0","xxl"],"kbVersion":2,"className":"hero-text-row provider-hero-row"} -->
+?><!-- wp:kadence/rowlayout {"uniqueID":"_a440a0-1c","columns":1,"customRowGutter":[30,"",""],"colLayout":"equal","tabletPadding":["","md","","md"],"inheritMaxWidth":true,"vsdesk":true,"padding":["md","xxl","0","xxl"],"kbVersion":2,"className":"hero-text-row provider-hero-row"} -->
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"_7f268b-ca","borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}]} -->
 <div class="wp-block-kadence-column kadence-column_7f268b-ca"><div class="kt-inside-inner-col"><!-- wp:paragraph {"align":"center","className":"preset1"} -->
 <p class="has-text-align-center preset1">Our Bus Systems</p>
@@ -28,7 +27,7 @@
 
 <!-- wp:acf/image-border {"name":"acf/image-border","data":{"image_border_group_border":"top-right","_image_border_group_border":"field_image_border_image_border_group_border","image_border_group_rounded":"bottom-right","_image_border_group_rounded":"field_image_border_image_border_group_rounded","image_border_group":"","_image_border_group":"field_image_border_image_border_group"},"mode":"preview"} -->
 <!-- wp:image {"id":218,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="http://localhost/rc/wp-content/uploads/2023/05/cat.jpg" alt="" class="wp-image-218"/></figure>
+<figure class="wp-block-image size-full"><img src="https://rc.chee.studio/wp-content/uploads/2023/05/cat.jpg" alt="" class="wp-image-218"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"meta-group","layout":{"type":"constrained","justifyContent":"left"}} -->
@@ -38,15 +37,15 @@
 
 <!-- wp:kadence/iconlist {"listGap":20,"uniqueID":"_46e752-88","listPadding":["","","",""],"color":"#E3B505"} -->
 <div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_46e752-88 kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><!-- wp:kadence/listitem {"uniqueID":"_a377ff-bb","icon":"fas_globe","text":"\u003ca href=\u0022http://canbyoregon.gov/area-transit\u0022 data-type=\u0022URL\u0022 data-id=\u0022canbyoregon.gov/area-transit\u0022 target=\u0022_blank\u0022 rel=\u0022noreferrer noopener\u0022\u003ecanbyoregon.gov/area-transit\u003c/a\u003e"} -->
-<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_a377ff-bb"><span data-name="fas_globe" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text"><a href="http://canbyoregon.gov/area-transit" data-type="URL" data-id="canbyoregon.gov/area-transit" target="_blank" rel="noreferrer noopener">canbyoregon.gov/area-transit</a></span></li>
+<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_a377ff-bb"><span data-name="fas_globe" data-stroke="USE_PARENT_DEFAULT_WIDTH" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text"><a href="http://canbyoregon.gov/area-transit" data-type="URL" data-id="canbyoregon.gov/area-transit" target="_blank" rel="noreferrer noopener">canbyoregon.gov/area-transit</a></span></li>
 <!-- /wp:kadence/listitem -->
 
 <!-- wp:kadence/listitem {"uniqueID":"_af95a7-49","icon":"fas_phone","text":"\u003ca href=\u0022tel:+1-503-266-4022\u0022 data-type=\u0022tel\u0022 data-id=\u0022tel:+1-503-266-4022\u0022\u003e503-266-4022\u003c/a\u003e"} -->
-<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_af95a7-49"><span data-name="fas_phone" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text"><a href="tel:+1-503-266-4022" data-type="tel" data-id="tel:+1-503-266-4022">503-266-4022</a></span></li>
+<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_af95a7-49"><span data-name="fas_phone" data-stroke="USE_PARENT_DEFAULT_WIDTH" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text"><a href="tel:+1-503-266-4022" data-type="tel" data-id="tel:+1-503-266-4022">503-266-4022</a></span></li>
 <!-- /wp:kadence/listitem -->
 
 <!-- wp:kadence/listitem {"uniqueID":"_4c2097-1d","icon":"fas_envelope","text":"\u003ca href=\u0022mailto:cat@canbyoregon.gov\u0022 data-type=\u0022mailto\u0022 data-id=\u0022mailto:cat@canbyoregon.gov\u0022\u003ecat@canbyoregon.gov\u003c/a\u003e"} -->
-<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_4c2097-1d"><span data-name="fas_envelope" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text"><a href="mailto:cat@canbyoregon.gov" data-type="mailto" data-id="mailto:cat@canbyoregon.gov">cat@canbyoregon.gov</a></span></li>
+<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_4c2097-1d"><span data-name="fas_envelope" data-stroke="USE_PARENT_DEFAULT_WIDTH" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text"><a href="mailto:cat@canbyoregon.gov" data-type="mailto" data-id="mailto:cat@canbyoregon.gov">cat@canbyoregon.gov</a></span></li>
 <!-- /wp:kadence/listitem --></ul></div>
 <!-- /wp:kadence/iconlist --></div>
 <!-- /wp:group -->
@@ -63,7 +62,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Canby Area Transit (CAT) was established in 2002 and is supported by Canby Area businesses and funding from the state of Oregon.<br>CAT provides the following routes and services:</p>
+<p>Canby Area Transit (CAT) was established in 2002 and is supported by Canby Area businesses and funding from the state of Oregon.<br></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":4,"style":{"spacing":{"padding":{"top":"var:preset|spacing|20"}}}} -->
@@ -89,7 +88,7 @@
 <!-- /wp:list -->
 
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Riders can make connections to:</h4>
+<h4 class="wp-block-heading">CAT riders can make connections to:</h4>
 <!-- /wp:heading -->
 
 <!-- wp:list {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|40"}}}} -->
@@ -126,7 +125,7 @@
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"_cf7ae1-26","borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"full-width"} -->
 <div class="wp-block-kadence-column kadence-column_cf7ae1-26 full-width"><div class="kt-inside-inner-col"><!-- wp:kadence/iconlist {"listLabelGap":15,"uniqueID":"_181a30-e1","blockAlignment":"center","listMargin":["0","0","xs","0"],"iconSize":[36,"",""],"color":"#E3B505","className":"icon-heading"} -->
 <div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_181a30-e1 kt-svg-icon-list-columns-1 aligncenter icon-heading"><ul class="kt-svg-icon-list"><!-- wp:kadence/listitem {"uniqueID":"_6079f7-a5","icon":"fas_ticket-alt","text":"Bus Fare Information"} -->
-<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_6079f7-a5"><span data-name="fas_ticket-alt" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text">Bus Fare Information</span></li>
+<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_6079f7-a5"><span data-name="fas_ticket-alt" data-stroke="USE_PARENT_DEFAULT_WIDTH" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text">Bus Fare Information</span></li>
 <!-- /wp:kadence/listitem --></ul></div>
 <!-- /wp:kadence/iconlist --></div></div>
 <!-- /wp:kadence/column -->
@@ -151,7 +150,7 @@
 
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"_166a62-4b","borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"secondary"} -->
 <div class="wp-block-kadence-column kadence-column_166a62-4b secondary"><div class="kt-inside-inner-col"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Single Trip Tickets</h3>
+<h3 class="wp-block-heading">Passes</h3>
 <!-- /wp:heading -->
 
 <!-- wp:table {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}},"className":"is-style-regular"} -->
@@ -192,7 +191,7 @@
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"_a35770-36","collapseOrder":1,"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"full-width"} -->
 <div class="wp-block-kadence-column kadence-column_a35770-36 full-width"><div class="kt-inside-inner-col"><!-- wp:kadence/iconlist {"listLabelGap":15,"uniqueID":"_247224-b4","blockAlignment":"center","listMargin":["0","0","xs","0"],"iconSize":[36,"",""],"color":"#E3B505","className":"icon-heading"} -->
 <div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_247224-b4 kt-svg-icon-list-columns-1 aligncenter icon-heading"><ul class="kt-svg-icon-list"><!-- wp:kadence/listitem {"uniqueID":"_897ba7-e8","icon":"fas_bus-alt","text":"How to Ride"} -->
-<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_897ba7-e8"><span data-name="fas_bus-alt" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text">How to Ride</span></li>
+<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_897ba7-e8"><span data-name="fas_bus-alt" data-stroke="USE_PARENT_DEFAULT_WIDTH" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text">How to Ride</span></li>
 <!-- /wp:kadence/listitem --></ul></div>
 <!-- /wp:kadence/iconlist --></div></div>
 <!-- /wp:kadence/column -->
@@ -200,21 +199,71 @@
 <!-- wp:kadence/column {"id":2,"borderWidth":["","","",""],"uniqueID":"_a411eb-eb","collapseOrder":2,"tabletPadding":["","","xs",""],"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"primary"} -->
 <div class="wp-block-kadence-column kadence-column_a411eb-eb primary"><div class="kt-inside-inner-col"><!-- wp:acf/image-border {"name":"acf/image-border","data":{"image_border_group_border":"bottom-left","_image_border_group_border":"field_image_border_image_border_group_border","image_border_group_rounded":"bottom-right","_image_border_group_rounded":"field_image_border_image_border_group_rounded","image_border_group":"","_image_border_group":"field_image_border_image_border_group"},"mode":"preview"} -->
 <!-- wp:image {"id":152,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="http://localhost/rc/wp-content/uploads/2023/05/884536984-809x1024.jpg" alt="" class="wp-image-152"/></figure>
+<figure class="wp-block-image size-large"><img src="https://rc.chee.studio/wp-content/uploads/2023/05/884536984-809x1024.jpg" alt="" class="wp-image-152"/></figure>
 <!-- /wp:image -->
 <!-- /wp:acf/image-border --></div></div>
 <!-- /wp:kadence/column -->
 
 <!-- wp:kadence/column {"id":3,"borderWidth":["","","",""],"uniqueID":"_087bf3-bf","collapseOrder":3,"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"secondary"} -->
-<div class="wp-block-kadence-column kadence-column_087bf3-bf secondary"><div class="kt-inside-inner-col"><!-- wp:kadence/tabs {"uniqueID":"_65e801-26","tabCount":4,"contentBorderStyles":[{"top":["#dee2e6","",0],"right":["#dee2e6","",0],"bottom":["#dee2e6","",0],"left":["#dee2e6","",0],"unit":"px"}],"titles":[{"text":"Rules","icon":"fas_clipboard-list","iconSide":"left","onlyIcon":false,"subText":"","anchor":"rules"},{"text":"Accessibility","icon":"fas_wheelchair","iconSide":"left","onlyIcon":false,"subText":"","anchor":"accessibility"},{"text":"Bikes","icon":"fas_bicycle","iconSide":"left","onlyIcon":false,"subText":"","anchor":"bikes"},{"text":"Safety","icon":"fas_shield-alt","iconSide":"left","onlyIcon":false,"subText":"","anchor":"safety"}],"iSize":20,"titleColor":"#212121","titleBg":"#FAFAF2","titleBgHover":"#E3B505","titleBgActive":"#E3B505","titleBorder":"#FAFAF2","titleBorderHover":"#E3B505","titleBorderActive":"#E3B505","titleBorderRadius":[0,0,0,0],"titlePadding":["xxs","xs","xxs","xs"],"startTab":1} -->
-<div class="wp-block-kadence-tabs alignnone"><div class="kt-tabs-wrap kt-tabs-id_65e801-26 kt-tabs-has-4-tabs kt-active-tab-1 kt-tabs-layout-tabs kt-tabs-tablet-layout-inherit kt-tabs-mobile-layout-inherit kt-tab-alignment-left "><ul class="kt-tabs-title-list"><li id="rules" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-active"><a href="#rules" data-tab="1" class="kt-tab-title kt-tab-title-1 "><span data-name="fas_clipboard-list" class="kadence-dynamic-icon"></span><span class="kt-title-text">Rules</span></a></li><li id="accessibility" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#accessibility" data-tab="2" class="kt-tab-title kt-tab-title-2 "><span data-name="fas_wheelchair" class="kadence-dynamic-icon"></span><span class="kt-title-text">Accessibility</span></a></li><li id="bikes" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#bikes" data-tab="3" class="kt-tab-title kt-tab-title-3 "><span data-name="fas_bicycle" class="kadence-dynamic-icon"></span><span class="kt-title-text">Bikes</span></a></li><li id="safety" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#safety" data-tab="4" class="kt-tab-title kt-tab-title-4 "><span data-name="fas_shield-alt" class="kadence-dynamic-icon"></span><span class="kt-title-text">Safety</span></a></li></ul><div class="kt-tabs-content-wrap"><!-- wp:kadence/tab {"uniqueID":"_abf69c-04","className":"clipboard"} -->
+<div class="wp-block-kadence-column kadence-column_087bf3-bf secondary"><div class="kt-inside-inner-col"><!-- wp:kadence/tabs {"uniqueID":"_65e801-26","tabCount":4,"currentTab":2,"contentBorderStyles":[{"top":["#dee2e6","",0],"right":["#dee2e6","",0],"bottom":["#dee2e6","",0],"left":["#dee2e6","",0],"unit":"px"}],"titles":[{"text":"Rules","icon":"fas_clipboard-list","iconSide":"left","onlyIcon":false,"subText":"","anchor":"rules"},{"text":"Accessibility","icon":"fas_wheelchair","iconSide":"left","onlyIcon":false,"subText":"","anchor":"accessibility"},{"text":"Bikes","icon":"rc-bicycle","iconSide":"left","onlyIcon":false,"subText":"","anchor":"bikes"},{"text":"Safety","icon":"fas_shield-alt","iconSide":"left","onlyIcon":false,"subText":"","anchor":"safety"}],"iSize":20,"titleColor":"#212121","titleBg":"#FAFAF2","titleBgHover":"#E3B505","titleBgActive":"#E3B505","titleBorder":"#FAFAF2","titleBorderHover":"#E3B505","titleBorderActive":"#E3B505","titleBorderRadius":[0,0,0,0],"titlePadding":["xxs","xs","xxs","xs"],"startTab":1} -->
+<div class="wp-block-kadence-tabs alignnone"><div class="kt-tabs-wrap kt-tabs-id_65e801-26 kt-tabs-has-4-tabs kt-active-tab-1 kt-tabs-layout-tabs kt-tabs-tablet-layout-inherit kt-tabs-mobile-layout-inherit kt-tab-alignment-left "><ul class="kt-tabs-title-list"><li id="rules" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-active"><a href="#rules" data-tab="1" class="kt-tab-title kt-tab-title-1 "><span data-name="fas_clipboard-list" class="kadence-dynamic-icon"></span><span class="kt-title-text">Rules</span></a></li><li id="accessibility" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#accessibility" data-tab="2" class="kt-tab-title kt-tab-title-2 "><span data-name="fas_wheelchair" class="kadence-dynamic-icon"></span><span class="kt-title-text">Accessibility</span></a></li><li id="bikes" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#bikes" data-tab="3" class="kt-tab-title kt-tab-title-3 "><span data-name="rc-bicycle" class="kadence-dynamic-icon"></span><span class="kt-title-text">Bikes</span></a></li><li id="safety" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-left kt-tab-title-inactive"><a href="#safety" data-tab="4" class="kt-tab-title kt-tab-title-4 "><span data-name="fas_shield-alt" class="kadence-dynamic-icon"></span><span class="kt-title-text">Safety</span></a></li></ul><div class="kt-tabs-content-wrap"><!-- wp:kadence/tab {"uniqueID":"_abf69c-04","className":"clipboard"} -->
 <div class="wp-block-kadence-tab kt-tab-inner-content kt-inner-tab-1 kt-inner-tab_abf69c-04 clipboard"><div class="kt-tab-inner-content-inner"><!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Rules</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Paragraph text</p>
-<!-- /wp:paragraph --></div></div>
+<p>When riding with CAT, here are some bus rules to know and follow:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Plan your trip and give yourself plenty of time. Arrive at the bus stop a few minutes early. Let the bus driver know if you are trying to connect with another bus or route.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>No smoking, vaping or alcohol allowed.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Shirt and shoes are required. Space can sometimes be limited, so please be mindful of your personal hygiene.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Remain seated while the bus is in motion.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Carry-on bags and gear must be kept clear of all walkways.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Fares must be paid upon boarding. Have the exact fare or ticket easily accessible for when the bus arrives. Passes are available on CAT buses for $20 (cash only, exact change). Drivers will sell passes at locations where it is safe to park the bus off the roadway. Please be considerate of the drivers' need to be safe and stay on schedule.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>No disruptive or disorderly behavior.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Use headphones for personal devices. Audio of any kind must be listened to through earbuds and conversations should be kept at a volume that is not discourteous to other passengers.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Finish food and beverages before boarding or keep them in a closed container</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Acknowledge priority seating areas for the elderly and disabled</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>If permitted on the bus, all animals (including service animals) must be under the control of their owner at all times. Some transit agencies may allow pets if they are in a pet carrier. Please contact your local agency before bringing a pet on board.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Do not walk or run in front of the bus. Use designated crosswalks after the bus has pulled away.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div></div>
 <!-- /wp:kadence/tab -->
 
 <!-- wp:kadence/tab {"id":2,"uniqueID":"_d18c01-19","className":"wheelchair"} -->
@@ -226,16 +275,46 @@
 <p>Canby Area Transit is committed to providing transportation services that will accommodate people of all abilities and provide quality service to as many members of the community as possible.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p>Customer accessibility is a critical consideration in all aspects of CAT service from customer amenities to vehicle and route design.</p>
-<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Vehicles are equipped with wheelchair lifts or ramps as well as bike racks.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Paratransit Dial-A-Ride service is available for those who are not able to access the FixedRoute service.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A General Public Dial-A-Ride service is available for anyone traveling within the CAT service area.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>CAT personnel are trained to operate vehicles and equipment safely and to sensitively assist people with disabilities.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Stops and service routes are announced on Commuter and Fixed-Route services.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Service animals trained to perform a task are accommodated on all vehicles.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Personal Care Attendants (PCA) may accompany individuals with disabilities at no charge.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Reasonable modifications to our policies, practices, and procedures are made, upon request, whenever possible</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A transferless service exceeding ADA requirements is available to eligible customers traveling between Oregon City and Canby.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>This Americans with Disabilities (ADA) Plan updates the ADA Plan adopted January 6, 2016 and documents the policies developed during the course of providing public transportation.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>These policies and service delivery systems were developed in regular public meetings with the integral participation of the Transit Advisory Committee and the governing body, Canby City Council.</p>
+<p>For more information on CAT’s ADA policies and procedures, please visit their <a href="https://www.canbyoregon.gov/area-transit/page/americans-disabilities-ada-plan" target="_blank" rel="noreferrer noopener">website</a>.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:kadence/tab -->
 
@@ -245,7 +324,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Paragraph text</p>
+<p>All buses are equipped with ramps or lifts and bicycle racks.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:kadence/tab -->
 
@@ -255,8 +334,42 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Paragraph text</p>
-<!-- /wp:paragraph --></div></div>
+<p>Ride Clackamas values the safety of our passengers. Here are some safety guidelines to make your experience riding with us as smooth as possible:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Keep your personal information private, including where you are going.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Be alert at bus stops and on the bus.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>If someone makes you feel uncomfortable, sit near the bus driver.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>No unnecessary conversation with the driver while the bus is moving. Drivers must remain focused on driving.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Keep the aisle of the bus clear at all times.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Remember that fighting, boisterous, or other behavior that disturbs passengers can result in removal from the bus.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>In case of an emergency, alert the bus driver and call 9-1-1.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Use designated crosswalks after the bus has pulled away. Do not cross in front of the bus.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div></div>
 <!-- /wp:kadence/tab --></div></div></div>
 <!-- /wp:kadence/tabs --></div></div>
 <!-- /wp:kadence/column -->
@@ -266,18 +379,18 @@
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"_133de4-c4","collapseOrder":1,"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"full-width"} -->
 <div class="wp-block-kadence-column kadence-column_133de4-c4 full-width"><div class="kt-inside-inner-col"><!-- wp:kadence/iconlist {"listLabelGap":15,"uniqueID":"_ce7b3b-d8","blockAlignment":"center","listMargin":["0","0","xs","0"],"iconSize":[36,"",""],"color":"#E3B505","className":"icon-heading"} -->
 <div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_ce7b3b-d8 kt-svg-icon-list-columns-1 aligncenter icon-heading"><ul class="kt-svg-icon-list"><!-- wp:kadence/listitem {"uniqueID":"_227fa4-53","icon":"fas_newspaper","text":"What's New"} -->
-<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_227fa4-53"><span data-name="fas_newspaper" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text">What's New</span></li>
+<li class="wp-block-kadence-listitem kt-svg-icon-list-item-wrap kt-svg-icon-list-item-_227fa4-53"><span data-name="fas_newspaper" data-stroke="USE_PARENT_DEFAULT_WIDTH" data-class="kt-svg-icon-list-single" class="kadence-dynamic-icon"></span><span class="kt-svg-icon-list-text">What's New</span></li>
 <!-- /wp:kadence/listitem --></ul></div>
 <!-- /wp:kadence/iconlist --></div></div>
 <!-- /wp:kadence/column -->
 
 <!-- wp:kadence/column {"id":2,"borderWidth":["","","",""],"uniqueID":"_dd66ea-f5","collapseOrder":2,"tabletPadding":["","","xs",""],"borderStyle":[{"top":["","",""],"right":["","",""],"bottom":["","",""],"left":["","",""],"unit":"px"}],"className":"primary"} -->
 <div class="wp-block-kadence-column kadence-column_dd66ea-f5 primary"><div class="kt-inside-inner-col"><!-- wp:kadence/image {"id":263,"imgMaxWidthTablet":500,"sizeSlug":"full","linkDestination":"none","uniqueID":"_099481-0b"} -->
-<figure class="wp-block-kadence-image kb-image_099481-0b size-full"><img src="http://localhost/rc/wp-content/uploads/2023/05/884536984-edited-1.jpg" alt="" class="kb-img wp-image-263"/></figure>
+<figure class="wp-block-kadence-image kb-image_099481-0b size-full"><img src="https://rc.chee.studio/wp-content/uploads/2023/05/884536984-edited-1.jpg" alt="" class="kb-img wp-image-263"/></figure>
 <!-- /wp:kadence/image -->
 
 <!-- wp:kadence/image {"id":264,"imgMaxWidthTablet":500,"sizeSlug":"full","linkDestination":"none","uniqueID":"_1bbd45-09"} -->
-<figure class="wp-block-kadence-image kb-image_1bbd45-09 size-full"><img src="http://localhost/rc/wp-content/uploads/2023/05/iStock-458463141-1-edited-1.jpg" alt="" class="kb-img wp-image-264"/></figure>
+<figure class="wp-block-kadence-image kb-image_1bbd45-09 size-full"><img src="https://rc.chee.studio/wp-content/uploads/2023/05/iStock-458463141-1-edited-1.jpg" alt="" class="kb-img wp-image-264"/></figure>
 <!-- /wp:kadence/image --></div></div>
 <!-- /wp:kadence/column -->
 
@@ -291,11 +404,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:kadence/column -->
 <!-- /wp:kadence/rowlayout -->

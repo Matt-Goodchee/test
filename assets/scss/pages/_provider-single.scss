@@ -17,6 +17,11 @@
   h1 {
     font-weight: 600;
   }
+  li {
+    &::marker {
+      color: $red;
+    }
+  }
   .wp-block-buttons {
     @include for-size(tablet-sm) {
       flex-direction: column;
@@ -80,22 +85,53 @@
     }
   }
   li.kt-title-item {
-    &:last-child {
-      margin-right: 0;
+    margin-right: 0 !important;
+    position: relative;
+    &:not(:last-child) {
+      a {
+        &:after {
+          @include trans;
+          content:'';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -2px;
+          background: $yellow;
+          width: 2px;
+          height: 100%;
+          transform: scale(50%);
+          z-index: 1;
+        }
+      }
     }
-    &.kt-tab-title-active {
+    &:last-child {
+      a {
+        border-top-right-radius: 60px !important;
+      }
+    }
+    &.kt-tab-title-active a {
+      &:after {
+        @include display('hide');
+      }
       .kb-svg-icon-wrap svg {
         color: $dark-brown;
       }
     }
   }
   a.kt-tab-title {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
     @include for-size(tablet-sm) {
       padding-left: 10px !important;
       padding-right: 10px !important;
     }
     @include for-size(phone) {
       padding-left: $padding-md !important;
+    }
+    &:hover, &:focus {
+      &:after {
+        @include display('hide');
+      }
     }
     .kb-svg-icon-wrap {
       flex-shrink: 0;
@@ -108,8 +144,10 @@
       }
     }
     .kt-title-text {
+      @include font('heading');
       color: $dark-brown;
       font-weight: 700;
+      font-size: rem(14);
       @include for-size(tablet-sm) {
         font-size: rem(12);
       }

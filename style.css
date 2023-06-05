@@ -1754,6 +1754,9 @@ img {
 .provider-content-row h1 {
   font-weight: 600
 }
+.provider-content-row li::marker {
+  color: var(--wp--preset--color--red)
+}
 .provider-content-row .meta-group {
   border-left: 4px solid var(--wp--preset--color--red);
   padding-left: 20px;
@@ -1776,11 +1779,41 @@ img {
 .provider-content-row .meta-group a[href^=tel]:hover {
   text-decoration: underline
 }
-.provider-tabs-row li.kt-title-item:last-child {
-  margin-right: 0
+.provider-tabs-row li.kt-title-item {
+  margin-right: 0!important;
+  position: relative
 }
-.provider-tabs-row li.kt-title-item.kt-tab-title-active .kb-svg-icon-wrap svg {
+.provider-tabs-row li.kt-title-item:not(:last-child) a:after {
+  transition: .6s cubic-bezier(.23,1,.32,1);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -2px;
+  background: var(--wp--preset--color--yellow);
+  width: 2px;
+  height: 100%;
+  transform: scale(50%);
+  z-index: 1
+}
+.provider-tabs-row li.kt-title-item:last-child a {
+  border-top-right-radius: 60px!important
+}
+.provider-tabs-row li.kt-title-item.kt-tab-title-active a:after {
+  opacity: 0;
+  visibility: hidden
+}
+.provider-tabs-row li.kt-title-item.kt-tab-title-active a .kb-svg-icon-wrap svg {
   color: var(--wp--preset--color--dark-brown)
+}
+.provider-tabs-row a.kt-tab-title {
+  padding-top: 16px!important;
+  padding-bottom: 16px!important
+}
+.provider-tabs-row a.kt-tab-title:focus:after,
+.provider-tabs-row a.kt-tab-title:hover:after {
+  opacity: 0;
+  visibility: hidden
 }
 .provider-tabs-row a.kt-tab-title .kb-svg-icon-wrap {
   flex-shrink: 0
@@ -1790,8 +1823,10 @@ img {
   color: var(--wp--preset--color--red)
 }
 .provider-tabs-row a.kt-tab-title .kt-title-text {
+  font-family: var(--wp--preset--font-family--header);
   color: var(--wp--preset--color--dark-brown);
-  font-weight: 700
+  font-weight: 700;
+  font-size: .875rem
 }
 .provider-tabs-row a.kt-tab-title:active .kb-svg-icon-wrap svg,
 .provider-tabs-row a.kt-tab-title:focus .kb-svg-icon-wrap svg,
