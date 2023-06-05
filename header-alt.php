@@ -29,7 +29,7 @@
     <?php include locate_template('partials/elements/notice-bar.php'); ?>
     <nav>
       <?php get_template_part('partials/navs/nav-desktop', null, [ 
-        'show_logo' => false,
+        'show_logo' => true,
       ]); ?>
     </nav>
 

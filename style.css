@@ -708,6 +708,13 @@ h6 {
 .gform_wrapper.gform_validation_error .validation_message {
   display: none
 }
+body.page-template-tpl-no-logo .mobile-nav-wrap {
+  margin-bottom: 0;
+  box-shadow: none
+}
+body.page-template-tpl-no-logo .mobile-nav-wrap:before {
+  display: none
+}
 .mobile-nav-wrap {
   top: 0;
   left: 0;
@@ -1820,6 +1827,9 @@ img {
   }
   .footer .col-1 .copyright {
     padding-top: 80px
+  }
+  body.page-template-tpl-no-logo .mobile-brand {
+    display: none
   }
   .mobile-nav-wrap:before {
     content: "";

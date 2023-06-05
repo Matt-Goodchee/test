@@ -1,5 +1,16 @@
-main {
-  // margin-top: 60px;
+body.page-template-tpl-no-logo {
+  .mobile-brand {
+    @include for-size(tablet, up, offset) {
+      display: none;
+    }
+  }
+  .mobile-nav-wrap {
+    margin-bottom: 0;
+    box-shadow: none;
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .mobile-nav-wrap {
@@ -235,7 +246,6 @@ main {
     }
   }
 }
-
 
 .sr-only {
   position: absolute;
