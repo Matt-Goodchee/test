@@ -1,11 +1,11 @@
 {
-  "name": "acf/image-border",
-  "title": "Image w/ Border",
-  "description": "Custom image block w/ border & rounded corners",
+  "name": "acf/route-mapr",
+  "title": "Route Map SVG",
+  "description": "Custom route map .svg with links on hover",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
-  "icon": "format-image",
-  "keywords": ["image", "border"],
+  "icon": "sticky",
+  "keywords": ["route", "map"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php",

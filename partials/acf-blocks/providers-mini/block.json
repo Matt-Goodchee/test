@@ -4,7 +4,7 @@
   "description": "Custom Providers mini index grid",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
-  "icon": "cover-image",
+  "icon": "index-card",
 "keywords": ["provider", "grid", "index"],
   "acf": {
     "mode": "preview",

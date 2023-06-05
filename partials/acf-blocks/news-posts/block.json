@@ -4,7 +4,7 @@
   "description": "Custom news posts listings",
   "style": "file:./style.css" ,
   "category": "custom_blocks",
-  "icon": "cover-image",
+  "icon": "excerpt-view",
   "keywords": ["news", "post"],
   "acf": {
     "mode": "preview",
