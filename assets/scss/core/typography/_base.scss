@@ -5,13 +5,10 @@ body {
   p {
     margin-bottom: 20px;
     &.has-small-font-size {
-
     }
     &.has-medium-font-size {
-
     }
     &.has-large-font-size {
-
     }
     &.has-x-large-font-size {
       @extend %preset4;
@@ -22,17 +19,24 @@ body {
   li {
     margin-bottom: 10px;
   }
-  p, li {
+  p,
+  li {
     @extend %body-copy;
     color: $dark-brown;
-    a, a[href^='tel'] {
+    a,
+    a[href^="tel"] {
       @include trans;
       color: $red;
       font-weight: 700;
       text-decoration: none;
-      &:hover, &:focus, &:active {
+      &:hover,
+      &:focus,
+      &:active {
         text-decoration: underline;
       }
+    }
+    a[href^="tel"] {
+      white-space: nowrap;
     }
   }
 }
@@ -42,7 +46,7 @@ blockquote {
   border-bottom: 2px solid $black;
   position: relative;
   &:before {
-    content:'“';
+    content: "“";
     display: block;
     margin-bottom: 25px;
   }

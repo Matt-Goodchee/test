@@ -259,6 +259,10 @@ body p a[href^=tel]:focus,
 body p a[href^=tel]:hover {
   text-decoration: underline
 }
+body li a[href^=tel],
+body p a[href^=tel] {
+  white-space: nowrap
+}
 blockquote {
   border-top: 2px solid var(--wp--preset--color--black);
   border-bottom: 2px solid var(--wp--preset--color--black);
@@ -1821,7 +1825,8 @@ img {
 }
 .provider-tabs-row a.kt-tab-title {
   padding-top: 16px!important;
-  padding-bottom: 16px!important
+  padding-bottom: 16px!important;
+  scroll-margin-top: 200px
 }
 .provider-tabs-row a.kt-tab-title:focus:after,
 .provider-tabs-row a.kt-tab-title:hover:after {
