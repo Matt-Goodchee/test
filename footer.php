@@ -32,14 +32,12 @@ endif; ?>
       </div>
 
       <div class="footer-col col-3">
-        <p>Bus Systems</p>
         <?php get_template_part('partials/navs/nav-footer', null, [ 
           'column' => 3,
         ]); ?>
       </div>
 
       <div class="footer-col col-4">
-        <p>Other Ways to Go</p>
         <?php get_template_part('partials/navs/nav-footer', null, [ 
           'column' => 4,
         ]); ?>

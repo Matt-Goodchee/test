@@ -94,9 +94,12 @@
   }
   .footer-col {
     flex: 1 0 calc(2 / 12 * 100%);
-    p {
-      font-weight: 700;
-      margin-bottom: 10px;
+    li {
+      &.nav-bold {
+        a {
+          font-weight: 700;
+        }
+      }
     }
     &:not(:first-child) {
       @include for-size(tablet, up, offset) {

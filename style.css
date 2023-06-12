@@ -418,9 +418,8 @@ h6 {
 .footer .footer-col {
   flex: 1 0 16.6666666667%
 }
-.footer .footer-col p {
-  font-weight: 700;
-  margin-bottom: 10px
+.footer .footer-col li.nav-bold a {
+  font-weight: 700
 }
 .footer .show-more a {
   padding: 20px;
