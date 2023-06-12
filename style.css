@@ -794,12 +794,6 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
 .mobile-nav-wrap .container .nav-button.map-toggle svg {
   width: 20px
 }
-.mobile-nav-wrap .container .nav-button.navbar-toggle.open svg.open {
-  display: none
-}
-.mobile-nav-wrap .container .nav-button.navbar-toggle.open svg.close {
-  display: block
-}
 .mobile-nav-wrap .container .nav-button span {
   color: #212121;
   font-weight: 700
@@ -2092,6 +2086,12 @@ img {
   }
   .mobile-nav-wrap .container .nav-button:not(:last-of-type) {
     margin-right: 15px
+  }
+  .mobile-nav-wrap .container .nav-button.navbar-toggle.open svg.open {
+    display: none
+  }
+  .mobile-nav-wrap .container .nav-button.navbar-toggle.open svg.close {
+    display: block
   }
   .mobile-nav-wrap .mobile-nav {
     top: 100px;
