@@ -100,7 +100,7 @@
       slides.slick("unslick");
     }
     function checkViewportWidth() {
-      if ($(window).width() <= 1024) {
+      if (window.matchMedia("(max-width: 1024px)").matches) {
         initSlickSlider();
       } else {
         destroySlickSlider();
