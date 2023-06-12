@@ -3,7 +3,7 @@
   $page_id = get_the_ID();
   ?>
 
-<?php // NAME
+<?php // Providers
 $providers = new WP_Query(array( 
  'post_type'      => 'provider',
  'orderby'        => 'date',

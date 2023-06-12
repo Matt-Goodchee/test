@@ -370,8 +370,30 @@ h6 {
 .footer .container {
   padding: 60px 40px 40px
 }
-.footer .wrapper {
+.footer .upper {
   display: flex
+}
+.footer .copyright {
+  padding-top: 20px
+}
+.footer .copyright p {
+  font-size: .75rem;
+  font-weight: 400;
+  margin-bottom: 0
+}
+.footer .copyright p a {
+  text-decoration: none
+}
+.footer .copyright p a:active,
+.footer .copyright p a:focus,
+.footer .copyright p a:hover {
+  text-decoration: underline
+}
+.footer .copyright .logo-alt {
+  margin-right: 20px
+}
+.footer .copyright .logo-alt img {
+  width: 122px
 }
 .footer ul {
   margin: 0;
@@ -437,30 +459,6 @@ h6 {
 .footer .col-1 li a {
   font-size: 1rem;
   font-weight: 700
-}
-.footer .col-1 .copyright {
-  display: flex;
-  align-items: center;
-  padding-top: 20px
-}
-.footer .col-1 .copyright p {
-  font-size: .75rem;
-  font-weight: 400;
-  margin-bottom: 0
-}
-.footer .col-1 .copyright p a {
-  text-decoration: none
-}
-.footer .col-1 .copyright p a:active,
-.footer .col-1 .copyright p a:focus,
-.footer .col-1 .copyright p a:hover {
-  text-decoration: underline
-}
-.footer .col-1 .logo-alt {
-  margin-right: 20px
-}
-.footer .col-1 .logo-alt img {
-  width: 122px
 }
 .footer .col-2 a {
   font-weight: 700
@@ -1849,6 +1847,12 @@ img {
 .provider-tabs-row a.kt-tab-title:hover .kb-svg-icon-wrap svg {
   color: var(--wp--preset--color--dark-brown)
 }
+@media only screen and (min-width:481px) {
+  .footer .copyright {
+    display: flex;
+    align-items: center
+  }
+}
 @media only screen and (min-width:769px) {
   .flex.reverse {
     flex-direction: row-reverse
@@ -1866,6 +1870,9 @@ img {
   }
 }
 @media only screen and (min-width:1025px) {
+  .footer .copyright {
+    padding-top: 40px
+  }
   .footer .footer-col:not(:first-child) {
     border-left: 1px solid var(--wp--preset--color--yellow);
     padding-left: 20px
@@ -1875,9 +1882,6 @@ img {
   }
   .footer .col-1 ul {
     padding-left: 70px
-  }
-  .footer .col-1 .copyright {
-    padding-top: 80px
   }
   body.page-template-tpl-no-logo .mobile-brand {
     display: none
@@ -1985,7 +1989,7 @@ img {
   .footer .col-4 {
     order: 3
   }
-  .footer .wrapper {
+  .footer .upper {
     flex-direction: column
   }
   .mobile-nav-wrap {
@@ -2200,6 +2204,9 @@ img {
   body li,
   body p {
     font-size: .875rem
+  }
+  .footer .copyright .logo-alt {
+    margin-bottom: 30px
   }
   .mobile-nav-wrap .container .mobile-brand img {
     max-width: 125px

@@ -5,17 +5,23 @@
 
 /* Custom Block Styles
 ========================================================= */
-$class: '.providers-mini';
+$class: ".providers-mini";
 
 #{$class} {
-  .wrapper, .slick-track {
+  .wrapper,
+  .slick-track {
     display: flex;
     gap: 24px 12px;
     @include for-size(tablet, up, offset) {
       justify-content: center;
       flex-wrap: wrap;
     }
-
+  }
+  .wrapper {
+    @include between-sizes(1025px, 1500px) {
+      @include margin-center;
+      max-width: 625px;
+    }
   }
   .provider {
     flex: 0 1 195px;
@@ -24,6 +30,9 @@ $class: '.providers-mini';
     border-radius: 10px;
     box-shadow: 1.6px 1.6px 10px rgba(0, 0, 0, 0.2);
     height: auto;
+    @include for-size(1500px) {
+      flex-basis: calc(33.333% - 12px);
+    }
     @include for-size(tablet-sm) {
       min-height: 150px;
       // flex-basis: calc(50% - 6px);
@@ -34,7 +43,9 @@ $class: '.providers-mini';
           background-color: #{$hex};
         }
         a {
-          &:hover, &:focus, &:active {
+          &:hover,
+          &:focus,
+          &:active {
             figure {
               border-color: #{$hex};
             }

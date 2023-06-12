@@ -11,7 +11,7 @@ endif; ?>
 
 <footer class="footer">
   <div class="container">
-    <div class="wrapper">
+    <div class="upper">
       <div class="footer-col col-1">
         <?php if ( $logo ) : ?>
           <div class="logo">
@@ -23,18 +23,6 @@ endif; ?>
         <?php get_template_part('partials/navs/nav-footer', null, [ 
           'column' => 1,
         ]); ?>
-        <div class="copyright">
-          <?php if ( $logo_copyright ) : ?>
-            <div class="logo-alt">
-              <a href="#" title="">
-                <img src="<?= $logo_copyright; ?>" alt="Clackamas County Logo">
-              </a>
-            </div>
-          <?php endif; ?>
-          <?php if ( !empty($copyright) ) : ?>
-            <?= $copyright; ?>
-          <?php endif; ?>
-        </div>
       </div>
 
       <div class="footer-col col-2">
@@ -58,6 +46,20 @@ endif; ?>
       </div>
     </div>
 
+    <div class="lower">
+        <div class="copyright">
+          <?php if ( $logo_copyright ) : ?>
+            <div class="logo-alt">
+              <a href="https://www.clackamas.us" title="Open Clackamas County site in new tab" target="_blank">
+                <img src="<?= $logo_copyright; ?>" alt="Clackamas County Logo">
+              </a>
+            </div>
+          <?php endif; ?>
+          <?php if ( !empty($copyright) ) : ?>
+            <?= $copyright; ?>
+          <?php endif; ?>
+        </div>
+    </div>
   </div>
 </footer>
 
