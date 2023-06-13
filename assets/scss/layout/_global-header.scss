@@ -19,27 +19,10 @@ body.page-template-tpl-no-logo {
   left: 0;
   width: 100%;
   z-index: 3000;
-  // box-shadow: 2px 2px 28px rgba(0, 0, 0, 0.2);
-  box-shadow: -60vw 100px 40px #fff, -60vw 70px 40px #fff, 2px 2px 28px rgba(0,0,0,.2);
+  box-shadow: -60vw 25px 40px #fff, -60vw 25px 40px #fff,
+    2px 2px 28px rgba(0, 0, 0, 0.2);
   position: relative;
   margin-bottom: 50px;
-  @include for-size(tablet, up, offset) {
-    &:before {
-      // content: "";
-      display: block;
-      position: absolute;
-      bottom: -50px;
-      left: 0;
-      background: linear-gradient(
-        90deg,
-        #ffffff 65.27%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      width: 60%;
-      height: 50px;
-      z-index: 0;
-    }
-  }
   @include for-size(tablet) {
     margin-bottom: 30px;
   }
@@ -82,13 +65,14 @@ body.page-template-tpl-no-logo {
             @include trans();
           }
         }
-        &:hover, &:focus {
-        .main-logo-mark {
-          path {
-            transform:translate(10px);
-            fill: $dark-brown;
+        &:hover,
+        &:focus {
+          .main-logo-mark {
+            path {
+              transform: translate(10px);
+              fill: $dark-brown;
+            }
           }
-        }
         }
       }
     }

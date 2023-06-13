@@ -721,7 +721,7 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   left: 0;
   width: 100%;
   z-index: 3000;
-  box-shadow: -60vw 100px 40px #fff,-60vw 70px 40px #fff,2px 2px 28px rgba(0,0,0,.2);
+  box-shadow: -60vw 25px 40px #fff,-60vw 25px 40px #fff,2px 2px 28px rgba(0,0,0,.2);
   position: relative;
   margin-bottom: 50px
 }
@@ -1730,6 +1730,7 @@ img {
 }
 .archive-index .posts-grid,
 .search-index .posts-grid {
+  grid-template-columns: repeat(auto-fit,minmax(390px,-webkit-max-content));
   grid-template-columns: repeat(auto-fit,minmax(390px,max-content));
   justify-content: center;
   gap: 35px
@@ -1901,16 +1902,6 @@ img {
   }
   body.page-template-tpl-no-logo .mobile-brand {
     display: none
-  }
-  .mobile-nav-wrap:before {
-    display: block;
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    background: linear-gradient(90deg,#fff 65.27%,rgba(255,255,255,0) 100%);
-    width: 60%;
-    height: 50px;
-    z-index: 0
   }
   .mobile-nav-wrap .container .mobile-brand {
     position: relative;

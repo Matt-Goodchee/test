@@ -99,10 +99,6 @@ $options
       'class' => 'center',
     ]
   ])
-  ->addTab('Custom Scripts')
-  ->addTextarea('head_code')
-  ->addTextarea('body_code')
-  ->addTextarea('footer_code')
 
 ->setLocation('options_page', '==', 'theme-options');
 
