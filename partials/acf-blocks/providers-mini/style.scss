@@ -42,6 +42,11 @@ $class: ".providers-mini";
         .name {
           background-color: #{$hex};
         }
+        &.current {
+          figure {
+            border-color: #{$hex} !important;
+          }
+        }
         a {
           &:hover,
           &:focus,
@@ -50,11 +55,6 @@ $class: ".providers-mini";
               border-color: #{$hex};
             }
           }
-        }
-      }
-      &.current {
-        figure {
-          border-color: #{$hex};
         }
       }
     }

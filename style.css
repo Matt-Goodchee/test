@@ -1722,11 +1722,14 @@ img {
 .archive-index .results-entry,
 .search-index .results-entry {
   box-shadow: 1.57219px 1.57219px 10px rgba(0,0,0,.2);
-  max-width: 480px
+  max-width: 480px;
+  border-radius: 10px
 }
 .archive-index .results-entry a,
 .search-index .results-entry a {
   transition: .6s cubic-bezier(.23,1,.32,1);
+  box-shadow: 1.57219px 1.57219px 10px rgba(0,0,0,.2);
+  border-radius: 10px;
   padding: clamp(25px,4vw,40px);
   display: block;
   border: 2px solid transparent;

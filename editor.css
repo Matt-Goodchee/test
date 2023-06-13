@@ -468,6 +468,10 @@ body .editor-styles-wrapper body p a[href^=tel]:focus,
 body .editor-styles-wrapper body p a[href^=tel]:hover {
   text-decoration: underline
 }
+body .editor-styles-wrapper body li a[href^=tel],
+body .editor-styles-wrapper body p a[href^=tel] {
+  white-space: nowrap
+}
 body .editor-styles-wrapper blockquote {
   border-top: 2px solid var(--wp--preset--color--black);
   border-bottom: 2px solid var(--wp--preset--color--black);

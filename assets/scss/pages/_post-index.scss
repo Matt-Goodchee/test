@@ -1,4 +1,3 @@
-
 /* Archive / Search Index Pages (shared)
 ========================================================= */
 .archive-index,
@@ -36,8 +35,9 @@
     padding-top: 75px;
     .pagination {
       text-align: center;
-      span, a {
-        @include font('heading');
+      span,
+      a {
+        @include font("heading");
         font-size: rem(20);
         color: $dark-brown;
         display: inline-block;
@@ -50,7 +50,9 @@
       }
       a {
         @include trans;
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
           color: $red;
         }
       }
@@ -67,11 +69,14 @@
   .results-entry {
     box-shadow: 1.57219px 1.57219px 10px rgba(0, 0, 0, 0.2);
     max-width: 480px;
+    border-radius: 10px;
     @include for-size(tablet-sm) {
       @include margin-center;
     }
     a {
       @include trans;
+      box-shadow: 1.57219px 1.57219px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
       padding: clamp(25px, 4vw, 40px);
       display: block;
       border: 2px solid transparent;
@@ -79,7 +84,9 @@
       color: inherit;
       height: 100%;
       min-height: 250px;
-      &:hover, &:focus, &:active {
+      &:hover,
+      &:focus,
+      &:active {
         border-color: $red;
       }
     }
