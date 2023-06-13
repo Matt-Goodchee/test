@@ -721,7 +721,7 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   left: 0;
   width: 100%;
   z-index: 3000;
-  box-shadow: 2px 2px 28px rgba(0,0,0,.2);
+  box-shadow: -60vw 100px 40px #fff,-60vw 70px 40px #fff,2px 2px 28px rgba(0,0,0,.2);
   position: relative;
   margin-bottom: 50px
 }
@@ -739,9 +739,18 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   transition: opacity .6s cubic-bezier(.23,1,.32,1);
   margin-right: 15px
 }
-.mobile-nav-wrap .container .mobile-brand img {
+.mobile-nav-wrap .container .mobile-brand svg {
   display: block;
-  max-width: 275px
+  max-width: 275px;
+  opacity: 0
+}
+.mobile-nav-wrap .container .mobile-brand svg .main-logo-mark path {
+  transition: .6s cubic-bezier(.23,1,.32,1)
+}
+.mobile-nav-wrap .container .mobile-brand svg:focus .main-logo-mark path,
+.mobile-nav-wrap .container .mobile-brand svg:hover .main-logo-mark path {
+  transform: translate(10px);
+  fill: var(--wp--preset--color--dark-brown)
 }
 .mobile-nav-wrap .container .menu-items {
   margin-left: auto;
@@ -915,6 +924,9 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   clip: rect(0,0,0,0);
   border: 0;
   opacity: 0
+}
+body {
+  overflow-x: hidden
 }
 *,
 * * {
@@ -1361,6 +1373,10 @@ img {
 .notice-bar .close-bar span {
   color: var(--wp--preset--color--white)
 }
+.animated,
+.animated-entry {
+  opacity: 0
+}
 .buttons-wrap {
   display: flex;
   align-items: center;
@@ -1714,7 +1730,6 @@ img {
 }
 .archive-index .posts-grid,
 .search-index .posts-grid {
-  grid-template-columns: repeat(auto-fit,minmax(390px,-webkit-max-content));
   grid-template-columns: repeat(auto-fit,minmax(390px,max-content));
   justify-content: center;
   gap: 35px
@@ -1888,7 +1903,6 @@ img {
     display: none
   }
   .mobile-nav-wrap:before {
-    content: "";
     display: block;
     position: absolute;
     bottom: -50px;
@@ -1996,7 +2010,7 @@ img {
   .mobile-nav-wrap {
     margin-bottom: 30px
   }
-  .mobile-nav-wrap .container .mobile-brand img {
+  .mobile-nav-wrap .container .mobile-brand svg {
     max-width: 200px
   }
   .alignleft,
@@ -2074,7 +2088,7 @@ img {
     padding-left: 10px;
     padding-right: 10px
   }
-  .mobile-nav-wrap .container .mobile-brand img {
+  .mobile-nav-wrap .container .mobile-brand svg {
     max-width: 150px
   }
   .mobile-nav-wrap .container .translate {
@@ -2215,7 +2229,7 @@ img {
   .footer .copyright .logo-alt {
     margin-bottom: 30px
   }
-  .mobile-nav-wrap .container .mobile-brand img {
+  .mobile-nav-wrap .container .mobile-brand svg {
     max-width: 125px
   }
   .mobile-nav-wrap .container .nav-button {

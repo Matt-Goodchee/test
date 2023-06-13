@@ -13,7 +13,7 @@
  <?php if ( $providers->have_posts() ) : ?>
   <div class="providers-index">
     <div class="wrapper">
-      <div class="providers-index--content grid">
+      <div class="providers-index--content grid animated-group">
         <?php while ( $providers->have_posts() ) : $providers->the_post(); ?>
           <?php include( locate_template('partials/posts/provider-entry.php') ); ?>
         <?php endwhile; ?>

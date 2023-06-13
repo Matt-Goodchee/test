@@ -11,6 +11,6 @@
 ?>
 
   <div 
-    <?php block_class_id( $block,'image-border-custom-block' . ' border-' . $border . ' rounded-' . $round); ?>>
+    <?php block_class_id( $block,'image-border-custom-block animated' . ' border-' . $border . ' rounded-' . $round); ?>>
     <InnerBlocks template="<?=esc_attr(wp_json_encode($template));?>" />
   </div>

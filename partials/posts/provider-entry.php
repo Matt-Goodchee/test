@@ -4,7 +4,7 @@ $group        = get_field('provider_group', get_the_ID());
 $accent_color = $group['accent_color'];
 $slug         = $post->post_name; ?>
 
-<div class="provider <?= $accent_color.' '.$slug; ?>">
+<div class="provider <?= $accent_color.' '.$slug; ?> animated-entry">
   <a href="<?php the_permalink(); ?>" title="View detailed info about the <?php the_title(); ?> system">
     <figure class="image"><?php the_post_thumbnail(); ?></figure>
     <div class="meta">

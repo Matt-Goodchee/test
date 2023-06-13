@@ -165,7 +165,7 @@ function scriptsJS() {
 ========================================================= */
 function browserSyncInit(done) {
   browsersync.init({
-    proxy: 'localhost/' + PROJECT_NAME,
+    proxy: PROJECT_NAME+'.local',
     notify: false
   });
   done();

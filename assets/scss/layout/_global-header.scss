@@ -19,12 +19,13 @@ body.page-template-tpl-no-logo {
   left: 0;
   width: 100%;
   z-index: 3000;
-  box-shadow: 2px 2px 28px rgba(0, 0, 0, 0.2);
+  // box-shadow: 2px 2px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: -60vw 100px 40px #fff, -60vw 70px 40px #fff, 2px 2px 28px rgba(0,0,0,.2);
   position: relative;
   margin-bottom: 50px;
   @include for-size(tablet, up, offset) {
     &:before {
-      content: "";
+      // content: "";
       display: block;
       position: absolute;
       bottom: -50px;
@@ -63,9 +64,10 @@ body.page-template-tpl-no-logo {
         position: relative;
         top: 40px;
       }
-      img {
+      svg {
         display: block;
         max-width: 275px;
+        opacity: 0;
         @include for-size(tablet) {
           max-width: 200px;
         }
@@ -74,6 +76,19 @@ body.page-template-tpl-no-logo {
         }
         @include for-size(phone) {
           max-width: 125px;
+        }
+        .main-logo-mark {
+          path {
+            @include trans();
+          }
+        }
+        &:hover, &:focus {
+        .main-logo-mark {
+          path {
+            transform:translate(10px);
+            fill: $dark-brown;
+          }
+        }
         }
       }
     }
@@ -289,4 +304,9 @@ body.page-template-tpl-no-logo {
   clip: rect(0, 0, 0, 0);
   border: 0;
   opacity: 0;
+}
+
+// Fix horizontal scroll for desktop
+body {
+  overflow-x: hidden;
 }
