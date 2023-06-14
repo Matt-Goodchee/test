@@ -80,11 +80,12 @@ body.page-template-tpl-no-logo {
       margin-left: auto;
       display: flex;
       align-items: center;
-    }
-    .translate {
-      margin-right: 25px;
-      @include for-size(tablet-sm) {
-        display: none;
+      #gtranslate {
+        margin-right: 50px;
+        margin-left: 20px;
+        @include for-size(tablet) {
+          margin-right: 20px;
+        }
       }
     }
     .nav-button {
@@ -257,6 +258,10 @@ body.page-template-tpl-no-logo {
         margin-left: auto;
         position: relative;
       }
+    }
+    #gtranslate {
+      text-align: center;
+      padding-top: 50px;
     }
   }
   .search-form {

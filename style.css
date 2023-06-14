@@ -757,8 +757,9 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   display: flex;
   align-items: center
 }
-.mobile-nav-wrap .container .translate {
-  margin-right: 25px
+.mobile-nav-wrap .container .menu-items #gtranslate {
+  margin-right: 50px;
+  margin-left: 20px
 }
 .mobile-nav-wrap .container .nav-button {
   transition: .6s cubic-bezier(.23,1,.32,1);
@@ -885,6 +886,10 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
 .mobile-nav-wrap .mobile-nav figure img {
   margin-left: auto;
   position: relative
+}
+.mobile-nav-wrap .mobile-nav #gtranslate {
+  text-align: center;
+  padding-top: 50px
 }
 .mobile-nav-wrap .search-form {
   padding-top: 10px
@@ -1839,7 +1844,7 @@ img {
 .provider-tabs-row a.kt-tab-title {
   padding-top: 16px!important;
   padding-bottom: 16px!important;
-  scroll-margin-top: 200px
+  scroll-margin-top: 150px
 }
 .provider-tabs-row a.kt-tab-title:focus:after,
 .provider-tabs-row a.kt-tab-title:hover:after {
@@ -2004,6 +2009,9 @@ img {
   .mobile-nav-wrap .container .mobile-brand svg {
     max-width: 200px
   }
+  .mobile-nav-wrap .container .menu-items #gtranslate {
+    margin-right: 20px
+  }
   .alignleft,
   .alignright {
     float: none;
@@ -2081,9 +2089,6 @@ img {
   }
   .mobile-nav-wrap .container .mobile-brand svg {
     max-width: 150px
-  }
-  .mobile-nav-wrap .container .translate {
-    display: none
   }
   .mobile-nav-wrap .container .nav-button {
     padding-top: 10px;
