@@ -99,8 +99,8 @@ body .notice-bar .close-bar a {
 body .notice-bar .close-bar span {
   color: var(--wp--preset--color--white)
 }
-body .animated,
-body .animated-entry {
+body body:not(.block-editor-page) .animated,
+body body:not(.block-editor-page) .animated-entry {
   opacity: 0
 }
 body .buttons-wrap {
@@ -444,6 +444,9 @@ body .editor-styles-wrapper body p.has-x-large-font-size {
 }
 body .editor-styles-wrapper body li {
   margin-bottom: 10px
+}
+body .editor-styles-wrapper body ul li::marker {
+  color: var(--wp--preset--color--red)
 }
 body .editor-styles-wrapper body li,
 body .editor-styles-wrapper body p {

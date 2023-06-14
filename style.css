@@ -1383,8 +1383,8 @@ img {
 .notice-bar .close-bar span {
   color: var(--wp--preset--color--white)
 }
-.animated,
-.animated-entry {
+body:not(.block-editor-page) .animated,
+body:not(.block-editor-page) .animated-entry {
   opacity: 0
 }
 .buttons-wrap {
