@@ -26,10 +26,12 @@ body.page-template-tpl-no-logo {
   @include for-size(tablet) {
     margin-bottom: 30px;
   }
+  .mobile-nav-header {
+    position: relative;
+  }
   .container {
     padding-left: 40px;
     padding-right: 40px;
-    position: relative;
     @include for-size(tablet-sm) {
       min-height: 80px;
       padding-left: 10px;

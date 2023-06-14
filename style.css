@@ -232,6 +232,9 @@ body p.has-x-large-font-size {
 body li {
   margin-bottom: 10px
 }
+body ul li::marker {
+  color: var(--wp--preset--color--red)
+}
 body li,
 body p {
   color: var(--wp--preset--color--dark-brown)
@@ -725,10 +728,12 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   position: relative;
   margin-bottom: 50px
 }
+.mobile-nav-wrap .mobile-nav-header {
+  position: relative
+}
 .mobile-nav-wrap .container {
   padding-left: 40px;
-  padding-right: 40px;
-  position: relative
+  padding-right: 40px
 }
 .mobile-nav-wrap .container .wrapper {
   min-height: 100px;
@@ -1788,9 +1793,6 @@ img {
 }
 .provider-content-row h1 {
   font-weight: 600
-}
-.provider-content-row li::marker {
-  color: var(--wp--preset--color--red)
 }
 .provider-content-row .meta-group {
   border-left: 4px solid var(--wp--preset--color--red);

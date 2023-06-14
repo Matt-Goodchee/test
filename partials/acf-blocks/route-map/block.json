@@ -9,7 +9,7 @@
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php",
-    "postTypes": ["post", "page", "provider"]
+    "postTypes": ["page", "provider"]
   },
   "align": "full",
   "supports": {

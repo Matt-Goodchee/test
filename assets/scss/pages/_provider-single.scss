@@ -15,11 +15,6 @@
   h1 {
     font-weight: 600;
   }
-  li {
-    &::marker {
-      color: $red;
-    }
-  }
   .wp-block-buttons {
     @include for-size(tablet-sm) {
       flex-direction: column;

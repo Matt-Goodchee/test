@@ -290,7 +290,7 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
   // Move GTranslate Widget
   function translateWidget() {
     const widget = $("#gtranslate");
-    if (widget.length) {
+    if (widget.length > 0) {
       if (window.matchMedia("(max-width: 768px)").matches) {
         widget.appendTo($("#mobile-nav .search-form"));
       } else {

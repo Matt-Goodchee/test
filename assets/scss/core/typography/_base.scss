@@ -19,6 +19,13 @@ body {
   li {
     margin-bottom: 10px;
   }
+  ul {
+    li {
+      &::marker {
+        color: $red;
+      }
+    }
+  }
   p,
   li {
     @extend %body-copy;
