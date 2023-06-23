@@ -22,6 +22,10 @@
         "slug": "red",
         "color": "#F0421C"
       },
+      { "name": "Red (alt)",
+        "slug": "red-alt",
+        "color": "#DC3610"
+      },
       { "name": "Dark Brown",
         "slug": "dark-brown",
         "color": "#212121"

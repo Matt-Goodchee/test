@@ -1,28 +1,28 @@
-/* POST - Single
-========================================================= */
+// /* POST - Single
+// ========================================================= */
 
-.post-single {
-  @include row-padding;
+// .post-single {
+//   @include row-padding;
 
-  &--content {
-    .article-single {
+//   &--content {
+//     .article-single {
 
-      &__title {
-        h1 {
-          text-align: center;
-        }
-      }
+//       &__title {
+//         h1 {
+//           text-align: center;
+//         }
+//       }
 
-      &__image {
-        img {
-          @include margin-center;
-          display: block;
-        }
-      }
+//       &__image {
+//         img {
+//           @include margin-center;
+//           display: block;
+//         }
+//       }
 
-      &__meta {}
+//       &__meta {}
 
-      &__content {}
-    }
-  }
-}
+//       &__content {}
+//     }
+//   }
+// }

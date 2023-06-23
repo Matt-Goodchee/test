@@ -22,7 +22,7 @@ body {
   ul {
     li {
       &::marker {
-        color: $red;
+        color: $red-alt;
       }
     }
   }
@@ -33,7 +33,7 @@ body {
     a,
     a[href^="tel"] {
       @include trans;
-      color: $red;
+      color: $red-alt;
       font-weight: 700;
       text-decoration: none;
       &:hover,

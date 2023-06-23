@@ -161,7 +161,7 @@ q:before {
 .h1,
 .preset1,
 h1 {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.2
@@ -170,7 +170,7 @@ h1 {
 .icon-heading .kt-svg-icon-list-text,
 .preset2,
 h2 {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.2
@@ -179,7 +179,7 @@ h2 {
 .h3,
 .preset3,
 h3 {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 1.875rem;
   font-weight: 500;
   line-height: 1.2
@@ -191,7 +191,7 @@ h3 {
 .search-index .results-entry h2,
 body p.has-x-large-font-size,
 h4 {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2
@@ -200,7 +200,7 @@ h4 {
 .mobile-nav-wrap .container .nav-button span,
 .preset5,
 h5 {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2
@@ -208,7 +208,7 @@ h5 {
 .h6,
 .preset6,
 h6 {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2
@@ -233,7 +233,7 @@ body li {
   margin-bottom: 10px
 }
 body ul li::marker {
-  color: var(--wp--preset--color--red)
+  color: var(--wp--preset--color--red-alt)
 }
 body li,
 body p {
@@ -244,7 +244,7 @@ body li a[href^=tel],
 body p a,
 body p a[href^=tel] {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  color: var(--wp--preset--color--red);
+  color: var(--wp--preset--color--red-alt);
   font-weight: 700;
   text-decoration: none
 }
@@ -280,7 +280,7 @@ blockquote p:last-of-type {
   margin-bottom: 0
 }
 body:not(.wp-admin) {
-  font-family: var(--wp--preset--font-family--body)
+  font-family: Karla,sans-serif
 }
 h1,
 h2,
@@ -411,7 +411,7 @@ h6 {
   margin-bottom: 10px
 }
 .footer li a {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: .875rem;
   font-weight: 500;
   text-decoration: none
@@ -536,7 +536,7 @@ h6 {
   grid-gap: 60px 30px
 }
 .gform_wrapper.gravity-theme form .gform-body .gfield_label {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   display: block;
   font-weight: 700;
   margin-bottom: 25px;
@@ -578,7 +578,7 @@ h6 {
 }
 .gform_wrapper.gravity-theme form .gform_footer button {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -768,7 +768,7 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
 }
 .mobile-nav-wrap .container .nav-button {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -1124,7 +1124,7 @@ table {
 button,
 input[type=submit] {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -1348,7 +1348,7 @@ img {
   margin-right: 10px
 }
 .notice-bar .heading {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 1.5rem;
   font-weight: 700
 }
@@ -1404,7 +1404,7 @@ body:not(.block-editor-page) .animated-entry {
 }
 .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -1475,6 +1475,7 @@ body:not(.block-editor-page) .animated-entry {
   margin-left: 8px
 }
 .icon-link .kt-svg-icon-list-text a {
+  color: var(--wp--preset--color--red-alt)!important;
   font-family: var(--wp--preset--font-family--header)!important;
   font-weight: 500!important;
   text-decoration: none
@@ -1562,7 +1563,7 @@ body:not(.block-editor-page) .animated-entry {
   border-color: var(--wp--preset--color--black)
 }
 .home-row .kt-svg-icon-list .kt-svg-icon-list-text {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   color: var(--wp--preset--color--dark-brown);
   font-size: 1.5rem;
   font-weight: 700
@@ -1620,7 +1621,7 @@ body:not(.block-editor-page) .animated-entry {
   color: var(--wp--preset--color--white)
 }
 .other-ways-row .col-menu a {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   color: var(--wp--preset--color--dark-brown);
   font-weight: 600;
   display: flex;
@@ -1714,7 +1715,7 @@ body:not(.block-editor-page) .animated-entry {
 .archive-index--pagination .pagination span,
 .search-index--pagination .pagination a,
 .search-index--pagination .pagination span {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   font-size: 1.25rem;
   color: var(--wp--preset--color--dark-brown);
   display: inline-block;
@@ -1782,14 +1783,6 @@ body:not(.block-editor-page) .animated-entry {
   margin: 20px auto;
   border-bottom: 3px solid var(--wp--preset--color--yellow);
   width: 110px
-}
-.post-single--content .article-single__title h1 {
-  text-align: center
-}
-.post-single--content .article-single__image img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block
 }
 .provider-content-row h1 {
   font-weight: 600
@@ -1861,7 +1854,7 @@ body:not(.block-editor-page) .animated-entry {
   color: var(--wp--preset--color--red)
 }
 .provider-tabs-row a.kt-tab-title .kt-title-text {
-  font-family: var(--wp--preset--font-family--header);
+  font-family: Montserrat,sans-serif;
   color: var(--wp--preset--color--dark-brown);
   font-weight: 700;
   font-size: .875rem
@@ -1940,10 +1933,6 @@ body:not(.block-editor-page) .animated-entry {
     top: 75px;
     left: 0;
     z-index: 1
-  }
-  .post-single {
-    padding-top: 120px;
-    padding-bottom: 120px
   }
   .provider-content-row .tablet {
     display: none
@@ -2036,10 +2025,6 @@ body:not(.block-editor-page) .animated-entry {
     -moz-column-gap: 0!important;
     column-gap: 0!important;
     grid-template-areas: "a a a a a b b b b b" "c c c c c c c c c c"
-  }
-  .post-single {
-    padding-top: 60px;
-    padding-bottom: 60px
   }
   .provider-content-row .primary .acf-innerblocks-container {
     display: flex;

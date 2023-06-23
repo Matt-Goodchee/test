@@ -14,13 +14,15 @@ $class: ".providers-mini";
     gap: 24px 12px;
     @include for-size(tablet, up, offset) {
       justify-content: center;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
     }
   }
   .wrapper {
-    @include between-sizes(1025px, 1500px) {
-      @include margin-center;
-      max-width: 625px;
+    .provider figure {
+      @include between-sizes(tablet, laptop-sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
   .provider {

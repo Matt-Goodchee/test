@@ -3,6 +3,7 @@
 $black      : var(--wp--preset--color--black);
 $white      : var(--wp--preset--color--white);
 $red        : var(--wp--preset--color--red);
+$red-alt    : var(--wp--preset--color--red-alt);
 $dark-brown : var(--wp--preset--color--dark-brown);
 $yellow     : var(--wp--preset--color--yellow);
 $gray       : var(--wp--preset--color--gray);
@@ -13,6 +14,7 @@ $colors : (
   'black'      : $black,
   'white'      : $white,
   'red'        : $red,
+  'red=alt'    : $red-alt,
   'dark-brown' : $dark-brown,
   'yellow'     : $yellow,
   'gray'       : $gray,
