@@ -161,7 +161,7 @@ q:before {
 .h1,
 .preset1,
 h1 {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.2
@@ -170,7 +170,7 @@ h1 {
 .icon-heading .kt-svg-icon-list-text,
 .preset2,
 h2 {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.2
@@ -179,7 +179,7 @@ h2 {
 .h3,
 .preset3,
 h3 {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 1.875rem;
   font-weight: 500;
   line-height: 1.2
@@ -191,7 +191,7 @@ h3 {
 .search-index .results-entry h2,
 body p.has-x-large-font-size,
 h4 {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2
@@ -200,7 +200,7 @@ h4 {
 .mobile-nav-wrap .container .nav-button span,
 .preset5,
 h5 {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2
@@ -208,7 +208,7 @@ h5 {
 .h6,
 .preset6,
 h6 {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2
@@ -280,7 +280,7 @@ blockquote p:last-of-type {
   margin-bottom: 0
 }
 body:not(.wp-admin) {
-  font-family: Karla,sans-serif
+  font-family: var(--wp--preset--font-family--body, "Karla", sans-serif)
 }
 h1,
 h2,
@@ -411,7 +411,7 @@ h6 {
   margin-bottom: 10px
 }
 .footer li a {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: .875rem;
   font-weight: 500;
   text-decoration: none
@@ -536,7 +536,7 @@ h6 {
   grid-gap: 60px 30px
 }
 .gform_wrapper.gravity-theme form .gform-body .gfield_label {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   display: block;
   font-weight: 700;
   margin-bottom: 25px;
@@ -578,7 +578,7 @@ h6 {
 }
 .gform_wrapper.gravity-theme form .gform_footer button {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -768,7 +768,7 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
 }
 .mobile-nav-wrap .container .nav-button {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -1124,7 +1124,7 @@ table {
 button,
 input[type=submit] {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -1348,7 +1348,7 @@ img {
   margin-right: 10px
 }
 .notice-bar .heading {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 1.5rem;
   font-weight: 700
 }
@@ -1404,7 +1404,7 @@ body:not(.block-editor-page) .animated-entry {
 }
 .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   border: 0;
   background: var(--wp--preset--color--red);
   color: var(--wp--preset--color--white);
@@ -1563,7 +1563,7 @@ body:not(.block-editor-page) .animated-entry {
   border-color: var(--wp--preset--color--black)
 }
 .home-row .kt-svg-icon-list .kt-svg-icon-list-text {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   color: var(--wp--preset--color--dark-brown);
   font-size: 1.5rem;
   font-weight: 700
@@ -1621,7 +1621,7 @@ body:not(.block-editor-page) .animated-entry {
   color: var(--wp--preset--color--white)
 }
 .other-ways-row .col-menu a {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   color: var(--wp--preset--color--dark-brown);
   font-weight: 600;
   display: flex;
@@ -1715,7 +1715,7 @@ body:not(.block-editor-page) .animated-entry {
 .archive-index--pagination .pagination span,
 .search-index--pagination .pagination a,
 .search-index--pagination .pagination span {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   font-size: 1.25rem;
   color: var(--wp--preset--color--dark-brown);
   display: inline-block;
@@ -1741,7 +1741,6 @@ body:not(.block-editor-page) .animated-entry {
 }
 .archive-index .posts-grid,
 .search-index .posts-grid {
-  grid-template-columns: repeat(auto-fit,minmax(390px,-webkit-max-content));
   grid-template-columns: repeat(auto-fit,minmax(390px,max-content));
   justify-content: center;
   gap: 35px
@@ -1854,7 +1853,7 @@ body:not(.block-editor-page) .animated-entry {
   color: var(--wp--preset--color--red)
 }
 .provider-tabs-row a.kt-tab-title .kt-title-text {
-  font-family: Montserrat,sans-serif;
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   color: var(--wp--preset--color--dark-brown);
   font-weight: 700;
   font-size: .875rem

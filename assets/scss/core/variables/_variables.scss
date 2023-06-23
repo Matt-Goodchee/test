@@ -9,12 +9,10 @@
 ========================================================= */
 @mixin font( $style:'body' ) {
   @if ( $style == 'body' ) {
-    font-family: 'Karla', sans-serif;
-    // font-family: var(--wp--preset--font-family--body);
+    font-family: var(--wp--preset--font-family--body,'Karla', sans-serif);
   }
   @else if ( $style == 'heading' ) {
-    font-family: 'Montserrat', sans-serif;
-    // font-family: var(--wp--preset--font-family--header);
+    font-family: var(--wp--preset--font-family--header,'Montserrat', sans-serif);
   }
 }
 
