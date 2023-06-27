@@ -3,7 +3,7 @@
 /* Project VARs
 ========================================================= */
 const PROJECT_NAME = "rc",
-  PREVIEW_MODE = true,
+  PREVIEW_MODE = false,
   BLOCK_MODE = true,
   ROOT = "./",
   STYLES_EDITOR = "./assets/scss/editor.scss",

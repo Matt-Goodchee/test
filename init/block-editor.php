@@ -95,9 +95,9 @@ remove_theme_support( 'block-templates' );
 /* Disable Inline Styles
 ========================================================= */
 
-add_filter( 'styles_inline_size_limit', '__return_zero' );
+// add_filter( 'styles_inline_size_limit', '__return_zero' );
 
 /* Conditional Block Assets (load only when used)
 ========================================================= */
 
-add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+// add_filter( 'should_load_separate_core_block_assets', '__return_true' );

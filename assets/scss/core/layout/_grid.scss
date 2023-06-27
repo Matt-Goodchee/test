@@ -1,6 +1,6 @@
 /* Grid & Padding Sizes (values defined in theme.json)
 ========================================================= */
-$width       : var(--wp--style--global--content-size);
+$width       : var(--wp--style--global--content-size,1440px);
 $padding-lg  : 100px;
 $padding-md  : 40px;
 // $padding-sm  : 40px;

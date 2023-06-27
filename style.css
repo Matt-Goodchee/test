@@ -122,7 +122,7 @@ q:before {
   content: none
 }
 .container {
-  max-width: var(--wp--style--global--content-size);
+  max-width: var(--wp--style--global--content-size,1440px);
   margin: 0 auto;
   padding: 0 100px
 }
@@ -372,7 +372,8 @@ h6 {
   display: none
 }
 .footer {
-  background: var(--wp--preset--color--dark-brown)
+  background: var(--wp--preset--color--dark-brown);
+  min-height: 250px
 }
 .footer .container {
   padding: 60px 40px 40px
@@ -1397,8 +1398,8 @@ img {
 .notice-bar .close-bar span {
   color: var(--wp--preset--color--white)
 }
-body {
-  --wp--style--global--content-size: 1440px,1440px
+html {
+  overflow-y: scroll
 }
 body:not(.block-editor-page) .animated,
 body:not(.block-editor-page) .animated-entry {
@@ -1758,7 +1759,6 @@ body:not(.block-editor-page) .animated-entry {
 }
 .archive-index .posts-grid,
 .search-index .posts-grid {
-  grid-template-columns: repeat(auto-fit,minmax(390px,-webkit-max-content));
   grid-template-columns: repeat(auto-fit,minmax(390px,max-content));
   justify-content: center;
   gap: 35px
