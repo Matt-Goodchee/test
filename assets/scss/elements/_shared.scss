@@ -295,8 +295,8 @@ body:not(.block-editor-page) {
     justify-content: center;
     @include for-size(tablet, up, offset) {
       justify-content: flex-end;
-      padding-right: 25% !important;
-      margin-top: -75px !important;
+      padding-right: 20% !important;
+      margin-top: -25px !important;
       position: relative;
       z-index: 1;
     }

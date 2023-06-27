@@ -1,5 +1,5 @@
 .container {
-  max-width: var(--wp--style--global--content-size);
+  max-width: var(--wp--style--global--content-size,1440px);
   margin: 0 auto;
   padding: 0 100px
 }
@@ -99,8 +99,8 @@ body .notice-bar .close-bar a {
 body .notice-bar .close-bar span {
   color: var(--wp--preset--color--white)
 }
-body body {
-  --wp--style--global--content-size: 1440px,1440px
+body html {
+  overflow-y: scroll
 }
 body body:not(.block-editor-page) .animated,
 body body:not(.block-editor-page) .animated-entry {
@@ -750,6 +750,33 @@ body .editor-styles-wrapper .gform_wrapper.gform_validation_error .gfield.gfield
 body .editor-styles-wrapper .gform_wrapper.gform_validation_error .validation_message {
   display: none
 }
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .route-map-svg {
+  opacity: 1
+}
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist {
+  margin-top: 20px
+}
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist .kt-svg-icon-list-item-wrap {
+  display: inline-flex!important;
+  padding: 8px 20px!important;
+  border: 3px solid var(--wp--preset--color--red);
+  border-radius: 60px;
+  text-decoration: none
+}
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist .kt-svg-icon-list-item-wrap:active,
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist .kt-svg-icon-list-item-wrap:focus,
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist .kt-svg-icon-list-item-wrap:hover {
+  border-color: var(--wp--preset--color--black)
+}
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist .kt-svg-icon-list-single {
+  margin-right: 10px!important
+}
+body .editor-styles-wrapper .wp-block-kadence-rowlayout.home-row .wp-block-kadence-iconlist .kt-svg-icon-list-text {
+  font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
+  color: var(--wp--preset--color--dark-brown);
+  font-size: 1.5rem;
+  font-weight: 700
+}
 body .editor-styles-wrapper .other-ways-row .kadence-column {
   grid-area: unset!important
 }
@@ -906,8 +933,8 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   }
   body .home-row .kt-svg-icon-list {
     justify-content: flex-end;
-    padding-right: 25%!important;
-    margin-top: -75px!important;
+    padding-right: 20%!important;
+    margin-top: -25px!important;
     position: relative;
     z-index: 1
   }

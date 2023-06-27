@@ -12,6 +12,36 @@ body {
     @import "core/typography/main";
     @import "layout/global-forms";
 
+    .wp-block-kadence-rowlayout.home-row {
+          .route-map-svg {
+      opacity: 1;
+    }
+      .wp-block-kadence-iconlist {
+        margin-top: 20px;
+        .kt-svg-icon-list-item-wrap {
+          display: inline-flex !important;
+          padding: 8px 20px !important;
+          border: 3px solid $red;
+          border-radius: 60px;
+          text-decoration: none;
+          &:hover,
+          &:focus,
+          &:active {
+            border-color: $black;
+          }
+        }
+        .kt-svg-icon-list-single{
+          margin-right: 10px !important;
+        }
+        .kt-svg-icon-list-text {
+          @include font("heading");
+          color: $dark-brown;
+          font-size: rem(24);
+          font-weight: 700;
+        }
+      }
+    }
+
     .other-ways-row {
       .kadence-column {
         grid-area: unset !important;

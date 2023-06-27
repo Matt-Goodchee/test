@@ -1,6 +1,5 @@
 .footer {
   background: $dark-brown;
-  min-height: 250px;
   @include for-size(tablet) {
     &.alt .container {
       display: none;

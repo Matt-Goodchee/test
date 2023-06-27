@@ -1,15 +1,3 @@
-/* Google Translate
-========================================================= */
-window.googleTranslateElementInit = function () {
-  new google.translate.TranslateElement(
-  {
-    pageLanguage: "en",
-    includedLanguages: "es,ar,en,ru,ko,th,vi,zh-CN",
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-  },
-  "google_translate_element"
-  );
-};
 
 /* GSAP 
 ========================================================= */
@@ -285,15 +273,16 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
     function checkViewportWidth() {
       if (window.matchMedia("(max-width: 1024px)").matches) {
         initSlickSlider();
-      } else {
+      } 
+      else if (slides.hasClass('slick-initialized')) {
         destroySlickSlider();
       }
     }
-    $(window).resize(
-      debounce(function () {
-        checkViewportWidth();
-      }, 200)
-      );
+
+    $(window).resize(debounce(function() {
+      checkViewportWidth();
+    }, 200)
+    );
 
     // run
     checkViewportWidth();
@@ -305,16 +294,17 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
     if (widget.length > 0) {
       if (window.matchMedia("(max-width: 768px)").matches) {
         widget.appendTo($("#mobile-nav .search-form"));
-      } else {
+      } 
+      else if (widget.next('.map-toggle').length === 0) {
         widget.prependTo($(".mobile-nav-header .menu-items"));
       }
     }
   }
-  $(window).resize(
-    debounce(function () {
-      translateWidget();
-    }, 200)
-    );
+
+  $(window).resize(debounce(function() {
+    translateWidget();
+  }, 200)
+  );
 
   // run
   translateWidget();

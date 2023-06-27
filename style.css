@@ -372,8 +372,7 @@ h6 {
   display: none
 }
 .footer {
-  background: var(--wp--preset--color--dark-brown);
-  min-height: 250px
+  background: var(--wp--preset--color--dark-brown)
 }
 .footer .container {
   padding: 60px 40px 40px
@@ -1759,6 +1758,7 @@ body:not(.block-editor-page) .animated-entry {
 }
 .archive-index .posts-grid,
 .search-index .posts-grid {
+  grid-template-columns: repeat(auto-fit,minmax(390px,-webkit-max-content));
   grid-template-columns: repeat(auto-fit,minmax(390px,max-content));
   justify-content: center;
   gap: 35px
@@ -1946,8 +1946,8 @@ body.single-provider {
   }
   .home-row .kt-svg-icon-list {
     justify-content: flex-end;
-    padding-right: 25%!important;
-    margin-top: -75px!important;
+    padding-right: 20%!important;
+    margin-top: -25px!important;
     position: relative;
     z-index: 1
   }

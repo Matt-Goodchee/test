@@ -2,7 +2,7 @@
 
 <footer class="footer">
   <div class="container">
-    <h1>TEST</h1>
+    <?php get_template_part('partials/elements/footer-partial'); ?>
   </div>
 </footer>
 
