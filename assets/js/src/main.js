@@ -2,12 +2,12 @@
 ========================================================= */
 window.googleTranslateElementInit = function () {
   new google.translate.TranslateElement(
-    {
-      pageLanguage: "en",
-      includedLanguages: "es,ar,en,ru,ko,th,vi,zh-CN",
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    },
-    "google_translate_element"
+  {
+    pageLanguage: "en",
+    includedLanguages: "es,ar,en,ru,ko,th,vi,zh-CN",
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+  },
+  "google_translate_element"
   );
 };
 
@@ -78,46 +78,46 @@ staggerGroup.forEach(function (group) {
 // Route SVG
 const routeTL = gsap.timeline({});
 routeTL
-  .to(".route-map-svg", { opacity: 1 })
-  .fromTo(
-    ".route-map-svg .route-logos g",
-    {
-      opacity: 0,
-      scale: 0.95,
-    },
-    {
-      opacity: 1,
-      scale: 1,
-      stagger: 0.2,
-      delay: 0.5,
-      duration: 1,
-    }
+.to(".route-map-svg", { opacity: 1 })
+.fromTo(
+  ".route-map-svg .route-logos g",
+  {
+    opacity: 0,
+    scale: 0.95,
+  },
+  {
+    opacity: 1,
+    scale: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    duration: 1,
+  }
   )
-  .fromTo(
-    ".route-map-svg .main-routes g",
-    {
-      opacity: 0,
-      scale: 0.98,
-    },
-    {
-      opacity: 1,
-      scale: 1,
-      stagger: 0.2,
-      delay: 0.5,
-      duration: 1,
-    },
-    "<"
+.fromTo(
+  ".route-map-svg .main-routes g",
+  {
+    opacity: 0,
+    scale: 0.98,
+  },
+  {
+    opacity: 1,
+    scale: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    duration: 1,
+  },
+  "<"
   )
-  .fromTo(
-    ".route-map-svg #city-names-and-background",
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-      duration: 1,
-    },
-    ">-0.8"
+.fromTo(
+  ".route-map-svg #city-names-and-background",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 1,
+  },
+  ">-0.8"
   );
 
 // Logo Animation
@@ -134,7 +134,7 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
     stagger: 0.15,
     duration: 0.8,
   }
-);
+  );
 
 /* jQuery Doc Ready
 ========================================================= */
@@ -156,7 +156,7 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
           x: 0,
           duration: 0.3,
         }
-      );
+        );
       gsap.fromTo(
         "#mobile-nav figure",
         {
@@ -168,7 +168,7 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
           x: 0,
           duration: 0.3,
         }
-      );
+        );
       menu.addClass("open");
       menuButton.addClass("open");
     }
@@ -187,7 +187,7 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
             gsap.set(menu, { display: "none" });
           },
         }
-      );
+        );
       menu.removeClass("open");
       menuButton.removeClass("open");
     }
@@ -211,11 +211,11 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
           if (
             !$(e.target).closest(menuButton).length &&
             !$(e.target).closest(menu).length
-          ) {
+            ) {
             closeMenu();
-            $(document).off("click.menuToggle");
-          }
-        });
+          $(document).off("click.menuToggle");
+        }
+      });
       }
     });
   }
@@ -231,13 +231,22 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
   }
 
   // Footer Menu
-  let footerShow = $(".footer .show-more a");
-  if (footerShow.length) {
-    footerShow.click(function (e) {
+  let footerTrigger = $(".footer.alt .show-more a");
+  if (footerTrigger.length) {
+    footerTrigger.click(function (e) {
       e.preventDefault();
-      footerShow.parent().hide();
-      footerShow.parent().next().slideDown();
-      footerShow.parents(".footer").removeClass("hidden");
+      if (footerTrigger.hasClass("closed")) {
+        footerTrigger.parent().next().slideDown();
+        footerTrigger.removeClass("closed").addClass("open");
+        footerTrigger.find(".open").hide();
+        footerTrigger.find(".close").show();
+        $("html, body").animate({ scrollTop: "+=100px" }, "slow");
+      } else {
+        footerTrigger.parent().next().slideUp();
+        footerTrigger.removeClass("open").addClass("closed");
+        footerTrigger.find(".close").hide();
+        footerTrigger.find(".open").show();
+      }
     });
   }
 
@@ -247,22 +256,25 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
     function initSlickSlider() {
       slides.slick({
         infinite: false,
-        slidesToScroll: 1,
+        slidesToScroll: 0,
+        swipeToSlide: true,
+        touchThreshold: 9,
+        edgeFriction: 1,
         dots: false,
         arrows: false,
         responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3.5,
-            },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3.5
           },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2.5,
-            },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2.5
           },
+        },
         ],
       });
     }
@@ -280,8 +292,8 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
     $(window).resize(
       debounce(function () {
         checkViewportWidth();
-      }, 250)
-    );
+      }, 200)
+      );
 
     // run
     checkViewportWidth();
@@ -301,6 +313,10 @@ logoTL.to(".main-logo", { opacity: 1 }).fromTo(
   $(window).resize(
     debounce(function () {
       translateWidget();
-    }, 250)
-  );
+    }, 200)
+    );
+
+  // run
+  translateWidget();
+
 })(jQuery);

@@ -99,6 +99,9 @@ body .notice-bar .close-bar a {
 body .notice-bar .close-bar span {
   color: var(--wp--preset--color--white)
 }
+body body {
+  --wp--style--global--content-size: 1440px,1440px
+}
 body body:not(.block-editor-page) .animated,
 body body:not(.block-editor-page) .animated-entry {
   opacity: 0

@@ -114,7 +114,7 @@
       display: none;
     }
     a {
-      padding: 20px;
+      padding: 30px 20px;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -123,6 +123,14 @@
     span {
       margin-left: 8px;
       color: $red;
+    }
+    .close {
+      display: none;
+    }
+    & + .container {
+      @include for-size(tablet) {
+        padding-top: 20px;
+      }
     }
   }
   .col-1 {

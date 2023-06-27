@@ -1,7 +1,28 @@
+body.single-provider {
+  overflow: hidden;
+}
+
+.provider-hero-row {
+  .kt-row-column-wrap {
+    padding-top: 20px !important;
+  }
+  p.preset1 {
+    @include for-size(phone) {
+      font-size: rem(30);
+    }
+  }
+}
+
 .provider-mini-links-row {
+
 }
 
 .provider-content-row {
+  .kt-row-column-wrap {
+    @include for-size(tablet-sm) {
+      padding-top: 20px !important;
+    }
+  }
   .desktop {
     @include for-size(tablet-sm) {
       display: none;
@@ -14,6 +35,9 @@
   }
   h1 {
     font-weight: 600;
+    @include for-size(phone) {
+      font-size: rem(26);
+    }
   }
   .wp-block-buttons {
     @include for-size(tablet-sm) {
@@ -177,14 +201,14 @@
 @include for-size(tablet, up, offset) {
   .provider-tabs-row .kt-row-column-wrap {
     grid-template-areas:
-      "f f f f f f f f f f"
-      "p p p p s s s s s s";
+    "f f f f f f f f f f"
+    "p p p p s s s s s s";
   }
 
   .provider-outro-row .kt-row-column-wrap {
     grid-template-areas:
-      "f f f f f f f f f f"
-      "p p p s s s s s s s";
+    "f f f f f f f f f f"
+    "p p p s s s s s s s";
   }
 
   .grid-custom {

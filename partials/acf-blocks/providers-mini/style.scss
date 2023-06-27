@@ -37,7 +37,9 @@ $class: ".providers-mini";
     }
     @include for-size(tablet-sm) {
       min-height: 150px;
-      // flex-basis: calc(50% - 6px);
+    }
+    @include for-size(phone) {
+      min-height: 130px;
     }
     @each $color, $hex in $providers {
       &.#{$color} {
@@ -61,7 +63,6 @@ $class: ".providers-mini";
       }
     }
     a {
-      display: block;
       // border-radius: 10px;
       // box-shadow: 1.6px 1.6px 10px rgba(0, 0, 0, 0.2);
       display: flex;
@@ -80,6 +81,13 @@ $class: ".providers-mini";
       border-top-right-radius: 10px;
       border: 3px solid transparent;
       border-bottom: none;
+      @include for-size(tablet-sm) {
+        padding: 10px;
+        img {
+          @include margin-center;
+          width: 85%;
+        }
+      }
       img {
         width: 100%;
       }

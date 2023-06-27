@@ -4,15 +4,13 @@
 ========================================================= */
 @import "color-vars";
 
-
 /* Fonts (fonts defined in theme.json)
 ========================================================= */
-@mixin font( $style:'body' ) {
-  @if ( $style == 'body' ) {
-    font-family: var(--wp--preset--font-family--body,'Karla', sans-serif);
-  }
-  @else if ( $style == 'heading' ) {
-    font-family: var(--wp--preset--font-family--header,'Montserrat', sans-serif);
+@mixin font($style: "body") {
+  @if ($style == "body") {
+    font-family: var(--wp--preset--font-family--body, "Karla", sans-serif);
+  } @else if ($style == "heading") {
+    font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
   }
 }
 
@@ -20,7 +18,7 @@
 ========================================================= */
 $browser-context: 16; // Default
 @function em($pixels, $context: $browser-context) {
-  @return math.div($pixels, $context)+em;
+  @return math.div($pixels, $context) + em;
 }
 
 /* REM to PX
@@ -29,10 +27,9 @@ $browser-context: 16; // Default
   @return (math.div($size, 16) + rem);
 }
 
-
 /* BG Image
 ========================================================= */
-@mixin bg($sizing:cover, $position:center, $repeat:no-repeat) {
+@mixin bg($sizing: cover, $position: center, $repeat: no-repeat) {
   background: {
     position: $position;
     repeat: $repeat;
@@ -40,13 +37,16 @@ $browser-context: 16; // Default
   }
 }
 
-
 /* Padding - Global Rows
 ========================================================= */
-@mixin row-padding ($top-large:120, $bottom-large:120,
-  $top-medium:60, $bottom-medium:60,
-  $top-small:$top-medium, $bottom-small:$bottom-medium) {
-
+@mixin row-padding(
+  $top-large: 120,
+  $bottom-large: 120,
+  $top-medium: 60,
+  $bottom-medium: 60,
+  $top-small: $top-medium,
+  $bottom-small: $bottom-medium
+) {
   @include for-size(tablet, up, offset) {
     padding-top: $top-large + px;
     padding-bottom: $bottom-large + px;
@@ -57,31 +57,27 @@ $browser-context: 16; // Default
   }
 }
 
-
 /* Global Transition ( property, duration, easing )
 ========================================================= */
-@mixin trans($prop:all, $dur:600, $ease:cubic-bezier(.23, 1, .32, 1)) {
-  transition: $prop $dur+ms $ease;
+@mixin trans($prop: all, $dur: 600, $ease: cubic-bezier(0.23, 1, 0.32, 1)) {
+  transition: $prop $dur + ms $ease;
 }
-
 
 /* Font Awesome 5 ( needs content specified )
 ========================================================= */
-@mixin fa($type:free, $weight:900) {
+@mixin fa($type: free, $weight: 900) {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  @if ($type=='free') {
+  @if ($type== "free") {
     font-family: "Font Awesome 5 Free";
     font-weight: $weight;
-  }
-  @else if ($type=='brands') {
+  } @else if ($type== "brands") {
     font-family: "Font Awesome 5 Brands";
   }
 }
-
 
 /* Additional Helper Mixins
 ========================================================= */
@@ -107,33 +103,30 @@ $browser-context: 16; // Default
   margin-right: -#{$padding}px;
 }
 
-@mixin center($dir:'vert') {
-  @if ($dir == 'vert') {
+@mixin center($dir: "vert") {
+  @if ($dir == "vert") {
     top: 50%;
     transform: translateY(-50%);
-  }
-  @else if ($dir == 'horiz') {
+  } @else if ($dir == "horiz") {
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
-@mixin display($state:show) {
-  @if ($state == 'show') {
+@mixin display($state: show) {
+  @if ($state == "show") {
     opacity: 1;
     visibility: visible;
-  }
-  @else if ($state == 'hide') {
+  } @else if ($state == "hide") {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-
 @mixin image-border($pos) {
   position: relative;
   &:before {
-    content:'';
+    content: "";
     display: block;
     position: absolute;
     background: $red;
@@ -141,25 +134,22 @@ $browser-context: 16; // Default
     height: 50px;
     z-index: 0;
   }
-  @if ($pos == 'top left') {
+  @if ($pos == "top left") {
     &:before {
       top: -12px;
       left: -12px;
     }
-  }
-  @else if ($pos == 'top right') {
+  } @else if ($pos == "top right") {
     &:before {
       top: -12px;
       right: -12px;
     }
-  }
-  @else if ($pos == 'bottom left') {
+  } @else if ($pos == "bottom left") {
     &:before {
       bottom: -12px;
       left: -12px;
     }
-  }
-  @else if ($pos == 'bottom right') {
+  } @else if ($pos == "bottom right") {
     &:before {
       bottom: -12px;
       right: -12px;
@@ -168,16 +158,13 @@ $browser-context: 16; // Default
 }
 
 @mixin image-rounded($pos) {
-  @if ($pos == 'top left') {
+  @if ($pos == "top left") {
     border-top-left-radius: 60px;
-  }
-  @else if ($pos == 'top right') {
+  } @else if ($pos == "top right") {
     border-top-right-radius: 60px;
-  }
-  @else if ($pos == 'bottom left') {
+  } @else if ($pos == "bottom left") {
     border-bottom-left-radius: 60px;
-  }
-  @else if ($pos == 'bottom right') {
+  } @else if ($pos == "bottom right") {
     border-bottom-right-radius: 60px;
   }
 }
@@ -186,7 +173,7 @@ $browser-context: 16; // Default
 ========================================================= */
 @mixin button {
   @include trans;
-  @include font('heading');
+  @include font("heading");
   border: 0;
   background: $red;
   color: $white;
@@ -201,7 +188,9 @@ $browser-context: 16; // Default
   line-height: 1.2;
   text-decoration: none;
   -webkit-appearance: none;
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: $dark-brown;
   }
 }
