@@ -30,9 +30,11 @@ $class: '.news-posts';
       margin-bottom: 20px;
       figure {
         @include margin-center;
-        max-width: 575px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }
+    }
+    figure {
+      max-width: 400px;
     }
     img {
       display: block;
