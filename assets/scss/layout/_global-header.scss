@@ -248,8 +248,8 @@ body.page-template-tpl-no-logo {
         &:focus,
         &:active {
           > a {
-            color: $white;
-            background-color: $dark-brown;
+            color: $white !important;
+            background-color: $dark-brown !important;
           }
         }
         &.icon-home {

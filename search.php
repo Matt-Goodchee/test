@@ -25,21 +25,21 @@ get_header();
             </div>
           <?php endwhile; ?>
 
-          <?php else : ?>
-            <h3>No Results Found</h3>
+        <?php else : ?>
+          <h3>No Results Found</h3>
 
-          </div>
-        <?php endif; ?>
-      </div>
-
-      <?php if ( $wp_query->max_num_pages > 1 ) : ?>
-        <div class="search-index--pagination">
-          <?php include( locate_template('partials/posts/post-pagination.php') ); ?>
         </div>
       <?php endif; ?>
-
     </div>
-  </section>
+
+    <?php if ( $wp_query->max_num_pages > 1 ) : ?>
+      <div class="search-index--pagination">
+        <?php include( locate_template('partials/posts/post-pagination.php') ); ?>
+      </div>
+    <?php endif; ?>
+
+  </div>
+</section>
 
 
-  <?php get_footer(); ?>
+<?php get_footer(); ?>
