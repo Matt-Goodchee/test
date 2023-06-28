@@ -40,7 +40,7 @@ animateElement.forEach(function (element) {
     transformOrigin: "center center",
     scrollTrigger: {
       trigger: element,
-      start: "top 70%",
+      start: "top 80%",
     },
   });
 });
@@ -53,7 +53,7 @@ staggerGroup.forEach(function (group) {
   gsap.from(elements, {
     scrollTrigger: {
       trigger: group,
-      start: "top 70%",
+      start: "top 80%",
     },
     y: -10,
     opacity: 0,

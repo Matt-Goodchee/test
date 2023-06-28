@@ -65,6 +65,9 @@ $box-shadow          : none;
       padding-bottom: 25px;
       .gform_fields {
         grid-gap: 60px 30px;
+        @include for-size(640px) {
+          column-gap: 0;
+        }
       }
       .gfield_label {
         @include font('heading');

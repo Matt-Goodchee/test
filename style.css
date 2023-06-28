@@ -582,22 +582,22 @@ h6 {
 .gform_wrapper.gravity-theme form .gform_footer button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none;
   margin: 0
 }
@@ -773,21 +773,21 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
 .mobile-nav-wrap .container .nav-button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
   padding: 13px 20px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  text-decoration: none;
   -webkit-appearance: none;
   border: 3px solid var(--wp--preset--color--red);
   background: var(--wp--preset--color--white);
@@ -867,20 +867,20 @@ body.page-template-tpl-no-logo .mobile-nav-wrap:before {
   align-items: center
 }
 .mobile-nav-wrap .mobile-nav ul li a {
-  transition: .6s cubic-bezier(.23,1,.32,1);
-  display: inline-block;
-  color: var(--wp--preset--color--dark-brown);
-  padding: 10px 24px;
-  text-decoration: none;
   border-radius: 60px;
+  border: 0;
+  color: var(--wp--preset--color--dark-brown);
+  display: inline-block;
   font-weight: 500;
+  padding: 10px 24px;
   text-align: center;
-  -webkit-appearance: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 0
+  -webkit-appearance: none;
+  transition: unset
 }
 .mobile-nav-wrap .mobile-nav ul li.current-menu-ancestor > a,
 .mobile-nav-wrap .mobile-nav ul li.current-menu-item > a,
@@ -1139,22 +1139,22 @@ button,
 input[type=submit] {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none
 }
 .button:active,
@@ -1422,22 +1422,22 @@ body:not(.block-editor-page) .animated-entry {
 .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none;
   font-weight: 500
 }
@@ -2231,6 +2231,10 @@ body.single-provider {
   }
 }
 @media only screen and (max-width:640px) {
+  .gform_wrapper.gravity-theme form .gform-body .gform_fields {
+    -moz-column-gap: 0;
+    column-gap: 0
+  }
   .about-form-row .gform_fields .gfield.email .gfield_label {
     height: 0;
     margin-bottom: 0
