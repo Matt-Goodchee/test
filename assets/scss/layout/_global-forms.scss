@@ -114,7 +114,9 @@ $box-shadow          : none;
       .gfield--type-captcha {
         .ginput_recaptcha {
           > div {
-            @include margin-center;
+            @include for-size(640px) {
+              @include margin-center;
+            }
           }
         }
       }

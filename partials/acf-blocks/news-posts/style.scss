@@ -58,6 +58,7 @@ $class: '.news-posts';
       margin-bottom: 0;
       @include for-size(tablet) {
         margin-bottom: 10px;
+        text-align: center;
       }
     }
     time {

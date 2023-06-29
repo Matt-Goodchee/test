@@ -10,6 +10,14 @@
   <link rel="alternate" type="application/rss+xml" title="<?= get_bloginfo('name'); ?> Feed" href="<?= home_url(); ?>/feed/">
 
   <?php require_once locate_template('/init/shortcodes.php'); ?>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8DTP00KQL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R8DTP00KQL');
+  </script>
 </head>
 
 <body <?php body_class(); ?> id="top-of-page">

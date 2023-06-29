@@ -575,10 +575,6 @@ h6 {
 .gform_wrapper.gravity-theme form .gform-body .ginput_container_consent input {
   margin-right: 10px
 }
-.gform_wrapper.gravity-theme form .gform-body .gfield--type-captcha .ginput_recaptcha > div {
-  margin-left: auto;
-  margin-right: auto
-}
 .gform_wrapper.gravity-theme form .gform-body .gfield--type-submit {
   align-self: center;
   justify-content: flex-end
@@ -1548,6 +1544,13 @@ body:not(.block-editor-page) .animated-entry {
   flex: 1;
   line-height: 1.4
 }
+.count-split-row .wp-block-kadence-countup .kb-count-up-title a {
+  color: var(--wp--preset--color--red)
+}
+.count-split-row .wp-block-kadence-countup .kb-count-up-title a:focus,
+.count-split-row .wp-block-kadence-countup .kb-count-up-title a:hover {
+  text-decoration: underline
+}
 .wp-block-table table {
   border: none
 }
@@ -2256,6 +2259,10 @@ body.single-provider {
   .gform_wrapper.gravity-theme form .gform-body .gform_fields {
     -moz-column-gap: 0;
     column-gap: 0
+  }
+  .gform_wrapper.gravity-theme form .gform-body .gfield--type-captcha .ginput_recaptcha > div {
+    margin-left: auto;
+    margin-right: auto
   }
   .gform_wrapper.gravity-theme form .gform-body .gfield--type-submit {
     justify-content: center
