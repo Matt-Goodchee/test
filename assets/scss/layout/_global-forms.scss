@@ -53,6 +53,7 @@ $box-shadow          : none;
       font-family: inherit;
       line-height: normal;
       color: black;
+      font-size: 16px !important;
       @include placeholder {
         color: black;
       }
@@ -110,6 +111,20 @@ $box-shadow          : none;
           margin-right: 10px;
         }
       }
+      .gfield--type-captcha {
+        .ginput_recaptcha {
+          > div {
+            @include margin-center;
+          }
+        }
+      }
+      .gfield--type-submit {
+        align-self: center;
+        justify-content: flex-end;
+        @include for-size(640px) {
+          justify-content: center;
+        }
+      }
     }
     
     .gform_footer {
@@ -136,14 +151,20 @@ $box-shadow          : none;
 ========================================================= */
 .gform_wrapper.gform_validation_error {
   .gform_validation_errors {
+    padding: 16px !important;
     margin-bottom: 25px;
     border-color: $border-color-error;
     h2.gform_submission_error {
       font-size: 18px;
+      line-height: 1.2;
       color: $border-color-error;
     }
   }
   .gfield.gfield_error {
+    .gfield_description:not(.validation_message) {
+      display: block !important;
+      color: $border-color-error;
+    }
     input, select, textarea, legend, label {
       color: $border-color-error;
       border-color: $border-color-error;

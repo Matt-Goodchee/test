@@ -124,22 +124,22 @@ body .wp-block-buttons.is-layout-flex {
 body .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none;
   font-weight: 500
 }
@@ -617,22 +617,22 @@ body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer {
 body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform_footer button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none;
   margin: 0
 }
@@ -798,22 +798,22 @@ body .editor-styles-wrapper .wp-block-freeform.block-library-rich-text__tinymce 
 body .editor-styles-wrapper .wp-block.editor-block .button .button {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none
 }
 body .editor-styles-wrapper .acf-block-preview .button:active,
@@ -839,22 +839,22 @@ body .editor-styles-wrapper .wp-block.editor-block .button .button:hover {
 body .editor-styles-wrapper .wp-block-button .wp-block-button__link {
   transition: .6s cubic-bezier(.23,1,.32,1);
   font-family: var(--wp--preset--font-family--header, "Montserrat", sans-serif);
-  border: 0;
   background: var(--wp--preset--color--red);
-  color: var(--wp--preset--color--white);
   border-radius: 80px;
+  border: 0;
+  color: var(--wp--preset--color--white);
   cursor: pointer;
   display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.2;
   padding: 10px 30px;
   text-align: center;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   vertical-align: baseline;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-decoration: none;
   -webkit-appearance: none
 }
 body .editor-styles-wrapper .wp-block-button .wp-block-button__link:active,
@@ -1054,6 +1054,10 @@ body .mce-menu-item.mce-menu-item-preview.mce-active .mce-text {
   body .about-form-row .gform_fields .gfield.email .gfield_label {
     height: 0;
     margin-bottom: 0
+  }
+  body .editor-styles-wrapper .gform_wrapper.gravity-theme form .gform-body .gform_fields {
+    -moz-column-gap: 0;
+    column-gap: 0
   }
 }
 @media only screen and (max-width:480px) {

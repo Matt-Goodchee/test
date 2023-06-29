@@ -128,9 +128,25 @@ body:not(.block-editor-page) {
 ========================================================= */
 .icon-heading {
   margin: 0;
+  li {
+    @include for-size(phone) {
+      flex-direction: column;
+      .kb-svg-icon-wrap {
+        margin-right: 0 !important;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .kb-svg-icon-wrap {
+    flex: 0 1 36px;
+  }
   .kt-svg-icon-list-text {
     @extend %preset2;
+    flex: 0 1 auto;
     color: $black;
+    @include for-size(tablet-sm) {
+      font-size: 28px;
+    }
   }
 }
 

@@ -492,6 +492,7 @@ h6 {
   font-family: inherit;
   line-height: normal;
   color: #000;
+  font-size: 16px!important;
   border-width: 0 0 3px
 }
 .gform_wrapper.gravity-theme form input[type]:active,
@@ -574,6 +575,14 @@ h6 {
 .gform_wrapper.gravity-theme form .gform-body .ginput_container_consent input {
   margin-right: 10px
 }
+.gform_wrapper.gravity-theme form .gform-body .gfield--type-captcha .ginput_recaptcha > div {
+  margin-left: auto;
+  margin-right: auto
+}
+.gform_wrapper.gravity-theme form .gform-body .gfield--type-submit {
+  align-self: center;
+  justify-content: flex-end
+}
 .gform_wrapper.gravity-theme form .gform_footer {
   margin: 0;
   padding-top: 25px;
@@ -607,11 +616,17 @@ h6 {
   background-color: var(--wp--preset--color--dark-brown)
 }
 .gform_wrapper.gform_validation_error .gform_validation_errors {
+  padding: 16px!important;
   margin-bottom: 25px;
   border-color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gform_validation_errors h2.gform_submission_error {
   font-size: 18px;
+  line-height: 1.2;
+  color: var(--wp--preset--color--red)
+}
+.gform_wrapper.gform_validation_error .gfield.gfield_error .gfield_description:not(.validation_message) {
+  display: block!important;
   color: var(--wp--preset--color--red)
 }
 .gform_wrapper.gform_validation_error .gfield.gfield_error input,
@@ -1480,7 +1495,11 @@ body:not(.block-editor-page) .animated-entry {
 .icon-heading {
   margin: 0
 }
+.icon-heading .kb-svg-icon-wrap {
+  flex: 0 1 36px
+}
 .icon-heading .kt-svg-icon-list-text {
+  flex: 0 1 auto;
   color: var(--wp--preset--color--black)
 }
 .icon-link li {
@@ -2164,6 +2183,9 @@ body.single-provider {
     padding-left: 0!important;
     padding-right: 0!important
   }
+  .icon-heading .kt-svg-icon-list-text {
+    font-size: 28px
+  }
   .count-split-row .wp-block-kadence-countup {
     align-items: center
   }
@@ -2235,6 +2257,9 @@ body.single-provider {
     -moz-column-gap: 0;
     column-gap: 0
   }
+  .gform_wrapper.gravity-theme form .gform-body .gfield--type-submit {
+    justify-content: center
+  }
   .about-form-row .gform_fields .gfield.email .gfield_label {
     height: 0;
     margin-bottom: 0
@@ -2266,6 +2291,13 @@ body.single-provider {
   .mobile-nav-wrap .container .nav-button svg {
     margin-left: 7px;
     width: 14px!important
+  }
+  .icon-heading li {
+    flex-direction: column
+  }
+  .icon-heading li .kb-svg-icon-wrap {
+    margin-right: 0!important;
+    margin-bottom: 5px
   }
   .provider-hero-row p.preset1 {
     font-size: 1.875rem
